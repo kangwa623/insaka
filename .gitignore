@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+.env
+
+# Generated data is reproducible from the seed; only Mwila's demo files are kept.
+data/synthetic/*
+!data/synthetic/transactions/
+!data/synthetic/statements/
+data/synthetic/transactions/*
+data/synthetic/statements/*
+!data/synthetic/transactions/MWILA-001_*
+!data/synthetic/statements/MWILA-001_*
