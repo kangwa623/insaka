@@ -70,7 +70,7 @@ def fmt(fig: Figure) -> str:
     if fig.unit == "K":
         return f"K{v:,.0f}"
     if fig.unit == "%":
-        return f"{v:.0%}"
+        return f"{v:.1%}" if fig.name == "pd" and v < 0.1 else f"{v:.0%}"
     if fig.unit == "x":
         return f"{v:.1f}x"
     return f"{v:,.0f}" if float(v).is_integer() else f"{v:.2f}"
@@ -213,6 +213,8 @@ def render(sections: list[dict], figures: dict) -> dict:
             parts.append(text[pos:m.start()])
             f = figures[m.group(1)]
             shown = fmt(f)
+            if f.unit == "x" and text[m.end():].lstrip().startswith("times"):
+                shown = shown[:-1]   # "2.8 times", not "2.8x times"
             spans.append({"figure": f.name, "text": shown, "rows": f.rows,
                           "source": f.detail.get("source", "statements")})
             used[f.name] = f

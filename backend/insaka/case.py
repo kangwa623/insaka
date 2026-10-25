@@ -167,9 +167,13 @@ def open_case(run: dict, agent_case, cases_dir: Path = CASES_DIR) -> Case:
         "memo": {"sections": agent_case.memo["sections"], "written_by": agent_case.memo["written_by"]}
         if agent_case.memo else None,
         "agent_run": {k: run[k] for k in ("mode", "model", "steps_used", "refused_calls",
-                                          "tokens", "replayed")},
+                                          "tokens", "replayed", "model_fallback", "steps")},
+        "figures": {k: f.to_dict() for k, f in agent_case.assessment["figures"].items()}
+        if agent_case.assessment else {},
+        "verification": _verification(agent_case.report),
     }
     case = Case(data, cases_dir)
+    save_ledger(agent_case, Path(cases_dir))
     _, audit = case._paths()
     if audit.exists():
         audit.unlink()   # a fresh run starts a fresh case
@@ -177,6 +181,32 @@ def open_case(run: dict, agent_case, cases_dir: Path = CASES_DIR) -> Case:
     case._audit("insaka.agent", "prepare", "preparing",
                 {"steps": run["steps_used"], "escalations": len(run["escalations"])})
     return case
+
+
+def _verification(report: dict | None) -> dict | None:
+    if not report:
+        return None
+    return {"passed": report["passed"], "flagged_rows": report["flagged_rows"],
+            "statements": report["statements"],
+            "transfers": {k: len(v) for k, v in report["transfers"].items()}}
+
+
+LEDGER_FIELDS = ("row_id", "channel", "date", "description", "reference", "direction",
+                 "amount", "balance", "trust", "category", "label_source", "label_quote",
+                 "needs_review")
+
+
+def save_ledger(agent_case, cases_dir: Path) -> None:
+    """The labelled rows behind the case, so the RM can open any figure's source."""
+    rows = [{k: getattr(r, k) for k in LEDGER_FIELDS}
+            for s in agent_case.ordered_statements() for r in s.rows]
+    cases_dir.mkdir(parents=True, exist_ok=True)
+    (cases_dir / f"{agent_case.client_id}.ledger.json").write_text(json.dumps(rows), "utf-8")
+
+
+def load_ledger(client_id: str, cases_dir: Path = CASES_DIR) -> list[dict]:
+    path = Path(cases_dir) / f"{client_id}.ledger.json"
+    return json.loads(path.read_text("utf-8")) if path.exists() else []
 
 
 def load_case(client_id: str, cases_dir: Path = CASES_DIR) -> Case:

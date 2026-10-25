@@ -102,5 +102,57 @@
    "title": "Recommendation for the RM",
    "text": "Verify PACRA and TPIN registration with the relevant authorities. Confirm the source of the mobile money income. Review the thin credit file to ensure no other obligations exist."
   }
+ ],
+ "366f4b1c6ca3df61681b641a089b86171ea9432c0a9e063b207243f29961ae4a": [
+  {
+   "title": "Summary",
+   "text": "The applicant is a maize and inputs trader in Eastern Province seeking {{requested_amount}} for {{tenor_months}} months to buy seed and fertiliser. The business has traded for {{years_trading}} years. The risk band is Low, with an estimated probability of default of {{pd}}."
+  },
+  {
+   "title": "Business and cash flow",
+   "text": "The business shows {{months}} months of statement history. Average monthly income is {{mean_monthly_income}}, while the applicant declared {{declared_monthly_turnover}}. Income peaks in {{peak_month}} at {{peak_month_income}}, which is {{peak_to_median}} times a typical month. This pattern matches the expected season, with a season fit of {{season_fit}}. After adjusting for the season, income variation is {{deseasoned_income_cv}}. The weakest month, adjusted for the season, is {{weakest_month}} at {{weakest_month_ratio}} of a typical month. Harvest-season income is {{harvest_ratio}} of the seasonal prediction."
+  },
+  {
+   "title": "Repayment capacity",
+   "text": "Average monthly committed costs are {{mean_monthly_committed}}, leaving a surplus of {{mean_monthly_surplus}}. The new loan instalment is {{new_instalment}}. The surplus covers the instalment {{debt_service_coverage}} times. The account was overdrawn on {{overdraft_day_share}} of days."
+  },
+  {
+   "title": "Risks and mitigants",
+   "text": "The main risk factor is the lack of credit-bureau history, creating a thin file. Mitigants include the strong surplus cover for the new instalment, zero days in overdraft, and low income variation beyond the normal season. The largest customer accounts for {{top_customer_share}} of payments, and {{mobile_money_share}} of income is received via mobile money."
+  },
+  {
+   "title": "Verification",
+   "text": "PACRA confirms the business is registered and active. ZRA confirms the TPIN and tax compliance. The credit bureau shows no history. All statements reconcile, and transfers match Absa's records. There are {{unverified_income_share}} of income on unverified rows. No rows require review."
+  },
+  {
+   "title": "Recommendation for the RM",
+   "text": "Discuss the thin credit file with the applicant to understand their banking history. Verify the source of the mobile money income. Confirm the supplier contracts for the seed and fertiliser stock."
+  }
+ ],
+ "a67940e5be5ff61a9243bffdac8fd8a8086f4ababd6fc313dccb8227ea660230": [
+  {
+   "title": "Summary",
+   "text": "The applicant is a maize and inputs trader in Eastern Province seeking {{requested_amount}} for {{tenor_months}} months to buy seed and fertiliser. The business has traded for {{years_trading}} years. The risk band is Low, with an estimated probability of default of {{pd}}."
+  },
+  {
+   "title": "Business and cash flow",
+   "text": "The business shows {{months}} months of statement history. Average monthly income is {{mean_monthly_income}}, while the applicant declared {{declared_monthly_turnover}}. Income peaks in {{peak_month}} at {{peak_month_income}}, which is {{peak_to_median}} times a typical month. This pattern matches the expected season, with a season fit of {{season_fit}}. After adjusting for the season, income variation is {{deseasoned_income_cv}}. The weakest month, adjusted for the season, is {{weakest_month}} at {{weakest_month_ratio}} of a typical month. Harvest-season income is {{harvest_ratio}} of the seasonal prediction."
+  },
+  {
+   "title": "Repayment capacity",
+   "text": "Average monthly committed costs are {{mean_monthly_committed}}, leaving a surplus of {{mean_monthly_surplus}}. The new loan instalment is {{new_instalment}}. The surplus covers the instalment {{debt_service_coverage}} times. The account was overdrawn on {{overdraft_day_share}} of days."
+  },
+  {
+   "title": "Risks and mitigants",
+   "text": "The main risk factor is the lack of credit-bureau history, creating a thin file. Mitigants include the strong surplus cover for the new instalment, zero days in overdraft, and low income variation beyond the normal season. The largest customer accounts for {{top_customer_share}} of payments, and {{mobile_money_share}} of income is received via mobile money."
+  },
+  {
+   "title": "Verification",
+   "text": "PACRA confirms the business is registered and active. ZRA confirms the TPIN and tax compliance. The credit bureau shows no history. All statements reconcile, and transfers match Absa's records. There are {{unverified_income_share}} of income on unverified rows. No rows require review."
+  },
+  {
+   "title": "Recommendation for the RM",
+   "text": "Discuss the thin credit file with the applicant to understand their banking history. Verify the source of the mobile money income. Confirm the supplier contracts for the seed and fertiliser stock."
+  }
  ]
 }

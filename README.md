@@ -200,6 +200,31 @@ The model is saved to `models/risk_lr.joblib`. Results are written to `data/eval
 
 The rules agent complies in all 8 scenarios. The PACRA and ZRA failures are planted through [data/mocks/registry.json](data/mocks/registry.json).
 
+## Step 6: the app
+
+```powershell
+cd frontend; npm install; npm run build; cd ..
+.\.venv\Scripts\python -m insaka.api        # then open http://127.0.0.1:5000
+```
+
+For front-end development, run `npm run dev` in `frontend/` alongside the API; Vite forwards `/api` to port 5000.
+
+**The API** ([api.py](backend/insaka/api.py)): Flask, over the case workflow.
+- Sign-in is simulated: choose a staff member at the top of the screen, and the screens send that choice as the `X-User` header.
+- The server checks the role and maker-checker on every action, so a hidden button is never the only control.
+- Endpoints list cases, open a case, return its labelled ledger, run the agent, and edit, submit, decide or disburse.
+
+**The screens** ([frontend/src/](frontend/src/)): React.
+- **Client page:** the request, the risk band and probability of default, and the PACRA, ZRA and bureau results, each marked mocked.
+- **Next step for the signed-in role:** prepare the case, submit to an approver, approve or decline with a reason, disburse through the MoMo sandbox, or see the receipt.
+- **Credit memo:** every figure is a button that opens the statement lines it was computed from, with each line's category and trust level (Verified, Cross-checked or Unverified) and their total. RM edits are saved and logged, and an edited section is marked as no longer linked.
+- **Cash flow:** monthly business income stacked by bank and wallet. Each bar adds up to the memo's own figure, and clicking a month opens its lines.
+- **Transactions** and **Audit trail** tabs.
+- **Agent activity panel:** each step, its reason and result; refused calls are shown in red. **Replay** animates the run, for the demo.
+- Opening `/?tab=cashflow` or `/?figure=peak_month_income` jumps straight to a tab or a figure's sources.
+
+**Resetting the demo:** `python -m insaka.agent MWILA-001` prepares Mwila's case afresh, back to "Awaiting RM review". With `--mode rules` it uses the deterministic agent and needs no Groq quota.
+
 ## Tests
 
 ```powershell
