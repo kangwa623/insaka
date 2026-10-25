@@ -1,0 +1,968 @@
+{
+  "sample": "main",
+  "clients": [
+    "MWILA-001",
+    "ZM-0036",
+    "ZM-0044",
+    "ZM-0137",
+    "ZM-0148",
+    "ZM-0110",
+    "ZM-0032",
+    "ZM-0019",
+    "ZM-0129",
+    "ZM-0083",
+    "ZM-0080",
+    "ZM-0056",
+    "ZM-0028",
+    "ZM-0104",
+    "ZM-0100",
+    "ZM-0120",
+    "ZM-0068",
+    "ZM-0021",
+    "ZM-0015",
+    "ZM-0069",
+    "ZM-0142"
+  ],
+  "rules": {
+    "clients_labelled": 21,
+    "rows": 14362,
+    "accuracy": 0.987675811168361,
+    "macro_f1": 0.9496835262397667,
+    "per_category": {
+      "airtime_data": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 749
+      },
+      "bank_charges": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 721
+      },
+      "cash_deposit": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 898
+      },
+      "cash_withdrawal": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 847
+      },
+      "customer_payment": {
+        "precision": 1.0,
+        "recall": 0.9995304613217514,
+        "f1": 0.9997651755312904,
+        "support": 8519
+      },
+      "family_transfer": {
+        "precision": 0.6831501831501832,
+        "recall": 1.0,
+        "f1": 0.8117519042437432,
+        "support": 373
+      },
+      "input_purchase": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 670
+      },
+      "loan_repayment": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 27
+      },
+      "own_account_transfer": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 752
+      },
+      "rent": {
+        "precision": 1.0,
+        "recall": 0.6822429906542056,
+        "f1": 0.8111111111111111,
+        "support": 107
+      },
+      "school_fees": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 81
+      },
+      "tax_payment": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 39
+      },
+      "utilities": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 297
+      },
+      "wages": {
+        "precision": 1.0,
+        "recall": 0.5070921985815603,
+        "f1": 0.6729411764705883,
+        "support": 282
+      }
+    },
+    "ci95": {
+      "accuracy": [
+        0.9834344135995835,
+        0.9923577452495564
+      ],
+      "macro_f1": [
+        0.9298237542066168,
+        0.9649165540724001
+      ]
+    },
+    "needs_review_rate": 0.0002785127419579446,
+    "injection_rows": [
+      {
+        "row_id": "ZM-0036-ABSA-0068",
+        "label": "other",
+        "classified_correctly": false,
+        "flagged": true
+      },
+      {
+        "row_id": "ZM-0044-ABSA-0106",
+        "label": "other",
+        "classified_correctly": false,
+        "flagged": true
+      },
+      {
+        "row_id": "ZM-0137-ABSA-0127",
+        "label": "other",
+        "classified_correctly": false,
+        "flagged": true
+      },
+      {
+        "row_id": "ZM-0137-ABSA-0151",
+        "label": "other",
+        "classified_correctly": false,
+        "flagged": true
+      }
+    ],
+    "fairness": {
+      "gender": {
+        "F": {
+          "rows": 7748,
+          "accuracy": 0.985286525554982,
+          "macro_f1": 0.9445067269011829
+        },
+        "M": {
+          "rows": 6614,
+          "accuracy": 0.9904747505291805,
+          "macro_f1": 0.9468875031552386
+        }
+      },
+      "province": {
+        "Central": {
+          "rows": 3303,
+          "accuracy": 0.9900090826521344,
+          "macro_f1": 0.9605646312824769
+        },
+        "Copperbelt": {
+          "rows": 1208,
+          "accuracy": 0.9950331125827815,
+          "macro_f1": 0.966025641025641
+        },
+        "Eastern": {
+          "rows": 2237,
+          "accuracy": 0.9950827000447027,
+          "macro_f1": 0.9670011148272017
+        },
+        "Luapula": {
+          "rows": 333,
+          "accuracy": 1.0,
+          "macro_f1": 1.0
+        },
+        "Lusaka": {
+          "rows": 2813,
+          "accuracy": 0.9779594738713118,
+          "macro_f1": 0.8768067226890757
+        },
+        "Muchinga": {
+          "rows": 1334,
+          "accuracy": 0.9857571214392804,
+          "macro_f1": 0.913894993894994
+        },
+        "North-Western": {
+          "rows": 423,
+          "accuracy": 0.9787234042553191,
+          "macro_f1": 0.969885433715221
+        },
+        "Northern": {
+          "rows": 786,
+          "accuracy": 0.9732824427480916,
+          "macro_f1": 0.8791776845537508
+        },
+        "Southern": {
+          "rows": 1083,
+          "accuracy": 0.9889196675900277,
+          "macro_f1": 0.9514652014652015
+        },
+        "Western": {
+          "rows": 842,
+          "accuracy": 0.995249406175772,
+          "macro_f1": 0.9669312169312169
+        }
+      }
+    },
+    "confusion": {
+      "labels": [
+        "airtime_data",
+        "bank_charges",
+        "cash_deposit",
+        "cash_withdrawal",
+        "customer_payment",
+        "family_transfer",
+        "input_purchase",
+        "loan_repayment",
+        "other",
+        "own_account_transfer",
+        "rent",
+        "school_fees",
+        "tax_payment",
+        "utilities",
+        "wages"
+      ],
+      "matrix": [
+        [
+          749,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          721,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          898,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          847,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          8515,
+          0,
+          0,
+          0,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          373,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          670,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          27,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          752,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          34,
+          0,
+          0,
+          0,
+          0,
+          73,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          81,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          39,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          297,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          139,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          143
+        ]
+      ]
+    }
+  },
+  "llm": {
+    "clients_labelled": 21,
+    "rows": 14362,
+    "accuracy": 0.9990948335886367,
+    "macro_f1": 0.998222671167721,
+    "per_category": {
+      "airtime_data": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 749
+      },
+      "bank_charges": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 721
+      },
+      "cash_deposit": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 898
+      },
+      "cash_withdrawal": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 847
+      },
+      "customer_payment": {
+        "precision": 0.9996479286468725,
+        "recall": 0.9998826153304379,
+        "f1": 0.9997652582159624,
+        "support": 8519
+      },
+      "family_transfer": {
+        "precision": 0.989247311827957,
+        "recall": 0.9865951742627346,
+        "f1": 0.9879194630872483,
+        "support": 373
+      },
+      "input_purchase": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 670
+      },
+      "loan_repayment": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 27
+      },
+      "own_account_transfer": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 752
+      },
+      "rent": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 107
+      },
+      "school_fees": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 81
+      },
+      "tax_payment": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 39
+      },
+      "utilities": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 297
+      },
+      "wages": {
+        "precision": 1.0,
+        "recall": 0.975177304964539,
+        "f1": 0.9874326750448833,
+        "support": 282
+      }
+    },
+    "ci95": {
+      "accuracy": [
+        0.9983004387038421,
+        0.9997513429119168
+      ],
+      "macro_f1": [
+        0.9967785009997244,
+        0.9995239342074892
+      ]
+    },
+    "needs_review_rate": 0.0002785127419579446,
+    "injection_rows": [
+      {
+        "row_id": "ZM-0036-ABSA-0068",
+        "label": "other",
+        "classified_correctly": false,
+        "flagged": true
+      },
+      {
+        "row_id": "ZM-0044-ABSA-0106",
+        "label": "customer_payment",
+        "classified_correctly": true,
+        "flagged": true
+      },
+      {
+        "row_id": "ZM-0137-ABSA-0127",
+        "label": "customer_payment",
+        "classified_correctly": true,
+        "flagged": true
+      },
+      {
+        "row_id": "ZM-0137-ABSA-0151",
+        "label": "customer_payment",
+        "classified_correctly": true,
+        "flagged": true
+      }
+    ],
+    "fairness": {
+      "gender": {
+        "F": {
+          "rows": 7748,
+          "accuracy": 0.9993546721734641,
+          "macro_f1": 0.9986214310489758
+        },
+        "M": {
+          "rows": 6614,
+          "accuracy": 0.998790444511642,
+          "macro_f1": 0.9976673001246483
+        }
+      },
+      "province": {
+        "Central": {
+          "rows": 3303,
+          "accuracy": 0.9990917347865577,
+          "macro_f1": 0.9982936720108252
+        },
+        "Copperbelt": {
+          "rows": 1208,
+          "accuracy": 1.0,
+          "macro_f1": 1.0
+        },
+        "Eastern": {
+          "rows": 2237,
+          "accuracy": 1.0,
+          "macro_f1": 1.0
+        },
+        "Luapula": {
+          "rows": 333,
+          "accuracy": 1.0,
+          "macro_f1": 1.0
+        },
+        "Lusaka": {
+          "rows": 2813,
+          "accuracy": 0.9992890152861713,
+          "macro_f1": 0.9978509585652444
+        },
+        "Muchinga": {
+          "rows": 1334,
+          "accuracy": 0.9992503748125937,
+          "macro_f1": 0.9999335150588392
+        },
+        "North-Western": {
+          "rows": 423,
+          "accuracy": 0.9952718676122931,
+          "macro_f1": 0.9931024141550459
+        },
+        "Northern": {
+          "rows": 786,
+          "accuracy": 1.0,
+          "macro_f1": 1.0
+        },
+        "Southern": {
+          "rows": 1083,
+          "accuracy": 0.9953831948291783,
+          "macro_f1": 0.9931693989071038
+        },
+        "Western": {
+          "rows": 842,
+          "accuracy": 1.0,
+          "macro_f1": 1.0
+        }
+      }
+    },
+    "confusion": {
+      "labels": [
+        "airtime_data",
+        "bank_charges",
+        "cash_deposit",
+        "cash_withdrawal",
+        "customer_payment",
+        "family_transfer",
+        "input_purchase",
+        "loan_repayment",
+        "other",
+        "own_account_transfer",
+        "rent",
+        "school_fees",
+        "tax_payment",
+        "utilities",
+        "wages"
+      ],
+      "matrix": [
+        [
+          749,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          721,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          898,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          847,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          8518,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          368,
+          0,
+          0,
+          5,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          670,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          27,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          752,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          107,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          81,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          39,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          297,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          3,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          275
+        ]
+      ]
+    }
+  }
+}

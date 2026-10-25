@@ -1,0 +1,164 @@
+{
+ "dd9fef712fecf01c8a2dde4da38306870d12a571824b8fefec8eb814868f1481": [
+  [
+   "r1",
+   "rent",
+   "RENT PHIRI SHOPS"
+  ],
+  [
+   "r2",
+   "cash_deposit",
+   "CASH DEPOSIT"
+  ],
+  [
+   "r3",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r4",
+   "input_purchase",
+   "EASTERN GRAIN HAULAGE"
+  ],
+  [
+   "r5",
+   "airtime_data",
+   "AIRTIME PURCHASE"
+  ],
+  [
+   "r6",
+   "utilities",
+   "ZESCO PREPAID"
+  ],
+  [
+   "r7",
+   "own_account_transfer",
+   "TRF [own MTN wallet]"
+  ],
+  [
+   "r8",
+   "tax_payment",
+   "ZRA PAYMENT"
+  ],
+  [
+   "r9",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r10",
+   "input_purchase",
+   "CHIPATA AGRO INPUTS"
+  ],
+  [
+   "r11",
+   "cash_withdrawal",
+   "ATM WDL"
+  ],
+  [
+   "r12",
+   "bank_charges",
+   "MONTHLY SERVICE FEE"
+  ],
+  [
+   "r13",
+   "bank_charges",
+   "SMS ALERT FEE"
+  ],
+  [
+   "r14",
+   "family_transfer",
+   "TRF TO PERSON_13"
+  ],
+  [
+   "r15",
+   "airtime_data",
+   "AIRTIME PURCHASE"
+  ],
+  [
+   "r16",
+   "school_fees",
+   "SCHOOL FEES"
+  ],
+  [
+   "r17",
+   "wages",
+   "SALARY PERSON_18"
+  ],
+  [
+   "r18",
+   "school_fees",
+   "SCHOOL FEES"
+  ],
+  [
+   "r19",
+   "customer_payment",
+   "Received from [phone]"
+  ],
+  [
+   "r20",
+   "input_purchase",
+   "Eastern Grain Haulage"
+  ],
+  [
+   "r21",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r22",
+   "cash_withdrawal",
+   "Cash Out via Agent"
+  ],
+  [
+   "r23",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r24",
+   "own_account_transfer",
+   "Transfer to Bank ABSA"
+  ],
+  [
+   "r25",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r26",
+   "family_transfer",
+   "Sent to [phone] PERSON_13"
+  ],
+  [
+   "r27",
+   "wages",
+   "Sent to [phone] PERSON_18"
+  ],
+  [
+   "r28",
+   "cash_deposit",
+   "Cash In via Agent"
+  ],
+  [
+   "r29",
+   "utilities",
+   "ZESCO Token"
+  ],
+  [
+   "r30",
+   "school_fees",
+   "Payment to Lake View"
+  ],
+  [
+   "r31",
+   "input_purchase",
+   "Chipata Agro Inputs"
+  ],
+  [
+   "r32",
+   "school_fees",
+   "Payment to Hillview Primary"
+  ]
+ ]
+}

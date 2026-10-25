@@ -18,6 +18,10 @@ class LedgerRow:
     balance: float
     page: int
     trust: str = ""      # set by verify.verify_case
+    category: str = ""   # set by labelling.label_case, one of taxonomy.CATEGORIES
+    label_source: str = ""   # "rules:<rule_id>" or "llm:<model>"
+    label_quote: str = ""    # the words in the description the label rests on
+    needs_review: bool = False
 
     @property
     def signed_amount(self) -> float:

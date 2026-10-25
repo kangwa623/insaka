@@ -13,3 +13,7 @@ data/synthetic/transactions/*
 data/synthetic/statements/*
 !data/synthetic/transactions/MWILA-001_*
 !data/synthetic/statements/MWILA-001_*
+
+# Cached model labels: only Mwila's, so the demo runs without an API key.
+data/labels/*
+!data/labels/MWILA-001.json

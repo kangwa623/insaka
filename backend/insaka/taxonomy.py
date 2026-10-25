@@ -4,7 +4,8 @@ CATEGORIES = {
     "customer_payment": "Money received from a customer for goods or services",
     "cash_deposit": "Business takings deposited as cash",
     "own_account_transfer": "Moving money between the owner's own bank and wallet accounts",
-    "input_purchase": "Payment to a supplier for stock, seed, fertiliser or other inputs",
+    "input_purchase": "Payment to a supplier for stock, seed, fertiliser, feed, fuel, spares "
+                      "or other business inputs",
     "wages": "Pay for workers",
     "rent": "Rent for premises",
     "utilities": "Electricity (ZESCO) and water",
