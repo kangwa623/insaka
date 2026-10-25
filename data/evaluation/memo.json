@@ -1,0 +1,21 @@
+{
+  "template_memos": {
+    "memos": 151,
+    "figures_shown": 1661,
+    "correct": 1661,
+    "linked": 1661,
+    "unsupported_numbers": 0,
+    "accuracy": 1.0,
+    "traceability": 1.0,
+    "problems": {}
+  },
+  "mwila_model_memo": {
+    "client_id": "MWILA-001",
+    "written_by": "llm:qwen/qwen3.8-27b",
+    "figures_shown": 23,
+    "correct": 23,
+    "linked": 23,
+    "unsupported_numbers": 0,
+    "problems": []
+  }
+}

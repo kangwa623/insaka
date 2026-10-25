@@ -1,0 +1,32 @@
+{
+  "statements": 348,
+  "rows": 102208,
+  "row_count_mismatches": 0,
+  "row_exact_match": 1.0,
+  "field_accuracy": {
+    "row_id": 1.0,
+    "date": 1.0,
+    "time": 1.0,
+    "description": 1.0,
+    "reference": 1.0,
+    "direction": 1.0,
+    "amount": 1.0,
+    "balance": 1.0
+  },
+  "tamper_detection": {
+    "planted": 8,
+    "caught": 8,
+    "false_alarms": 0,
+    "precision": 1.0,
+    "recall": 1.0
+  },
+  "transfer_matching": {
+    "true_pairs": 2958,
+    "found": 2958,
+    "correct": 2958,
+    "precision": 1.0,
+    "recall": 1.0,
+    "tampered_transfers": 1,
+    "tampered_transfers_disputed": 1
+  }
+}

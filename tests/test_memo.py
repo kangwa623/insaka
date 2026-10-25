@@ -70,3 +70,13 @@ def test_injected_text_never_reaches_the_memo_as_instructions(case, tmp_path):
     memo = draft(case, {"injection_suspected": ["X"], "needs_review": ["X"]}, chat, tmp_path)
     assert memo["written_by"] == "template"
     assert "approve" not in " ".join(s["text"].lower() for s in memo["sections"])
+
+
+def test_memo_evaluation_every_figure_right_and_sourced(tmp_path):
+    from insaka.evaluation.memo import evaluate
+    from insaka.generator import generate
+
+    generate(8, 42, tmp_path, pdfs=False)
+    t = evaluate(tmp_path, tmp_path / "cases")["template_memos"]
+    assert t["memos"] == 9 and t["figures_shown"] > 0
+    assert t["accuracy"] == t["traceability"] == 1.0 and t["unsupported_numbers"] == 0

@@ -223,6 +223,20 @@ For front-end development, run `npm run dev` in `frontend/` alongside the API; V
 - **Agent activity panel:** each step, its reason and result; refused calls are shown in red. **Replay** animates the run, for the demo.
 - Opening `/?tab=cashflow` or `/?figure=peak_month_income` jumps straight to a tab or a figure's sources.
 
+**Evaluation screen** (the **Evaluation** switch at the top, or `/?view=evaluation`): the brief's "How we'll prove it works" table, with each threshold, its measured result and a status. It reads only results already measured, from `data/evaluation/*.json`, through `GET /api/evaluation`. Below the scorecard:
+- statement parsing and tamper detection
+- labelling F1 by category, Qwen vs rules, on held-out clients, plus the prompt-injection rows
+- AUROC with 95% CIs for the four models, and calibration
+- finding detection
+- fairness by gender and province
+- the agent scenarios
+
+Every chart has a table view. Expert judgement and time saved are shown as **not measured yet**, because they need people in a pilot. Fairness shows **Check**: two provinces score more than 0.05 below the overall AUROC (Eastern 0.728 and Southern 0.763, with 12 and 14 defaults), which is too few defaults to be sure either way.
+
+Two evaluations feed it:
+- `python -m insaka.evaluation.parsing --out data/evaluation/parsing.json` saves the parsing results.
+- `python -m insaka.evaluation.memo` checks every figure in all 151 demo memos (template, no model) and in Mwila's Qwen memo: 1,661 figures, 100% equal to the computed value, 100% linked to a source, and 0 numbers without one.
+
 **Resetting the demo:** `python -m insaka.agent MWILA-001` prepares Mwila's case afresh, back to "Awaiting RM review". With `--mode rules` it uses the deterministic agent and needs no Groq quota.
 
 ## Tests

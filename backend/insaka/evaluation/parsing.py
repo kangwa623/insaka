@@ -103,8 +103,13 @@ def evaluate(data_dir: str | Path, workers: int | None = None) -> dict:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--data", default="data/synthetic")
+    parser.add_argument("--out", help="also write the results here, e.g. data/evaluation/parsing.json")
     args = parser.parse_args()
-    print(json.dumps(evaluate(args.data), indent=2))
+    text = json.dumps(evaluate(args.data), indent=2)
+    print(text)
+    if args.out:
+        Path(args.out).parent.mkdir(parents=True, exist_ok=True)
+        Path(args.out).write_text(text, "utf-8")
 
 
 if __name__ == "__main__":

@@ -55,3 +55,14 @@ def test_workflow_over_http_with_server_side_roles(client):
 
 def test_unknown_case_is_404(client):
     assert call(client, "get", "/cases/ZM-9999", "rm.chanda").status_code == 404
+
+
+def test_evaluation_results_need_sign_in():
+    app = create_app()
+    c = app.test_client()
+    assert call(c, "get", "/evaluation").status_code == 401
+    raw = call(c, "get", "/evaluation", "auditor.phiri")
+    assert b"NaN" not in raw.data   # must parse as strict JSON in the browser
+    r = raw.json
+    assert set(r) == {"parsing", "labelling", "labelling_holdout", "scoring", "memo", "agent"}
+    assert r["scoring"]["holdout"]["models"]["logistic"]["auroc"] > 0.8

@@ -15,12 +15,24 @@ from flask import Flask, abort, jsonify, request, send_from_directory
 from .case import USERS, NotAllowed, load_case, load_ledger
 
 FRONTEND = Path(__file__).resolve().parents[2] / "frontend" / "dist"
+EVALUATIONS = ("parsing", "labelling", "labelling_holdout", "scoring", "memo", "agent")
+
+
+def _finite(o):
+    """NaN (e.g. AUROC for a group with no defaults) is not valid JSON; send null."""
+    if isinstance(o, float) and o != o:
+        return None
+    if isinstance(o, dict):
+        return {k: _finite(v) for k, v in o.items()}
+    if isinstance(o, list):
+        return [_finite(v) for v in o]
+    return o
 
 
 def create_app(data_dir="data/synthetic", cases_dir="data/cases", agent_dir="data/agent",
-               **agent_settings) -> Flask:
+               evaluation_dir="data/evaluation", **agent_settings) -> Flask:
     app = Flask(__name__, static_folder=None)
-    data_dir, cases_dir = Path(data_dir), Path(cases_dir)
+    data_dir, cases_dir, evaluation_dir = Path(data_dir), Path(cases_dir), Path(evaluation_dir)
 
     def clients() -> dict:
         return {c["client_id"]: c for c in
@@ -78,6 +90,16 @@ def create_app(data_dir="data/synthetic", cases_dir="data/cases", agent_dir="dat
             return jsonify(client=client, case=None, audit=[])
         view = load_case(cid, cases_dir).view(u)
         return jsonify(client=client, **view)
+
+    @app.get("/api/evaluation")
+    def evaluation():
+        """Every evaluation result, as measured; a missing file comes back as null."""
+        user()
+        out = {}
+        for name in EVALUATIONS:
+            path = evaluation_dir / f"{name}.json"
+            out[name] = _finite(json.loads(path.read_text("utf-8"))) if path.exists() else None
+        return jsonify(out)
 
     @app.get("/api/cases/<cid>/ledger")
     def ledger(cid):

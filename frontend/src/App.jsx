@@ -3,6 +3,7 @@ import { api, fmtFigure, kwacha, STATUS } from "./api.js";
 import AgentPanel from "./AgentPanel.jsx";
 import Actions from "./Actions.jsx";
 import CashflowChart from "./CashflowChart.jsx";
+import Evaluation from "./Evaluation.jsx";
 import Memo from "./Memo.jsx";
 import SourceDrawer from "./SourceDrawer.jsx";
 import { AuditTrail, Transactions } from "./Tables.jsx";
@@ -17,6 +18,7 @@ export default function App() {
   const [ledger, setLedger] = useState([]);
   const params = new URLSearchParams(window.location.search);
   const [tab, setTab] = useState(params.get("tab") || "memo");
+  const [screen, setScreen] = useState(params.get("view") === "evaluation" ? "evaluation" : "cases");
   const [drawer, setDrawer] = useState(null);   // {title, value, label, source, rows}
   const [busy, setBusy] = useState(false);
   const [toast, setToast] = useState(null);
@@ -79,6 +81,11 @@ export default function App() {
           <span className="wordmark">Insaka</span>
           <span className="tagline">Every figure traceable, every decision human.</span>
         </div>
+        <nav className="screens">
+          {[["cases", "Cases"], ["evaluation", "Evaluation"]].map(([k, l]) => (
+            <button key={k} className={screen === k ? "on" : ""} onClick={() => setScreen(k)}>{l}</button>
+          ))}
+        </nav>
         <span className="pill synthetic">Synthetic data · prototype</span>
         <label className="signin">
           Signed in as
@@ -90,6 +97,7 @@ export default function App() {
         </label>
       </header>
 
+      {screen === "evaluation" ? <Evaluation user={user} /> : (
       <div className="layout">
         <aside className="cases">
           <input className="search" placeholder="Search cases" value={filter}
@@ -134,6 +142,7 @@ export default function App() {
         <AgentPanel run={c?.agent_run} escalations={c?.escalations || []} replayKey={replayKey}
                     onReplay={() => setReplayKey((k) => k + 1)} />
       </div>
+      )}
 
       {drawer && <SourceDrawer drawer={drawer} rowsById={rowsById} close={() => setDrawer(null)} />}
       {toast && <div className={`toast ${toast.kind}`}>{toast.text}</div>}
