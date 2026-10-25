@@ -22,3 +22,9 @@ data/memos/*
 
 # The risk model's training cohort (seed 43) is regenerated on demand.
 data/training/
+
+# Agent runs and case files: only Mwila's demo case is kept.
+data/agent/*
+!data/agent/MWILA-001.json
+data/cases/*
+!data/cases/MWILA-001*

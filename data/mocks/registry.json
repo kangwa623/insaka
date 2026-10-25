@@ -1,0 +1,5 @@
+{
+  "_note": "Synthetic fixture for the mocked PACRA and ZRA lookups. Applicants listed here declared a registration that the mock registry cannot find, to exercise the agent's stop-and-escalate rule.",
+  "pacra_not_found": ["ZM-0003", "ZM-0008"],
+  "zra_no_record": ["ZM-0009"]
+}

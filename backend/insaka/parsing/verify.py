@@ -38,8 +38,16 @@ def reconcile(statement: Statement) -> dict:
     }
 
 
+def _covers(statement: Statement, day: str) -> bool:
+    """Whether a statement's period includes this date; statements often cover different spans."""
+    return bool(statement.rows) and statement.rows[0].date <= day <= statement.rows[-1].date
+
+
 def cross_match(absa: Statement, wallets: list[Statement]) -> dict:
-    """Pair wallet-to-bank transfers with Absa's record of them, by reference."""
+    """Pair wallet-to-bank transfers with Absa's record of them, by reference.
+
+    A transfer only lacks a partner if the other statement covers its date.
+    """
     absa_by_ref = {r.reference: r for r in absa.rows}
     matched, mismatched, unmatched = [], [], []
     wallet_refs = set()
@@ -48,7 +56,8 @@ def cross_match(absa: Statement, wallets: list[Statement]) -> dict:
             wallet_refs.add(row.reference)
             bank_row = absa_by_ref.get(row.reference)
             if bank_row is None:
-                if row.direction == "debit" and "BANK ABSA" in row.description.upper():
+                if (row.direction == "debit" and "BANK ABSA" in row.description.upper()
+                        and _covers(absa, row.date)):
                     unmatched.append(row.row_id)
                 continue
             if (abs(bank_row.amount - row.amount) <= TOLERANCE
@@ -58,10 +67,10 @@ def cross_match(absa: Statement, wallets: list[Statement]) -> dict:
                 mismatched.append({"wallet_row": row.row_id, "absa_row": bank_row.row_id,
                                    "wallet_amount": row.amount, "absa_amount": bank_row.amount})
     # Absa credits that name a supplied wallet but have no partner on its statement.
-    accounts = {w.account for w in wallets}
     for row in absa.rows:
-        names_wallet = any(a in row.description for a in accounts)
-        if names_wallet and "MOMO TRF" in row.description and row.reference not in wallet_refs:
+        wallet = next((w for w in wallets if w.account in row.description), None)
+        if (wallet and "MOMO TRF" in row.description and row.reference not in wallet_refs
+                and _covers(wallet, row.date)):
             unmatched.append(row.row_id)
     return {"matched": matched, "mismatched": mismatched, "unmatched": unmatched}
 

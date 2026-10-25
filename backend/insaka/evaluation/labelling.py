@@ -24,27 +24,35 @@ from ..ledger import LedgerRow, Statement
 SAMPLE_SEED = 7
 
 
+def load_statement(data_dir: Path, client: dict, channel: str) -> tuple[Statement, dict]:
+    """One statement rebuilt from its ground-truth CSV, plus truth per row_id."""
+    path = Path(data_dir) / "transactions" / f"{client['client_id']}_{channel}.csv"
+    with open(path, encoding="utf-8") as f:
+        rows = list(csv.DictReader(f))
+    statement = Statement(
+        statement_id=f"{client['client_id']}-{channel.upper()}", channel=channel,
+        holder=client["owner_name"], business=client["business_name"],
+        account=client["channels"][channel], period="", opening_balance=0.0,
+        closing_balance=0.0, source_file=str(path))
+    truth = {}
+    for r in rows:
+        statement.rows.append(LedgerRow(
+            row_id=r["row_id"], channel=channel, date=r["date"], time=r["time"],
+            description=r["description"], reference=r["reference"],
+            direction=r["direction"], amount=float(r["amount"]),
+            balance=float(r["balance"]), page=0))
+        truth[r["row_id"]] = {"category": r["true_category"],
+                              "injection": r["injection"] == "True"}
+    return statement, truth
+
+
 def load_case(data_dir: Path, client: dict) -> tuple[list[Statement], dict]:
     """A client's statements rebuilt from the ground-truth CSVs, plus truth per row_id."""
     statements, truth = [], {}
     for channel in client["channels"]:
-        path = data_dir / "transactions" / f"{client['client_id']}_{channel}.csv"
-        with open(path, encoding="utf-8") as f:
-            rows = list(csv.DictReader(f))
-        statement = Statement(
-            statement_id=f"{client['client_id']}-{channel.upper()}", channel=channel,
-            holder=client["owner_name"], business=client["business_name"],
-            account=client["channels"][channel], period="", opening_balance=0.0,
-            closing_balance=0.0, source_file=str(path))
-        for r in rows:
-            statement.rows.append(LedgerRow(
-                row_id=r["row_id"], channel=channel, date=r["date"], time=r["time"],
-                description=r["description"], reference=r["reference"],
-                direction=r["direction"], amount=float(r["amount"]),
-                balance=float(r["balance"]), page=0))
-            truth[r["row_id"]] = {"category": r["true_category"],
-                                  "injection": r["injection"] == "True"}
+        statement, rows = load_statement(data_dir, client, channel)
         statements.append(statement)
+        truth.update(rows)
     return statements, truth
 
 

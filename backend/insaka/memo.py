@@ -91,8 +91,9 @@ def application_figures(client: dict, scored: dict) -> dict[str, Figure]:
     return {f.name: f for f in figs}
 
 
-def assess(statements, report, client: dict, bundle: dict | None = None) -> dict:
-    """Everything the memo needs, computed in code."""
+def assess(statements, report, client: dict, bundle: dict | None = None,
+           checks: dict | None = None) -> dict:
+    """Everything the memo needs, computed in code. checks: PACRA/ZRA/bureau results, if run."""
     corrections = {b["row_id"]: b["implied_amount"]
                    for c in report["statements"] for b in c["breaks"]}
     figures = compute_features(statements, client, corrections)
@@ -102,7 +103,31 @@ def assess(statements, report, client: dict, bundle: dict | None = None) -> dict
     scored = risk.score(bundle, risk.model_inputs(values, findings, client))
     figures.update(application_figures(client, scored))
     return {"client": client, "figures": figures, "findings": findings, "score": scored,
-            "report": report}
+            "report": report, "checks": checks or {}}
+
+
+CHECK_TEXT = {
+    "PACRA": {"found": "PACRA confirms the business is registered and active",
+              "not_registered": "not registered with PACRA (an informal business)",
+              "not_found": "PACRA cannot find the business the applicant says is registered"},
+    "ZRA": {"compliant": "ZRA confirms the TPIN and tax compliance",
+            "not_registered": "no TPIN with ZRA",
+            "no_record": "ZRA has no record of the TPIN the applicant declared"},
+    "Credit bureau": {"clean": "the credit bureau shows a clean record",
+                      "no_hit": "the credit bureau has no history for the applicant (thin file)",
+                      "adverse": "the credit bureau shows an adverse record"},
+}
+
+
+def checks_text(client: dict, checks: dict) -> str:
+    app = client["application"]
+    if not checks:
+        return (f"Bureau: {app['bureau_status'].replace('_', ' ')}. "
+                f"Declared on the application, not yet checked with PACRA or ZRA: "
+                f"PACRA registered {'yes' if app['pacra_registered'] else 'no'}, "
+                f"TPIN registered {'yes' if app['tpin_registered'] else 'no'}.")
+    said = [CHECK_TEXT[c["service"]][c["status"]] for c in checks.values()]
+    return "Checks (mocked services in this prototype): " + "; ".join(said) + "."
 
 
 def facts_text(case: dict, labelling: dict) -> str:
@@ -110,10 +135,7 @@ def facts_text(case: dict, labelling: dict) -> str:
     c, s, report = case["client"], case["score"], case["report"]
     lines = [f"Business type: {c['business_type']} in {c['province']} Province "
              f"({c['sector']}). Loan purpose: {c['application']['purpose']}.",
-             f"Bureau: {c['application']['bureau_status'].replace('_', ' ')}. "
-             f"Declared on the application, not yet checked with PACRA or ZRA: "
-             f"PACRA registered {'yes' if c['application']['pacra_registered'] else 'no'}, "
-             f"TPIN registered {'yes' if c['application']['tpin_registered'] else 'no'}.",
+             checks_text(c, case.get("checks", {})),
              f"Risk band: {s['band']}.", "", "Figures (placeholder: meaning = value):"]
     for f in case["figures"].values():
         lines.append(f"{{{{{f.name}}}}}: {f.label} = {fmt(f)}")
@@ -272,6 +294,18 @@ def to_markdown(memo: dict, case: dict) -> str:
     return "\n".join(lines) + "\n"
 
 
+def save(memo: dict, case: dict, out: str | Path = "data/memos") -> str:
+    """Write {client}_memo.json (with every figure and its rows) and {client}_memo.md."""
+    out = Path(out)
+    out.mkdir(parents=True, exist_ok=True)
+    cid = case["client"]["client_id"]
+    (out / f"{cid}_memo.json").write_text(json.dumps(
+        {**memo, "figures": {k: f.to_dict() for k, f in case["figures"].items()}}, indent=2), "utf-8")
+    markdown = to_markdown(memo, case)
+    (out / f"{cid}_memo.md").write_text(markdown, "utf-8")
+    return markdown
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Assess one client's statements and draft the memo.")
     parser.add_argument("pdfs", nargs="+")
@@ -287,13 +321,7 @@ def main() -> None:
                   if c["client_id"] == cid)
     case = assess(statements, report, client)
     memo = draft(case, labelling)
-    out = Path(args.out)
-    out.mkdir(parents=True, exist_ok=True)
-    (out / f"{cid}_memo.json").write_text(json.dumps(
-        {**memo, "figures": {k: f.to_dict() for k, f in case["figures"].items()}}, indent=2), "utf-8")
-    markdown = to_markdown(memo, case)
-    (out / f"{cid}_memo.md").write_text(markdown, "utf-8")
-    print(markdown)
+    print(save(memo, case, args.out))
     if memo["rejected_drafts"]:
         print(f"Model drafts rejected: {memo['rejected_drafts']}")
 

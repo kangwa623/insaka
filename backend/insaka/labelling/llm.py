@@ -26,6 +26,7 @@ PROMPT_VERSION = "v3"
 DEFAULT_MODEL = "qwen/qwen3.8-27b"
 BATCH_SIZE = 40
 MAX_OUTPUT_TOKENS = 900   # the Groq free tier allows 1,000 output tokens a minute
+AGENT_OUTPUT_TOKENS = 250   # one tool call per agent turn needs little
 
 SYSTEM_PROMPT = """You label rows from a Zambian small business's bank (Absa) and mobile-money \
 (MTN, Airtel) statements for a credit assessment.
@@ -154,6 +155,40 @@ class GroqChat:
             messages=[{"role": "system", "content": system}, {"role": "user", "content": user}],
             **extra)
         return reply.choices[0].message.content or ""
+
+    def turn(self, messages: list, tools: list) -> dict:
+        """One agent step with native tool calling, normalised for the agent loop.
+
+        If the model calls a tool that doesn't exist, Groq rejects the generation (400
+        tool_use_failed); that comes back as a call to the made-up name, so the loop can
+        refuse it and log it like any other forbidden call.
+        """
+        from groq import BadRequestError
+
+        extra = {"reasoning_effort": "none"} if "qwen3" in self.model else {}
+        try:
+            reply = self.client.chat.completions.create(
+                model=self.model, temperature=0, max_completion_tokens=AGENT_OUTPUT_TOKENS,
+                messages=messages, tools=tools, tool_choice="auto", parallel_tool_calls=False,
+                **extra)
+        except BadRequestError as e:
+            body = getattr(e, "body", None) or {}
+            err = body.get("error", body) if isinstance(body, dict) else {}
+            if err.get("code") != "tool_use_failed":
+                raise
+            failed = err.get("failed_generation", "")
+            name = m.group(1) if (m := re.search(r"<function=([\w.-]+)>", failed)) else "unknown"
+            return {"text": "", "calls": [], "invalid_call": name, "tokens": 0}
+        message = reply.choices[0].message
+        calls = []
+        for t in message.tool_calls or []:
+            try:
+                args = json.loads(t.function.arguments or "{}")
+            except json.JSONDecodeError:
+                args = {"_unparseable": t.function.arguments}
+            calls.append({"id": t.id, "name": t.function.name, "arguments": args})
+        return {"text": message.content or "", "calls": calls,
+                "tokens": reply.usage.total_tokens if reply.usage else 0}
 
 
 class LLMLabeller:
