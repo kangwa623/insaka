@@ -70,13 +70,21 @@ def create_app(data_dir="data/synthetic", cases_dir="data/cases", agent_dir="dat
             path = cases_dir / f"{cid}.json"
             data = json.loads(path.read_text("utf-8")) if path.exists() else {}
             score = data.get("score") or {}
+            steps = (data.get("agent_run") or {}).get("steps") or []
+            audit = cases_dir / f"{cid}.audit.jsonl"
+            last = audit.read_text("utf-8").strip().splitlines()[-1] if audit.exists() else None
             rows.append({"client_id": cid, "business_name": c["business_name"],
                          "business_type": c["business_type"], "town": c["town"],
                          "province": c["province"],
                          "requested_amount": c["application"]["requested_amount"],
                          "status": data.get("status", "not_started"),
                          "band": score.get("band"), "pd": score.get("pd"),
-                         "escalations": len(data.get("escalations", []))})
+                         "escalations": len(data.get("escalations", [])),
+                         "stage_since": json.loads(last)["at"] if last else None,
+                         "prepared_in_seconds": round(sum(s.get("ms", 0) for s in steps) / 1000, 1)
+                         if steps else None,
+                         "submitted_by": data.get("submitted_by"),
+                         "decision": (data.get("decision") or {}).get("decision")})
         order = {"MWILA-001": 0}
         rows.sort(key=lambda r: (order.get(r["client_id"], 1), r["status"] == "not_started",
                                  r["client_id"]))
@@ -105,6 +113,13 @@ def create_app(data_dir="data/synthetic", cases_dir="data/cases", agent_dir="dat
     def ledger(cid):
         user()
         return jsonify(load_ledger(cid, cases_dir))
+
+    @app.get("/api/cases/<cid>/pamodzi")
+    def pamodzi(cid):
+        user()
+        case_or_404(cid)
+        from .pamodzi import monthly_flows
+        return jsonify(monthly_flows(load_ledger(cid, cases_dir)))
 
     @app.post("/api/cases/<cid>/run")
     def run(cid):

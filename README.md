@@ -223,6 +223,13 @@ For front-end development, run `npm run dev` in `frontend/` alongside the API; V
 - **Agent activity panel:** each step, its reason and result; refused calls are shown in red. **Replay** animates the run, for the demo.
 - Opening `/?tab=cashflow` or `/?figure=peak_month_income` jumps straight to a tab or a figure's sources.
 
+**Pamodzi view** (a tab on the client page): Absa, MTN and Airtel combined month by month ([pamodzi.py](backend/insaka/pamodzi.py)).
+- Money in and money out per account. Money moved between the owner's own accounts is shown on its own and left out, so it isn't counted twice.
+- Every amount opens its statement lines.
+- Each account-month is checked: in minus out must equal the change in balance, so an edited statement shows up here too.
+
+**Pipeline board** (the **Pipeline** switch at the top): every case by stage, from application to escalated, with the RM, with the approver, approved, disbursed or declined. Each card shows the risk band, time in stage and "memo ready in" (the agent's time to a decision-ready case). Clicking a card opens the case. To fill the board with demo cases, run `python -m insaka.demo --seed`. It prepares 8 clients with the rules agent (cached labels, template memo, no model calls) and moves them through the workflow with the synthetic staff. Seeded cases aren't committed.
+
 **Evaluation screen** (the **Evaluation** switch at the top, or `/?view=evaluation`): the brief's "How we'll prove it works" table, with each threshold, its measured result and a status. It reads only results already measured, from `data/evaluation/*.json`, through `GET /api/evaluation`. Below the scorecard:
 - statement parsing and tamper detection
 - labelling F1 by category, Qwen vs rules, on held-out clients, plus the prompt-injection rows

@@ -12,7 +12,7 @@ export async function api(path, user, { method = "GET", body } = {}) {
   return data;
 }
 
-export const kwacha = (v) => `K${Math.round(v).toLocaleString("en-ZM")}`;
+export const kwacha = (v) => `${v < 0 ? "−" : ""}K${Math.abs(Math.round(v)).toLocaleString("en-ZM")}`;
 
 export const STATUS = {
   not_started: "Not started",

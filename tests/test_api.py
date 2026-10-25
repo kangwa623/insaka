@@ -66,3 +66,11 @@ def test_evaluation_results_need_sign_in():
     r = raw.json
     assert set(r) == {"parsing", "labelling", "labelling_holdout", "scoring", "memo", "agent"}
     assert r["scoring"]["holdout"]["models"]["logistic"]["auroc"] > 0.8
+
+
+def test_pipeline_fields_and_pamodzi(client):
+    rows = {r["client_id"]: r for r in call(client, "get", "/cases", "rm.chanda").json}
+    mwila = rows[MWILA_ID]
+    assert mwila["stage_since"] and mwila["prepared_in_seconds"] is not None
+    p = call(client, "get", f"/cases/{MWILA_ID}/pamodzi", "rm.chanda").json
+    assert p["channels"] and p["balance_check"]["mismatches"] == []
