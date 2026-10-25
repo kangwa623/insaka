@@ -14,6 +14,11 @@ data/synthetic/statements/*
 !data/synthetic/transactions/MWILA-001_*
 !data/synthetic/statements/MWILA-001_*
 
-# Cached model labels: only Mwila's, so the demo runs without an API key.
+# Cached model labels and memos: only Mwila's, so the demo runs without an API key.
 data/labels/*
 !data/labels/MWILA-001.json
+data/memos/*
+!data/memos/MWILA-001*
+
+# The risk model's training cohort (seed 43) is regenerated on demand.
+data/training/

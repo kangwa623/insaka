@@ -16,6 +16,7 @@ import hashlib
 import json
 import os
 import re
+import time
 from pathlib import Path
 
 from ..taxonomy import CATEGORIES
@@ -170,8 +171,19 @@ class LLMLabeller:
         return json.loads(path.read_text("utf-8")) if path.exists() else {}
 
     def _save(self, client: str, cache: dict) -> None:
-        self.cache_dir.mkdir(parents=True, exist_ok=True)
-        self._cache_path(client).write_text(json.dumps(cache, indent=1), "utf-8")
+        """Write via a temp file; retry briefly, as Windows can hold a new file for a moment."""
+        path = self._cache_path(client)
+        tmp = path.with_suffix(".tmp")
+        for attempt in range(5):
+            try:
+                self.cache_dir.mkdir(parents=True, exist_ok=True)
+                tmp.write_text(json.dumps(cache, indent=1), "utf-8")
+                os.replace(tmp, path)
+                return
+            except OSError:
+                if attempt == 4:
+                    raise
+                time.sleep(0.5 * (attempt + 1))
 
     def _ask(self, client: str, cache: dict, used: dict, system: str, user: str) -> list:
         key = hashlib.sha256(f"{self.model}\n{PROMPT_VERSION}\n{system}\n{user}".encode()).hexdigest()

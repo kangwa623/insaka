@@ -107,6 +107,54 @@ The prompt was tuned on the main sample: Mwila, the 3 injection clients, 2 tampe
 
 Results are written to `data/evaluation/labelling.json` and `labelling_holdout.json`.
 
+**Pre-labelling every client** (`python -m insaka.labelling.batch [--wait]`) is limited by the free tier, which allows 200,000 tokens a day and refills at about 8,000 an hour. That covers about 35 clients a day, and 56 of 151 are labelled so far. With `--wait` the batch sleeps whenever the quota runs out and then carries on. Don't leave it running before a live demo, because it would use the quota the demo's live upload needs.
+
+## Step 4: features, risk score, findings and memo
+
+```powershell
+.\.venv\Scripts\python -m insaka.memo data/synthetic/statements/MWILA-001_absa.pdf data/synthetic/statements/MWILA-001_mtn.pdf
+```
+
+This command parses, verifies, labels, computes features, detects findings, scores and drafts the memo. It writes `data/memos/MWILA-001_memo.json` (for the app) and `MWILA-001_memo.md`.
+
+**Features** ([features.py](backend/insaka/features.py)):
+- Every figure is a `Figure`: a value plus the row_ids it was computed from, so any number in the memo can be traced back to its transactions.
+- The features are monthly income, volatility before and after allowing for the season, peak month, overdraft days, largest-customer share, mobile-money share, committed costs, surplus and debt-service cover.
+- **Correctness check:** on 300 training clients, the features computed from the ledger match the generator's truth to within 0.3%. The one exception is largest-customer share, off by at most 0.08 when a bank line such as "TRF FROM BANDA C" fits more than one customer.
+- **Edited rows:** for rows the tamper check caught, the amount the balances imply replaces the edited amount.
+
+**Findings** ([findings.py](backend/insaka/findings.py)) are rules over the features, with thresholds tuned only on the training cohort. Seasonal income is reported as context, not as risk. It's detected when the business's Zambian season predicts a peak and the income actually follows that season.
+
+**Risk score** ([scoring/model.py](backend/insaka/scoring/model.py)):
+- Logistic regression over application data (years trading, PACRA, bureau status) and statement features: volatility after allowing for the season, overdraft days, largest-customer share, debt-service cover, drought shock.
+- Each score comes with plain-language reasons for what raises and lowers the risk.
+- TPIN registration, loan size and mobile-money share were left out. Their learned weights went against credit sense (for example, being paid by MoMo raised risk), and dropping them cost no accuracy.
+- The model was trained on 1,000 clients from a separate cohort (seed 43), using the generator's categories. Qwen matched those on every held-out row in Step 3.
+
+**Evaluation** (`python -m insaka.evaluation.scoring`, 95% bootstrap CIs):
+
+| | Held-out 1,001 clients (156 defaults) | Demo 151 clients (20 defaults) |
+|---|---|---|
+| Logistic regression | **AUROC 0.835** [0.801, 0.866] | **0.853** [0.743, 0.943] |
+| Application data only | 0.582 [0.536, 0.633] | 0.609 [0.459, 0.757] |
+| Gradient boosting (challenger) | 0.800 [0.762, 0.837] | 0.826 [0.710, 0.923] |
+| Approve everyone | 0.500 | 0.500 |
+| AUROC gain from statements | **+0.254** [0.197, 0.309] | +0.243 [0.058, 0.423] |
+
+- **Calibration:** predicted and observed default rates agree in each fifth of the held-out cohort, for example 0.16 predicted vs 0.18 observed, and 0.52 vs 0.47 in the riskiest fifth.
+- **Logistic regression beats gradient boosting** on both cohorts, which matches the study cited in the brief.
+- **Finding detection:** F1 between 0.97 and 1.00 for every finding, on both cohorts. The target is 0.85.
+- **Fairness:** AUROC is 0.85 for women and 0.82 for men on the held-out cohort. The full split by gender and province is in `data/evaluation/scoring.json`.
+- **Qwen labels vs generator categories:** on the 56 demo clients Qwen has labelled, Qwen's labels give the same findings for every client and move the PD by at most 3 points.
+
+**Memo** ([memo.py](backend/insaka/memo.py)):
+- Qwen writes the sections from masked facts and may refer to numbers and months only through placeholders such as `{{mean_monthly_income}}`. Code fills each placeholder with the computed value and a link to its rows.
+- **Code rejects a draft that** contains a digit, number word or date of its own, names an unknown figure, or approves or declines. One retry is allowed, with the reason it was rejected.
+- **If Qwen still fails or can't be reached,** a fixed template is used, so a memo always goes out.
+- Every memo reports how many figures it uses, how many are linked to a source, and how many numbers have no source. That last count is always 0.
+
+The model is saved to `models/risk_lr.joblib`. Results are written to `data/evaluation/scoring.json`.
+
 ## Tests
 
 ```powershell

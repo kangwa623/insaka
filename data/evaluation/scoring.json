@@ -1,0 +1,464 @@
+{
+  "train": {
+    "clients": 1000,
+    "defaults": 165,
+    "cohort_seed": 43
+  },
+  "holdout": {
+    "clients": 1001,
+    "defaults": 156,
+    "models": {
+      "logistic": {
+        "auroc": 0.8354195114550145,
+        "brier": 0.10153007817050044,
+        "auroc_ci95": [
+          0.8011205355811887,
+          0.8664375077751244
+        ],
+        "brier_ci95": [
+          0.08940290587468419,
+          0.11480637682442844
+        ]
+      },
+      "application_only": {
+        "auroc": 0.5818768016992868,
+        "brier": 0.12992287634055216,
+        "auroc_ci95": [
+          0.5364862322543729,
+          0.6328676702347094
+        ],
+        "brier_ci95": [
+          0.11417666574497873,
+          0.1448738194475112
+        ]
+      },
+      "gradient_boosting": {
+        "auroc": 0.7996055226824459,
+        "brier": 0.10755869444865898,
+        "auroc_ci95": [
+          0.7616973367081892,
+          0.8366701238124002
+        ],
+        "brier_ci95": [
+          0.0948190147303527,
+          0.1216628522724656
+        ]
+      },
+      "approve_everyone": {
+        "auroc": 0.5,
+        "brier": 0.13164058441558443,
+        "auroc_ci95": null,
+        "brier_ci95": null
+      }
+    },
+    "statement_gain_auroc": {
+      "value": 0.2535427097557277,
+      "ci95": [
+        0.19653296377157178,
+        0.30862308482253975
+      ]
+    },
+    "calibration_logistic": [
+      {
+        "mean_predicted": 0.014754286129866095,
+        "observed_default_rate": 0.014925373134328358,
+        "clients": 201
+      },
+      {
+        "mean_predicted": 0.03525827379957707,
+        "observed_default_rate": 0.025,
+        "clients": 200
+      },
+      {
+        "mean_predicted": 0.06759778212655615,
+        "observed_default_rate": 0.09,
+        "clients": 200
+      },
+      {
+        "mean_predicted": 0.1643471862541647,
+        "observed_default_rate": 0.18,
+        "clients": 200
+      },
+      {
+        "mean_predicted": 0.5246894800482842,
+        "observed_default_rate": 0.47,
+        "clients": 200
+      }
+    ],
+    "fairness": {
+      "gender": {
+        "F": {
+          "clients": 477,
+          "defaults": 77,
+          "auroc": 0.8483116883116882,
+          "mean_pd": 0.16808616402340656,
+          "default_rate": 0.16142557651991615
+        },
+        "M": {
+          "clients": 524,
+          "defaults": 79,
+          "auroc": 0.8236666192575736,
+          "mean_pd": 0.1548989612951423,
+          "default_rate": 0.15076335877862596
+        }
+      },
+      "province": {
+        "Central": {
+          "clients": 95,
+          "defaults": 16,
+          "auroc": 0.8599683544303798,
+          "mean_pd": 0.1641894913195442,
+          "default_rate": 0.16842105263157894
+        },
+        "Copperbelt": {
+          "clients": 89,
+          "defaults": 17,
+          "auroc": 0.9068627450980392,
+          "mean_pd": 0.21573614461345042,
+          "default_rate": 0.19101123595505617
+        },
+        "Eastern": {
+          "clients": 95,
+          "defaults": 12,
+          "auroc": 0.7279116465863454,
+          "mean_pd": 0.15637907546606178,
+          "default_rate": 0.12631578947368421
+        },
+        "Luapula": {
+          "clients": 106,
+          "defaults": 21,
+          "auroc": 0.8162464985994398,
+          "mean_pd": 0.13837527276724312,
+          "default_rate": 0.19811320754716982
+        },
+        "Lusaka": {
+          "clients": 93,
+          "defaults": 13,
+          "auroc": 0.8884615384615384,
+          "mean_pd": 0.1221686493401545,
+          "default_rate": 0.13978494623655913
+        },
+        "Muchinga": {
+          "clients": 98,
+          "defaults": 18,
+          "auroc": 0.8604166666666666,
+          "mean_pd": 0.17504519314694886,
+          "default_rate": 0.1836734693877551
+        },
+        "North-Western": {
+          "clients": 96,
+          "defaults": 11,
+          "auroc": 0.8716577540106951,
+          "mean_pd": 0.1639714911740155,
+          "default_rate": 0.11458333333333333
+        },
+        "Northern": {
+          "clients": 111,
+          "defaults": 17,
+          "auroc": 0.8510638297872339,
+          "mean_pd": 0.15229061265892926,
+          "default_rate": 0.15315315315315314
+        },
+        "Southern": {
+          "clients": 102,
+          "defaults": 14,
+          "auroc": 0.762987012987013,
+          "mean_pd": 0.1681404911111553,
+          "default_rate": 0.13725490196078433
+        },
+        "Western": {
+          "clients": 116,
+          "defaults": 17,
+          "auroc": 0.8306595365418895,
+          "mean_pd": 0.16129208414691562,
+          "default_rate": 0.14655172413793102
+        }
+      }
+    }
+  },
+  "demo": {
+    "clients": 151,
+    "defaults": 20,
+    "models": {
+      "logistic": {
+        "auroc": 0.8526717557251908,
+        "brier": 0.08365671956349437,
+        "auroc_ci95": [
+          0.7429508747537944,
+          0.9426696790638396
+        ],
+        "brier_ci95": [
+          0.05369219286300794,
+          0.11682182945513186
+        ]
+      },
+      "application_only": {
+        "auroc": 0.6093511450381679,
+        "brier": 0.11170941250779978,
+        "auroc_ci95": [
+          0.45905910609857986,
+          0.7567828880845112
+        ],
+        "brier_ci95": [
+          0.07942194892360607,
+          0.14803097318165095
+        ]
+      },
+      "gradient_boosting": {
+        "auroc": 0.8255725190839696,
+        "brier": 0.08994300677717366,
+        "auroc_ci95": [
+          0.7102634559577506,
+          0.9230670717104639
+        ],
+        "brier_ci95": [
+          0.05763668861297852,
+          0.12384417908778429
+        ]
+      },
+      "approve_everyone": {
+        "auroc": 0.5,
+        "brier": 0.11596672185430465,
+        "auroc_ci95": null,
+        "brier_ci95": null
+      }
+    },
+    "statement_gain_auroc": {
+      "value": 0.24332061068702293,
+      "ci95": [
+        0.0580292389438161,
+        0.4225844704831393
+      ]
+    },
+    "calibration_logistic": [
+      {
+        "mean_predicted": 0.012723565443348505,
+        "observed_default_rate": 0.03225806451612903,
+        "clients": 31
+      },
+      {
+        "mean_predicted": 0.032106948532093296,
+        "observed_default_rate": 0.0,
+        "clients": 30
+      },
+      {
+        "mean_predicted": 0.058165957208768194,
+        "observed_default_rate": 0.06666666666666667,
+        "clients": 30
+      },
+      {
+        "mean_predicted": 0.12609890671171023,
+        "observed_default_rate": 0.13333333333333333,
+        "clients": 30
+      },
+      {
+        "mean_predicted": 0.4081763414551978,
+        "observed_default_rate": 0.43333333333333335,
+        "clients": 30
+      }
+    ],
+    "fairness": {
+      "gender": {
+        "F": {
+          "clients": 81,
+          "defaults": 12,
+          "auroc": 0.8369565217391304,
+          "mean_pd": 0.1161374801595847,
+          "default_rate": 0.14814814814814814
+        },
+        "M": {
+          "clients": 70,
+          "defaults": 8,
+          "auroc": 0.8830645161290323,
+          "mean_pd": 0.1389105607578647,
+          "default_rate": 0.11428571428571428
+        }
+      },
+      "province": {
+        "Central": {
+          "clients": 12,
+          "defaults": 3,
+          "auroc": 0.7037037037037037,
+          "mean_pd": 0.0638768022653738,
+          "default_rate": 0.25
+        },
+        "Copperbelt": {
+          "clients": 13,
+          "defaults": 2,
+          "auroc": 1.0,
+          "mean_pd": 0.14294384160197132,
+          "default_rate": 0.15384615384615385
+        },
+        "Eastern": {
+          "clients": 14,
+          "defaults": 2,
+          "auroc": 0.875,
+          "mean_pd": 0.12638403727563682,
+          "default_rate": 0.14285714285714285
+        },
+        "Luapula": {
+          "clients": 14,
+          "defaults": 0,
+          "auroc": NaN,
+          "mean_pd": 0.05684804434669406,
+          "default_rate": 0.0
+        },
+        "Lusaka": {
+          "clients": 23,
+          "defaults": 3,
+          "auroc": 0.9833333333333333,
+          "mean_pd": 0.10799640091447611,
+          "default_rate": 0.13043478260869565
+        },
+        "Muchinga": {
+          "clients": 15,
+          "defaults": 2,
+          "auroc": 0.9230769230769231,
+          "mean_pd": 0.13369968295508572,
+          "default_rate": 0.13333333333333333
+        },
+        "North-Western": {
+          "clients": 19,
+          "defaults": 2,
+          "auroc": 0.4117647058823529,
+          "mean_pd": 0.11522762289685884,
+          "default_rate": 0.10526315789473684
+        },
+        "Northern": {
+          "clients": 17,
+          "defaults": 2,
+          "auroc": 0.9333333333333333,
+          "mean_pd": 0.1483482078179837,
+          "default_rate": 0.11764705882352941
+        },
+        "Southern": {
+          "clients": 14,
+          "defaults": 3,
+          "auroc": 0.9696969696969697,
+          "mean_pd": 0.19478360064797787,
+          "default_rate": 0.21428571428571427
+        },
+        "Western": {
+          "clients": 10,
+          "defaults": 1,
+          "auroc": 0.8888888888888888,
+          "mean_pd": 0.20132071928771778,
+          "default_rate": 0.1
+        }
+      }
+    }
+  },
+  "findings": {
+    "demo": {
+      "seasonal_income": {
+        "precision": 1.0,
+        "recall": 0.9615384615384616,
+        "f1": 0.9803921568627451,
+        "planted": 26
+      },
+      "drought_shock": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "planted": 5
+      },
+      "irregular_inflows": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "planted": 17
+      },
+      "heavy_overdraft": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "planted": 15
+      },
+      "dominant_customer": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "planted": 20
+      }
+    },
+    "holdout": {
+      "seasonal_income": {
+        "precision": 0.9948717948717949,
+        "recall": 0.9463414634146341,
+        "f1": 0.97,
+        "planted": 205
+      },
+      "drought_shock": {
+        "precision": 0.9803921568627451,
+        "recall": 0.9615384615384616,
+        "f1": 0.970873786407767,
+        "planted": 52
+      },
+      "irregular_inflows": {
+        "precision": 1.0,
+        "recall": 0.9454545454545454,
+        "f1": 0.9719626168224299,
+        "planted": 110
+      },
+      "heavy_overdraft": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "planted": 160
+      },
+      "dominant_customer": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "planted": 141
+      }
+    },
+    "thresholds": {
+      "seasonal_peak_to_median": 1.8,
+      "season_fit": 0.5,
+      "drought_harvest_ratio": 0.6,
+      "irregular_low_month_ratio": 0.37,
+      "heavy_overdraft_share": 0.25,
+      "dominant_customer_share": 0.5
+    }
+  },
+  "qwen_consistency": {
+    "clients": 56,
+    "max_pd_difference": 0.0306,
+    "max_feature_difference": {
+      "months": 0.0,
+      "mean_monthly_income": 474.285714,
+      "monthly_income": 3320.0,
+      "raw_income_cv": 0.022369,
+      "deseasoned_income_cv": 0.013586,
+      "peak_month": 0.0,
+      "peak_month_income": 3320.0,
+      "peak_to_median": 0.180631,
+      "overdraft_day_share": 0.0,
+      "top_customer_share": 0.002905,
+      "mobile_money_share": 0.015182,
+      "mean_monthly_committed": 4269.090909,
+      "mean_monthly_surplus": 4269.090909,
+      "new_instalment": 0.0,
+      "debt_service_coverage": 0.218928,
+      "unverified_income_share": 0.0,
+      "season_peak_ratio": 0.0,
+      "season_fit": 0.002936,
+      "weakest_month": 0.0,
+      "weakest_month_ratio": 0.0,
+      "harvest_ratio": 0.067215
+    },
+    "clients_with_different_findings": 0
+  },
+  "coefficients": {
+    "years_trading": -0.246,
+    "pacra_registered": -0.184,
+    "bureau_adverse": 0.451,
+    "bureau_no_hit": 0.251,
+    "deseasoned_income_cv": 0.505,
+    "overdraft_day_share": 1.167,
+    "top_customer_share": 0.14,
+    "log_debt_service_coverage": -0.851,
+    "drought_shock": 0.235
+  }
+}
