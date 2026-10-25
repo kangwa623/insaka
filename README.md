@@ -41,8 +41,36 @@ The ground truth makes it possible to score every later step:
 
 Transaction categories live in [backend/insaka/taxonomy.py](backend/insaka/taxonomy.py).
 
-Each PDF page is stamped "SYNTHETIC DATA" on top of the content, and that text appears in
-text extraction, so the parser must skip it.
+Each PDF page is stamped "SYNTHETIC DATA" on top of the content; the parser drops it as
+rotated text.
+
+## Step 2: parser and tamper check
+
+```powershell
+.\.venv\Scripts\python -m insaka.parsing data/synthetic/statements/MWILA-001_absa.pdf data/synthetic/statements/MWILA-001_mtn.pdf
+```
+
+**Parser.** The parser ([backend/insaka/parsing/pdf.py](backend/insaka/parsing/pdf.py)) is rules-based, with no AI involved, so it cannot invent anything. It reads each statement into the standard ledger defined in [backend/insaka/ledger.py](backend/insaka/ledger.py):
+- It finds the layout from the statement title. New formats are added in [layouts.py](backend/insaka/parsing/layouts.py).
+- It locates each column from the table header.
+- It assigns right-aligned amounts to columns by their right edge.
+- It joins descriptions that wrap onto a second line.
+- It drops rotated watermark characters.
+
+**Checks.** The checks in [verify.py](backend/insaka/parsing/verify.py) run in three steps:
+1. **Reconcile.** Every balance must equal the previous balance plus the row's amount, and the last balance must equal the closing balance in the header. A broken row is reported with the amount it shows and the amount the balances imply.
+2. **Cross-match.** Each MoMo→Absa transfer is paired with Absa's record by reference and amount. A transfer whose amounts disagree is disputed.
+3. **Trust levels.** Every row is labelled:
+   - **Verified:** on Absa's own record, or a transfer confirmed against it.
+   - **Cross-checked:** on a wallet statement that reconciles.
+   - **Unverified:** anything on an edited statement, and any disputed transfer.
+
+**Evaluation** against ground truth (`python -m insaka.evaluation.parsing`, about 4.5 min) on the seed-42 set of 348 statements and 102,208 rows:
+- Every field parsed exactly (100%).
+- 8 of 8 tampered rows caught, with no false alarms.
+- All 2,958 untampered transfer pairs matched. The one transfer whose amount was tampered with was disputed.
+
+Photos of printed statements need OCR first. Today a text-less PDF is rejected with a clear error.
 
 ## Tests
 
