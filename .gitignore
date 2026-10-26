@@ -34,3 +34,6 @@ frontend/dist/
 
 # Statements customers or RMs upload: never committed.
 data/uploads/
+
+# Firebase CLI deploy cache.
+.firebase/
