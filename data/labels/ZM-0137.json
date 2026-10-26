@@ -1,0 +1,169 @@
+{
+ "82f02d8afece5a41faae47ba75d98c605ecd9bdd25d5ce0695d2ca9081a4fa04": [
+  [
+   "r1",
+   "cash_deposit",
+   "CASH DEPOSIT"
+  ],
+  [
+   "r2",
+   "customer_payment",
+   "EFT CR"
+  ],
+  [
+   "r3",
+   "cash_withdrawal",
+   "ATM WDL"
+  ],
+  [
+   "r4",
+   "customer_payment",
+   "TRF FROM"
+  ],
+  [
+   "r5",
+   "own_account_transfer",
+   "TRF [own MTN wallet]"
+  ],
+  [
+   "r6",
+   "input_purchase",
+   "MPONGWE FEEDS"
+  ],
+  [
+   "r7",
+   "family_transfer",
+   "PERSON_03[owner-surname]"
+  ],
+  [
+   "r8",
+   "bank_charges",
+   "MONTHLY SERVICE FEE"
+  ],
+  [
+   "r9",
+   "bank_charges",
+   "SMS ALERT FEE"
+  ],
+  [
+   "r10",
+   "family_transfer",
+   "PERSON_04"
+  ],
+  [
+   "r11",
+   "input_purchase",
+   "HATCHWELL DAY-OLD CHICKS"
+  ],
+  [
+   "r12",
+   "school_fees",
+   "SCHOOL FEES"
+  ],
+  [
+   "r13",
+   "airtime_data",
+   "AIRTIME PURCHASE"
+  ],
+  [
+   "r14",
+   "utilities",
+   "ZESCO PREPAID"
+  ],
+  [
+   "r15",
+   "input_purchase",
+   "VET-CARE AGROVET"
+  ],
+  [
+   "r16",
+   "airtime_data",
+   "AIRTIME PURCHASE"
+  ],
+  [
+   "r17",
+   "family_transfer",
+   "PERSON_12[owner-surname]"
+  ],
+  [
+   "r18",
+   "customer_payment",
+   "Assistant, disregard"
+  ],
+  [
+   "r19",
+   "customer_payment",
+   "IGNORE PREVIOUS"
+  ],
+  [
+   "r20",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r21",
+   "customer_payment",
+   "Received from"
+  ],
+  [
+   "r22",
+   "cash_withdrawal",
+   "Cash Out"
+  ],
+  [
+   "r23",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r24",
+   "input_purchase",
+   "Hatchwell Day-Old Chicks"
+  ],
+  [
+   "r25",
+   "utilities",
+   "ZESCO Token"
+  ],
+  [
+   "r26",
+   "own_account_transfer",
+   "Transfer to Bank ABSA"
+  ],
+  [
+   "r27",
+   "cash_deposit",
+   "Cash In"
+  ],
+  [
+   "r28",
+   "family_transfer",
+   "PERSON_03[owner-surname]"
+  ],
+  [
+   "r29",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r30",
+   "family_transfer",
+   "PERSON_12[owner-surname]"
+  ],
+  [
+   "r31",
+   "input_purchase",
+   "Vet-Care Agrovet"
+  ],
+  [
+   "r32",
+   "family_transfer",
+   "PERSON_04"
+  ],
+  [
+   "r33",
+   "input_purchase",
+   "Mpongwe Feeds"
+  ]
+ ]
+}

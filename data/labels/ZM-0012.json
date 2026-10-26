@@ -1,0 +1,186 @@
+{
+ "be23e165f31da339c0e53946f6eaae9232ca18dcf55eb846121116be6a3fef1a": [
+  [
+   "r1",
+   "input_purchase",
+   "CITY MARKET SUPPLIERS"
+  ],
+  [
+   "r2",
+   "input_purchase",
+   "SOWETO MARKET WHOLESALERS"
+  ],
+  [
+   "r3",
+   "cash_deposit",
+   "CASH DEPOSIT"
+  ],
+  [
+   "r4",
+   "cash_withdrawal",
+   "ATM WDL"
+  ],
+  [
+   "r5",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r6",
+   "utilities",
+   "ZESCO PREPAID"
+  ],
+  [
+   "r7",
+   "own_account_transfer",
+   "MTN MOMO TRF"
+  ],
+  [
+   "r8",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r9",
+   "family_transfer",
+   "TRF TO PERSON_05"
+  ],
+  [
+   "r10",
+   "bank_charges",
+   "MONTHLY SERVICE FEE"
+  ],
+  [
+   "r11",
+   "bank_charges",
+   "SMS ALERT FEE"
+  ],
+  [
+   "r12",
+   "school_fees",
+   "SCHOOL FEES"
+  ],
+  [
+   "r13",
+   "bank_charges",
+   "OVERDRAFT INTEREST"
+  ],
+  [
+   "r14",
+   "family_transfer",
+   "TRF TO PERSON_10"
+  ],
+  [
+   "r15",
+   "airtime_data",
+   "AIRTIME PURCHASE"
+  ],
+  [
+   "r16",
+   "family_transfer",
+   "TRF TO PERSON_13"
+  ],
+  [
+   "r17",
+   "input_purchase",
+   "TIYANJANE WHOLESALE"
+  ],
+  [
+   "r18",
+   "airtime_data",
+   "AIRTIME PURCHASE"
+  ],
+  [
+   "r19",
+   "school_fees",
+   "SCHOOL FEES"
+  ],
+  [
+   "r20",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r21",
+   "customer_payment",
+   "Received from"
+  ],
+  [
+   "r22",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r23",
+   "utilities",
+   "ZESCO Token"
+  ],
+  [
+   "r24",
+   "rent",
+   "MWANZA PROPERTIES"
+  ],
+  [
+   "r25",
+   "cash_withdrawal",
+   "Cash Out"
+  ],
+  [
+   "r26",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r27",
+   "cash_deposit",
+   "Cash In"
+  ],
+  [
+   "r28",
+   "own_account_transfer",
+   "Transfer to Bank"
+  ],
+  [
+   "r29",
+   "family_transfer",
+   "Sent to PERSON_13"
+  ],
+  [
+   "r30",
+   "family_transfer",
+   "Sent to PERSON_05"
+  ],
+  [
+   "r31",
+   "school_fees",
+   "Mapalo Academy"
+  ],
+  [
+   "r32",
+   "family_transfer",
+   "Sent to PERSON_10"
+  ],
+  [
+   "r33",
+   "school_fees",
+   "Chimwemwe Basic School"
+  ]
+ ],
+ "4c2e87734918248a981aef683e772d9008049e91f543d9ce5b75b1f90ce3632b": [
+  [
+   "r1",
+   "family_transfer",
+   "Sent to [phone] PERSON_13"
+  ],
+  [
+   "r2",
+   "family_transfer",
+   "Sent to [phone] PERSON_05"
+  ],
+  [
+   "r3",
+   "family_transfer",
+   "Sent to [phone] PERSON_10"
+  ]
+ ]
+}

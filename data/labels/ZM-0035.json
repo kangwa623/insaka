@@ -1,0 +1,176 @@
+{
+ "14009010486aecc492345226526384bdfe4b08f1b155c03902e06f6d91c08b2b": [
+  [
+   "r1",
+   "input_purchase",
+   "TIYANJANE WHOLESALE"
+  ],
+  [
+   "r2",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r3",
+   "customer_payment",
+   "MWANZA SUPERMARKET"
+  ],
+  [
+   "r4",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r5",
+   "cash_deposit",
+   "CASH DEPOSIT"
+  ],
+  [
+   "r6",
+   "own_account_transfer",
+   "own AIRTEL wallet"
+  ],
+  [
+   "r7",
+   "cash_withdrawal",
+   "ATM WDL"
+  ],
+  [
+   "r8",
+   "airtime_data",
+   "AIRTIME PURCHASE"
+  ],
+  [
+   "r9",
+   "utilities",
+   "ZESCO PREPAID"
+  ],
+  [
+   "r10",
+   "input_purchase",
+   "SOWETO MARKET WHOLESALERS"
+  ],
+  [
+   "r11",
+   "airtime_data",
+   "AIRTIME PURCHASE"
+  ],
+  [
+   "r12",
+   "bank_charges",
+   "MONTHLY SERVICE FEE"
+  ],
+  [
+   "r13",
+   "bank_charges",
+   "SMS ALERT FEE"
+  ],
+  [
+   "r14",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r15",
+   "input_purchase",
+   "CITY MARKET SUPPLIERS"
+  ],
+  [
+   "r16",
+   "school_fees",
+   "SCHOOLS FEES"
+  ],
+  [
+   "r17",
+   "school_fees",
+   "SCHOOL FEES"
+  ],
+  [
+   "r18",
+   "family_transfer",
+   "PERSON_14[owner-surname]"
+  ],
+  [
+   "r19",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r20",
+   "customer_payment",
+   "Money received"
+  ],
+  [
+   "r21",
+   "utilities",
+   "ZESCO Token"
+  ],
+  [
+   "r22",
+   "family_transfer",
+   "PERSON_14[owner-surname]"
+  ],
+  [
+   "r23",
+   "own_account_transfer",
+   "own Absa account"
+  ],
+  [
+   "r24",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r25",
+   "customer_payment",
+   "Money received"
+  ],
+  [
+   "r26",
+   "cash_withdrawal",
+   "Cash Out"
+  ],
+  [
+   "r27",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r28",
+   "cash_deposit",
+   "Cash In"
+  ],
+  [
+   "r29",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r30",
+   "input_purchase",
+   "Tiyanjane Wholesale"
+  ],
+  [
+   "r31",
+   "school_fees",
+   "Hillview Primary School"
+  ],
+  [
+   "r32",
+   "input_purchase",
+   "Soweto Market Wholesalers"
+  ],
+  [
+   "r33",
+   "input_purchase",
+   "City Market Suppliers"
+  ]
+ ],
+ "0fa378ca28288bd7cec7cfbfe342b636a397148248578e952893a122f794fbd8": [
+  [
+   "r1",
+   "school_fees",
+   "SCHOOL FEES HILLVIEW"
+  ]
+ ]
+}

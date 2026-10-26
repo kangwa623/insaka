@@ -1,0 +1,246 @@
+{
+ "6c2ba2048561624ed849e275fa9f9d4d07dd0b6ced72b99cccc440579089e16f": [
+  [
+   "r1",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r2",
+   "input_purchase",
+   "ROOFING SHEETS ZAMBIA"
+  ],
+  [
+   "r3",
+   "airtime_data",
+   "AIRTIME PURCHASE MTN"
+  ],
+  [
+   "r4",
+   "customer_payment",
+   "EFT CR MWANZA"
+  ],
+  [
+   "r5",
+   "utilities",
+   "ZESCO PREPAID"
+  ],
+  [
+   "r6",
+   "cash_withdrawal",
+   "ATM WDL"
+  ],
+  [
+   "r7",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r8",
+   "input_purchase",
+   "CEMENT & STEEL"
+  ],
+  [
+   "r9",
+   "own_account_transfer",
+   "MTN MOMO TRF"
+  ],
+  [
+   "r10",
+   "cash_deposit",
+   "CASH DEPOSIT"
+  ],
+  [
+   "r11",
+   "wages",
+   "SALARY PERSON_07"
+  ],
+  [
+   "r12",
+   "wages",
+   "SALARY PERSON_09"
+  ],
+  [
+   "r13",
+   "bank_charges",
+   "MONTHLY SERVICE FEE"
+  ],
+  [
+   "r14",
+   "bank_charges",
+   "SMS ALERT FEE"
+  ],
+  [
+   "r15",
+   "family_transfer",
+   "TRF TO PERSON_11"
+  ],
+  [
+   "r16",
+   "tax_payment",
+   "ZRA PAYMENT"
+  ],
+  [
+   "r17",
+   "customer_payment",
+   "TRF FROM PERSON_09"
+  ],
+  [
+   "r18",
+   "wages",
+   "SALARY PERSON_15"
+  ],
+  [
+   "r19",
+   "family_transfer",
+   "TRF TO PERSON_16"
+  ],
+  [
+   "r20",
+   "airtime_data",
+   "AIRTIME PURCHASE AIRTEL"
+  ],
+  [
+   "r21",
+   "input_purchase",
+   "BUILDMART WHOLESALE"
+  ],
+  [
+   "r22",
+   "wages",
+   "SALARY PERSON_20"
+  ],
+  [
+   "r23",
+   "wages",
+   "SALARY PERSON_21"
+  ],
+  [
+   "r24",
+   "wages",
+   "SALARY PERSON_24"
+  ],
+  [
+   "r25",
+   "family_transfer",
+   "TRF TO PERSON_41"
+  ],
+  [
+   "r26",
+   "input_purchase",
+   "KALULU ESTATES"
+  ],
+  [
+   "r27",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r28",
+   "customer_payment",
+   "Received from [phone]"
+  ],
+  [
+   "r29",
+   "own_account_transfer",
+   "Transfer to Bank"
+  ],
+  [
+   "r30",
+   "loan_repayment",
+   "Loan Repayment"
+  ],
+  [
+   "r31",
+   "family_transfer",
+   "Sent to [phone]"
+  ],
+  [
+   "r32",
+   "cash_deposit",
+   "Cash In via"
+  ],
+  [
+   "r33",
+   "wages",
+   "Sent to [phone]"
+  ],
+  [
+   "r34",
+   "wages",
+   "Sent to [phone]"
+  ],
+  [
+   "r35",
+   "wages",
+   "Sent to [phone]"
+  ],
+  [
+   "r36",
+   "wages",
+   "Sent to [phone]"
+  ],
+  [
+   "r37",
+   "cash_withdrawal",
+   "Cash Out via"
+  ],
+  [
+   "r38",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r39",
+   "input_purchase",
+   "Cement & Steel"
+  ],
+  [
+   "r40",
+   "family_transfer",
+   "Sent to [phone]"
+  ]
+ ],
+ "7eef0b52a4175667501beddbcc86429450e011f55e4c4277222699504f4f1e87": [
+  [
+   "r1",
+   "utilities",
+   "ZESCO Token"
+  ],
+  [
+   "r2",
+   "wages",
+   "Sent to [phone] PERSON_07"
+  ],
+  [
+   "r3",
+   "wages",
+   "Sent to [phone] PERSON_09"
+  ],
+  [
+   "r4",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r5",
+   "family_transfer",
+   "Sent to [phone] PERSON_41"
+  ],
+  [
+   "r6",
+   "input_purchase",
+   "Merchant Payment BuildMart Wholesale"
+  ],
+  [
+   "r7",
+   "customer_payment",
+   "Received from [phone] PERSON_09"
+  ],
+  [
+   "r8",
+   "input_purchase",
+   "Merchant Payment Roofing Sheets"
+  ]
+ ]
+}

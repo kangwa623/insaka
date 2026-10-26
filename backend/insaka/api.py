@@ -8,6 +8,7 @@ on the server, so hiding a button in the screens is never the only control.
 """
 
 import json
+import os
 from pathlib import Path
 
 from flask import Flask, abort, jsonify, request, send_from_directory
@@ -35,6 +36,20 @@ def create_app(data_dir="data/synthetic", cases_dir="data/cases", agent_dir="dat
                evaluation_dir="data/evaluation", uploads_dir="data/uploads", **agent_settings) -> Flask:
     app = Flask(__name__, static_folder=None)
     app.config["MAX_CONTENT_LENGTH"] = 25 * 1024 * 1024
+    # The screens are served from Firebase and call this API on Render: allow those origins
+    # (INSAKA_CORS_ORIGINS, comma-separated); with none set, as in local use, allow any.
+    origins = {o.strip() for o in os.environ.get("INSAKA_CORS_ORIGINS", "").split(",") if o.strip()}
+
+    @app.after_request
+    def cors(response):
+        origin = request.headers.get("Origin")
+        if origin and (not origins or origin in origins):
+            response.headers["Access-Control-Allow-Origin"] = origin
+            response.headers["Vary"] = "Origin"
+            response.headers["Access-Control-Allow-Headers"] = "Content-Type, X-User"
+            response.headers["Access-Control-Allow-Methods"] = "GET, POST, OPTIONS"
+            response.headers["Access-Control-Max-Age"] = "3600"
+        return response
     data_dir, cases_dir, evaluation_dir = Path(data_dir), Path(cases_dir), Path(evaluation_dir)
     uploads_dir = Path(uploads_dir)
 

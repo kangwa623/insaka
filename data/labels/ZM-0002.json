@@ -1,0 +1,149 @@
+{
+ "0b52bd1257d825ec437349e59f638710e596cd02e32732924f8eaee336a2f09f": [
+  [
+   "r1",
+   "cash_withdrawal",
+   "ATM WDL"
+  ],
+  [
+   "r2",
+   "input_purchase",
+   "KAFUE SEED"
+  ],
+  [
+   "r3",
+   "airtime_data",
+   "AIRTIME PURCHASE"
+  ],
+  [
+   "r4",
+   "own_account_transfer",
+   "own MTN wallet"
+  ],
+  [
+   "r5",
+   "utilities",
+   "ZESCO PREPAID"
+  ],
+  [
+   "r6",
+   "cash_deposit",
+   "CASH DEPOSIT"
+  ],
+  [
+   "r7",
+   "input_purchase",
+   "TRACTOR HIRE"
+  ],
+  [
+   "r8",
+   "input_purchase",
+   "FERT AGENT"
+  ],
+  [
+   "r9",
+   "customer_payment",
+   "EFT CR"
+  ],
+  [
+   "r10",
+   "bank_charges",
+   "SERVICE FEE"
+  ],
+  [
+   "r11",
+   "bank_charges",
+   "SMS ALERT"
+  ],
+  [
+   "r12",
+   "customer_payment",
+   "TRF FROM"
+  ],
+  [
+   "r13",
+   "airtime_data",
+   "AIRTIME PURCHASE"
+  ],
+  [
+   "r14",
+   "family_transfer",
+   "PERSON_08[owner-surname]"
+  ],
+  [
+   "r15",
+   "customer_payment",
+   "EFT CR"
+  ],
+  [
+   "r16",
+   "cash_deposit",
+   "Cash In"
+  ],
+  [
+   "r17",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r18",
+   "family_transfer",
+   "PERSON_11[owner-surname]"
+  ],
+  [
+   "r19",
+   "customer_payment",
+   "Received from"
+  ],
+  [
+   "r20",
+   "family_transfer",
+   "PERSON_08[owner-surname]"
+  ],
+  [
+   "r21",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r22",
+   "own_account_transfer",
+   "own Absa account"
+  ],
+  [
+   "r23",
+   "customer_payment",
+   "Received from"
+  ],
+  [
+   "r24",
+   "cash_withdrawal",
+   "Cash Out"
+  ],
+  [
+   "r25",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r26",
+   "input_purchase",
+   "Kafue Seed"
+  ],
+  [
+   "r27",
+   "input_purchase",
+   "Village Fert"
+  ],
+  [
+   "r28",
+   "input_purchase",
+   "Tractor Hire"
+  ],
+  [
+   "r29",
+   "utilities",
+   "ZESCO Token"
+  ]
+ ]
+}

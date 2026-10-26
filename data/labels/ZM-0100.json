@@ -1,0 +1,194 @@
+{
+ "0955e17c6893c502ea5ce5160d718818e78af71c9bb112b6fd91501e27a507b9": [
+  [
+   "r1",
+   "airtime_data",
+   "AIRTIME PURCHASE MTN"
+  ],
+  [
+   "r2",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r3",
+   "input_purchase",
+   "EFT DR HAIRLINE IMPORTS"
+  ],
+  [
+   "r4",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r5",
+   "input_purchase",
+   "EFT DR GLAMOUR BEAUTY WHOLESALE"
+  ],
+  [
+   "r6",
+   "customer_payment",
+   "EFT CR GREENFIELD MILLERS LTD"
+  ],
+  [
+   "r7",
+   "cash_deposit",
+   "CASH DEPOSIT MUFULIRA BRANCH"
+  ],
+  [
+   "r8",
+   "own_account_transfer",
+   "MTN MOMO TRF [own MTN wallet]"
+  ],
+  [
+   "r9",
+   "cash_withdrawal",
+   "ATM WDL MUFULIRA"
+  ],
+  [
+   "r10",
+   "bank_charges",
+   "MONTHLY SERVICE FEE"
+  ],
+  [
+   "r11",
+   "bank_charges",
+   "SMS ALERT FEE"
+  ],
+  [
+   "r12",
+   "family_transfer",
+   "TRF TO PERSON_06"
+  ],
+  [
+   "r13",
+   "family_transfer",
+   "TRF TO PERSON_07[owner-surname]"
+  ],
+  [
+   "r14",
+   "school_fees",
+   "SCHOOL FEES MAPALO ACADEMY"
+  ],
+  [
+   "r15",
+   "utilities",
+   "ZESCO PREPAID ****#"
+  ],
+  [
+   "r16",
+   "wages",
+   "SALARY PERSON_09"
+  ],
+  [
+   "r17",
+   "input_purchase",
+   "EFT DR KANYAMA CASH & CARRY"
+  ],
+  [
+   "r18",
+   "airtime_data",
+   "AIRTIME PURCHASE AIRTEL"
+  ],
+  [
+   "r19",
+   "family_transfer",
+   "TRF TO PERSON_14"
+  ],
+  [
+   "r20",
+   "school_fees",
+   "SCHOOL FEES CHIMWEMWE BASIC SCHOOL"
+  ],
+  [
+   "r21",
+   "customer_payment",
+   "Received from [phone] PERSON"
+  ],
+  [
+   "r22",
+   "input_purchase",
+   "Merchant Payment Glamour Beauty Wholesale"
+  ],
+  [
+   "r23",
+   "customer_payment",
+   "Received from [phone] PERSON_07[owner-surname]"
+  ],
+  [
+   "r24",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r25",
+   "family_transfer",
+   "Sent to [phone] PERSON_06"
+  ],
+  [
+   "r26",
+   "utilities",
+   "ZESCO Token ****#"
+  ],
+  [
+   "r27",
+   "cash_withdrawal",
+   "Cash Out via Agent #"
+  ],
+  [
+   "r28",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r29",
+   "own_account_transfer",
+   "Transfer to Bank ABSA [own Absa account]"
+  ],
+  [
+   "r30",
+   "family_transfer",
+   "Sent to [phone] PERSON_14"
+  ],
+  [
+   "r31",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r32",
+   "wages",
+   "Sent to [phone] PERSON_09"
+  ],
+  [
+   "r33",
+   "cash_deposit",
+   "Cash In via Agent #"
+  ],
+  [
+   "r34",
+   "family_transfer",
+   "Sent to [phone] PERSON_07[owner-surname]"
+  ],
+  [
+   "r35",
+   "input_purchase",
+   "Merchant Payment Hairline Imports"
+  ],
+  [
+   "r36",
+   "school_fees",
+   "Payment to Chimwemwe Basic School"
+  ],
+  [
+   "r37",
+   "input_purchase",
+   "Merchant Payment Kanyama Cash & Carry"
+  ],
+  [
+   "r38",
+   "school_fees",
+   "Payment to Mapalo Academy"
+  ]
+ ]
+}

@@ -1,0 +1,184 @@
+{
+ "7a613815ca0584d35fffa3d437ea3682a8ded232154a63ecc7b2afbb0c0a9d29": [
+  [
+   "r1",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r2",
+   "airtime_data",
+   "AIRTIME PURCHASE AIRTEL"
+  ],
+  [
+   "r3",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r4",
+   "rent",
+   "STANDING ORDER RENT"
+  ],
+  [
+   "r5",
+   "cash_withdrawal",
+   "ATM WDL MAZABUKA"
+  ],
+  [
+   "r6",
+   "cash_deposit",
+   "CASH DEPOSIT MAZABUKA"
+  ],
+  [
+   "r7",
+   "input_purchase",
+   "EFT DR TIYANJANE"
+  ],
+  [
+   "r8",
+   "own_account_transfer",
+   "MTN MOMO TRF"
+  ],
+  [
+   "r9",
+   "tax_payment",
+   "ZRA PAYMENT TPIN"
+  ],
+  [
+   "r10",
+   "utilities",
+   "ZESCO PREPAID ****#"
+  ],
+  [
+   "r11",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r12",
+   "input_purchase",
+   "EFT DR KANYAMA"
+  ],
+  [
+   "r13",
+   "bank_charges",
+   "MONTHLY SERVICE FEE"
+  ],
+  [
+   "r14",
+   "bank_charges",
+   "SMS ALERT FEE"
+  ],
+  [
+   "r15",
+   "input_purchase",
+   "EFT DR NORTHERN"
+  ],
+  [
+   "r16",
+   "airtime_data",
+   "AIRTIME PURCHASE MTN"
+  ],
+  [
+   "r17",
+   "family_transfer",
+   "TRF TO PERSON_30"
+  ],
+  [
+   "r18",
+   "wages",
+   "SALARY PERSON_41"
+  ],
+  [
+   "r19",
+   "family_transfer",
+   "TRF TO PERSON_45"
+  ],
+  [
+   "r20",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r21",
+   "customer_payment",
+   "Received from [phone]"
+  ],
+  [
+   "r22",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r23",
+   "cash_withdrawal",
+   "Cash Out via Agent"
+  ],
+  [
+   "r24",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r25",
+   "input_purchase",
+   "Merchant Payment Tiyanjane"
+  ],
+  [
+   "r26",
+   "own_account_transfer",
+   "Transfer to Bank ABSA"
+  ],
+  [
+   "r27",
+   "cash_deposit",
+   "Cash In via Agent"
+  ],
+  [
+   "r28",
+   "customer_payment",
+   "Received from [phone]"
+  ],
+  [
+   "r29",
+   "family_transfer",
+   "Sent to [phone]"
+  ],
+  [
+   "r30",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r31",
+   "utilities",
+   "ZESCO Token ****#"
+  ],
+  [
+   "r32",
+   "wages",
+   "Sent to [phone]"
+  ],
+  [
+   "r33",
+   "input_purchase",
+   "Merchant Payment Kanyama"
+  ],
+  [
+   "r34",
+   "input_purchase",
+   "Merchant Payment Northern"
+  ],
+  [
+   "r35",
+   "family_transfer",
+   "Sent to [phone]"
+  ],
+  [
+   "r36",
+   "school_fees",
+   "Payment to Lake View"
+  ]
+ ]
+}

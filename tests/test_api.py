@@ -74,3 +74,16 @@ def test_pipeline_fields_and_pamodzi(client):
     assert mwila["stage_since"] and mwila["prepared_in_seconds"] is not None
     p = call(client, "get", f"/cases/{MWILA_ID}/pamodzi", "rm.chanda").json
     assert p["channels"] and p["balance_check"]["mismatches"] == []
+
+
+def test_cross_origin_headers(monkeypatch):
+    monkeypatch.setenv("INSAKA_CORS_ORIGINS", "https://insaka.web.app")
+    c = create_app().test_client()
+    ok = c.get("/api/users", headers={"Origin": "https://insaka.web.app"})
+    assert ok.headers["Access-Control-Allow-Origin"] == "https://insaka.web.app"
+    pre = c.options("/api/cases/MWILA-001/submit", headers={
+        "Origin": "https://insaka.web.app", "Access-Control-Request-Method": "POST",
+        "Access-Control-Request-Headers": "X-User, Content-Type"})
+    assert pre.status_code == 200 and "X-User" in pre.headers["Access-Control-Allow-Headers"]
+    other = c.get("/api/users", headers={"Origin": "https://evil.example"})
+    assert "Access-Control-Allow-Origin" not in other.headers

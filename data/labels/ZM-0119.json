@@ -1,0 +1,174 @@
+{
+ "b3f07240412038087ce20e87a35d5960fc5d2949bb4ca6af7b42f17c0abf0e91": [
+  [
+   "r1",
+   "airtime_data",
+   "AIRTIME PURCHASE MTN"
+  ],
+  [
+   "r2",
+   "input_purchase",
+   "AGRI-CHEM SUPPLIES ZAMBIA"
+  ],
+  [
+   "r3",
+   "input_purchase",
+   "KAFUE SEED DISTRIBUTORS"
+  ],
+  [
+   "r4",
+   "cash_deposit",
+   "CASH DEPOSIT NAKONDE"
+  ],
+  [
+   "r5",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r6",
+   "tax_payment",
+   "ZRA PAYMENT TPIN"
+  ],
+  [
+   "r7",
+   "cash_withdrawal",
+   "ATM WDL NAKONDE"
+  ],
+  [
+   "r8",
+   "loan_repayment",
+   "LOAN REPAYMENT KWACHA"
+  ],
+  [
+   "r9",
+   "family_transfer",
+   "TRF TO PERSON_03"
+  ],
+  [
+   "r10",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r11",
+   "own_account_transfer",
+   "MTN MOMO TRF"
+  ],
+  [
+   "r12",
+   "airtime_data",
+   "AIRTIME PURCHASE AIRTEL"
+  ],
+  [
+   "r13",
+   "bank_charges",
+   "MONTHLY SERVICE FEE"
+  ],
+  [
+   "r14",
+   "bank_charges",
+   "SMS ALERT FEE"
+  ],
+  [
+   "r15",
+   "bank_charges",
+   "OVERDRAFT INTEREST"
+  ],
+  [
+   "r16",
+   "input_purchase",
+   "COPPERHILL FERTILISER WHOLESALE"
+  ],
+  [
+   "r17",
+   "utilities",
+   "ZESCO PREPAID ****#"
+  ],
+  [
+   "r18",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r19",
+   "family_transfer",
+   "TRF TO PERSON_10"
+  ],
+  [
+   "r20",
+   "family_transfer",
+   "TRF TO PERSON_12"
+  ],
+  [
+   "r21",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r22",
+   "customer_payment",
+   "Received from [phone]"
+  ],
+  [
+   "r23",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r24",
+   "cash_withdrawal",
+   "Cash Out via Agent"
+  ],
+  [
+   "r25",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r26",
+   "cash_deposit",
+   "Cash In via Agent"
+  ],
+  [
+   "r27",
+   "utilities",
+   "ZESCO Token ****#"
+  ],
+  [
+   "r28",
+   "own_account_transfer",
+   "Transfer to Bank ABSA"
+  ],
+  [
+   "r29",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r30",
+   "family_transfer",
+   "Sent to [phone]"
+  ],
+  [
+   "r31",
+   "family_transfer",
+   "Sent to [phone]"
+  ],
+  [
+   "r32",
+   "school_fees",
+   "Sunrise Secondary School"
+  ],
+  [
+   "r33",
+   "customer_payment",
+   "Received from [phone]"
+  ],
+  [
+   "r34",
+   "family_transfer",
+   "Sent to [phone]"
+  ]
+ ]
+}

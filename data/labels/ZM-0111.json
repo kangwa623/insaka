@@ -1,0 +1,261 @@
+{
+ "c176ae0bb8fc51b4d2edee81c2d476f96430f2f65030a9d558bcbb90709ee1c2": [
+  [
+   "r1",
+   "input_purchase",
+   "TRACTOR HIRE"
+  ],
+  [
+   "r2",
+   "rent",
+   "MWANZA PROPERTIES"
+  ],
+  [
+   "r3",
+   "cash_withdrawal",
+   "ATM WDL"
+  ],
+  [
+   "r4",
+   "input_purchase",
+   "SEED DISTRIBUTORS"
+  ],
+  [
+   "r5",
+   "family_transfer",
+   "TRF TO PERSON_01"
+  ],
+  [
+   "r6",
+   "cash_deposit",
+   "CASH DEPOSIT"
+  ],
+  [
+   "r7",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r8",
+   "utilities",
+   "ZESCO PREPAID"
+  ],
+  [
+   "r9",
+   "own_account_transfer",
+   "own AIRTEL wallet"
+  ],
+  [
+   "r10",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r11",
+   "wages",
+   "SALARY PERSON_03"
+  ],
+  [
+   "r12",
+   "own_account_transfer",
+   "own MTN wallet"
+  ],
+  [
+   "r13",
+   "bank_charges",
+   "SERVICE FEE"
+  ],
+  [
+   "r14",
+   "bank_charges",
+   "SMS ALERT FEE"
+  ],
+  [
+   "r15",
+   "bank_charges",
+   "OVERDRAFT INTEREST"
+  ],
+  [
+   "r16",
+   "airtime_data",
+   "AIRTIME PURCHASE"
+  ],
+  [
+   "r17",
+   "input_purchase",
+   "FERT AGENT"
+  ],
+  [
+   "r18",
+   "tax_payment",
+   "ZRA PAYMENT"
+  ],
+  [
+   "r19",
+   "school_fees",
+   "SCHOOL FEES"
+  ],
+  [
+   "r20",
+   "airtime_data",
+   "AIRTIME PURCHASE"
+  ],
+  [
+   "r21",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r22",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r23",
+   "school_fees",
+   "SCHOOL FEES"
+  ],
+  [
+   "r24",
+   "family_transfer",
+   "TRF TO PERSON_15"
+  ],
+  [
+   "r25",
+   "cash_deposit",
+   "Cash In via Agent"
+  ],
+  [
+   "r26",
+   "cash_withdrawal",
+   "Cash Out via Agent"
+  ],
+  [
+   "r27",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r28",
+   "customer_payment",
+   "Received from [phone]"
+  ],
+  [
+   "r29",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r30",
+   "family_transfer",
+   "Sent to [phone]"
+  ],
+  [
+   "r31",
+   "own_account_transfer",
+   "Transfer to Bank ABSA"
+  ],
+  [
+   "r32",
+   "wages",
+   "Sent to [phone]"
+  ],
+  [
+   "r33",
+   "customer_payment",
+   "Received from [phone]"
+  ],
+  [
+   "r34",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r35",
+   "utilities",
+   "ZESCO Token"
+  ],
+  [
+   "r36",
+   "school_fees",
+   "Sunrise Secondary School"
+  ],
+  [
+   "r37",
+   "family_transfer",
+   "Sent to [phone]"
+  ],
+  [
+   "r38",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r39",
+   "cash_deposit",
+   "Cash In Agent"
+  ],
+  [
+   "r40",
+   "cash_withdrawal",
+   "Cash Out via Agent"
+  ]
+ ],
+ "8ed17ca1ed63f33a084d5b56e2f1128815057f79e77a00b4f418ec30d1e424b9": [
+  [
+   "r1",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r2",
+   "customer_payment",
+   "Money received from"
+  ],
+  [
+   "r3",
+   "customer_payment",
+   "Money received from"
+  ],
+  [
+   "r4",
+   "own_account_transfer",
+   "Transfer to Bank ABSA"
+  ],
+  [
+   "r5",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r6",
+   "utilities",
+   "ZESCO Token"
+  ],
+  [
+   "r7",
+   "family_transfer",
+   "Money sent to PERSON_15"
+  ],
+  [
+   "r8",
+   "school_fees",
+   "Payment to Sunrise Secondary"
+  ],
+  [
+   "r9",
+   "school_fees",
+   "Payment to Mapalo Academy"
+  ],
+  [
+   "r10",
+   "family_transfer",
+   "Money sent to PERSON_01"
+  ],
+  [
+   "r11",
+   "wages",
+   "Money sent to PERSON_03"
+  ]
+ ]
+}

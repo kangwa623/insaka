@@ -1,0 +1,236 @@
+{
+ "7e424c310b8846509cdf12c39013d331f085f25197841ca0dd3e6f765b67da86": [
+  [
+   "r1",
+   "input_purchase",
+   "DRIPPRO IRRIGATION"
+  ],
+  [
+   "r2",
+   "cash_withdrawal",
+   "ATM WDL"
+  ],
+  [
+   "r3",
+   "cash_deposit",
+   "CASH DEPOSIT"
+  ],
+  [
+   "r4",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r5",
+   "own_account_transfer",
+   "own AIRTEL wallet"
+  ],
+  [
+   "r6",
+   "input_purchase",
+   "GREENLEAF SEEDLINGS"
+  ],
+  [
+   "r7",
+   "own_account_transfer",
+   "own MTN wallet"
+  ],
+  [
+   "r8",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r9",
+   "bank_charges",
+   "MONTHLY SERVICE FEE"
+  ],
+  [
+   "r10",
+   "bank_charges",
+   "SMS ALERT FEE"
+  ],
+  [
+   "r11",
+   "family_transfer",
+   "PERSON_03[owner-surname]"
+  ],
+  [
+   "r12",
+   "school_fees",
+   "SCHOOL FEES"
+  ],
+  [
+   "r13",
+   "tax_payment",
+   "ZRA PAYMENT"
+  ],
+  [
+   "r14",
+   "school_fees",
+   "SCHOOL FEES"
+  ],
+  [
+   "r15",
+   "utilities",
+   "ZESCO PREPAID"
+  ],
+  [
+   "r16",
+   "input_purchase",
+   "VET-CARE AGROVET"
+  ],
+  [
+   "r17",
+   "airtime_data",
+   "AIRTIME PURCHASE"
+  ],
+  [
+   "r18",
+   "family_transfer",
+   "PERSON_06[owner-surname]"
+  ],
+  [
+   "r19",
+   "airtime_data",
+   "AIRTIME PURCHASE"
+  ],
+  [
+   "r20",
+   "customer_payment",
+   "Received from"
+  ],
+  [
+   "r21",
+   "family_transfer",
+   "PERSON_06[owner-surname]"
+  ],
+  [
+   "r22",
+   "cash_withdrawal",
+   "Cash Out"
+  ],
+  [
+   "r23",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r24",
+   "cash_deposit",
+   "Cash In"
+  ],
+  [
+   "r25",
+   "input_purchase",
+   "Vet-Care Agrovet"
+  ],
+  [
+   "r26",
+   "own_account_transfer",
+   "own Absa account"
+  ],
+  [
+   "r27",
+   "utilities",
+   "ZESCO Token"
+  ],
+  [
+   "r28",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r29",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r30",
+   "input_purchase",
+   "Greenleaf Seedlings"
+  ],
+  [
+   "r31",
+   "family_transfer",
+   "PERSON_03[owner-surname]"
+  ],
+  [
+   "r32",
+   "school_fees",
+   "Mapalo Academy"
+  ],
+  [
+   "r33",
+   "customer_payment",
+   "Money received"
+  ],
+  [
+   "r34",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r35",
+   "own_account_transfer",
+   "own Absa account"
+  ],
+  [
+   "r36",
+   "cash_withdrawal",
+   "Cash Out"
+  ],
+  [
+   "r37",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r38",
+   "cash_deposit",
+   "Cash In"
+  ],
+  [
+   "r39",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r40",
+   "utilities",
+   "ZESCO Token"
+  ]
+ ],
+ "96e65745610615b0737f0452e51959b7451cf7d474bdf8697ff30210907354b2": [
+  [
+   "r1",
+   "input_purchase",
+   "Greenleaf Seedlings"
+  ],
+  [
+   "r2",
+   "family_transfer",
+   "PERSON_06[owner-surname]"
+  ],
+  [
+   "r3",
+   "input_purchase",
+   "Vet-Care Agrovet"
+  ],
+  [
+   "r4",
+   "input_purchase",
+   "DripPro Irrigation"
+  ],
+  [
+   "r5",
+   "family_transfer",
+   "PERSON_03[owner-surname]"
+  ],
+  [
+   "r6",
+   "school_fees",
+   "Mapalo Academy"
+  ]
+ ]
+}

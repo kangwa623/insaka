@@ -1,0 +1,99 @@
+{
+ "4e7fe76aa537c3ac9006c4e8021caad026de3dea68447bdcb1dcb20151f98a1a": [
+  [
+   "r1",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r2",
+   "family_transfer",
+   "TRF TO PERSON_02"
+  ],
+  [
+   "r3",
+   "utilities",
+   "ZESCO PREPAID"
+  ],
+  [
+   "r4",
+   "rent",
+   "STANDING ORDER RENT"
+  ],
+  [
+   "r5",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r6",
+   "airtime_data",
+   "AIRTIME PURCHASE AIRTEL"
+  ],
+  [
+   "r7",
+   "input_purchase",
+   "EFT DR KANYAMA"
+  ],
+  [
+   "r8",
+   "cash_withdrawal",
+   "ATM WDL MAZABUKA"
+  ],
+  [
+   "r9",
+   "input_purchase",
+   "EFT DR GLAMOUR"
+  ],
+  [
+   "r10",
+   "airtime_data",
+   "AIRTIME PURCHASE MTN"
+  ],
+  [
+   "r11",
+   "cash_deposit",
+   "CASH DEPOSIT MAZABUKA"
+  ],
+  [
+   "r12",
+   "wages",
+   "SALARY PERSON_20"
+  ],
+  [
+   "r13",
+   "bank_charges",
+   "MONTHLY SERVICE FEE"
+  ],
+  [
+   "r14",
+   "bank_charges",
+   "SMS ALERT FEE"
+  ],
+  [
+   "r15",
+   "tax_payment",
+   "ZRA PAYMENT TPIN"
+  ],
+  [
+   "r16",
+   "school_fees",
+   "SCHOOL FEES SUNRISE"
+  ],
+  [
+   "r17",
+   "school_fees",
+   "SCHOOL FEES MAPALO"
+  ],
+  [
+   "r18",
+   "input_purchase",
+   "EFT DR HAIRLINE"
+  ],
+  [
+   "r19",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ]
+ ]
+}

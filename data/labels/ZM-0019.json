@@ -1,0 +1,94 @@
+{
+ "f5bcc60d7f3d5a5d9167cb93ba858a45fc57b2cec9328e68ad21ff5c3761d3d7": [
+  [
+   "r1",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r2",
+   "rent",
+   "STANDING ORDER RENT"
+  ],
+  [
+   "r3",
+   "cash_deposit",
+   "CASH DEPOSIT"
+  ],
+  [
+   "r4",
+   "airtime_data",
+   "AIRTIME PURCHASE"
+  ],
+  [
+   "r5",
+   "input_purchase",
+   "DRIPPRO IRRIGATION"
+  ],
+  [
+   "r6",
+   "input_purchase",
+   "GREENLEAF SEEDLINGS"
+  ],
+  [
+   "r7",
+   "airtime_data",
+   "AIRTIME PURCHASE"
+  ],
+  [
+   "r8",
+   "family_transfer",
+   "TRF TO PERSON_05"
+  ],
+  [
+   "r9",
+   "utilities",
+   "ZESCO PREPAID"
+  ],
+  [
+   "r10",
+   "cash_withdrawal",
+   "ATM WDL"
+  ],
+  [
+   "r11",
+   "input_purchase",
+   "VET-CARE AGROVET"
+  ],
+  [
+   "r12",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r13",
+   "family_transfer",
+   "TRF TO PERSON_10"
+  ],
+  [
+   "r14",
+   "bank_charges",
+   "MONTHLY SERVICE FEE"
+  ],
+  [
+   "r15",
+   "bank_charges",
+   "SMS ALERT FEE"
+  ],
+  [
+   "r16",
+   "tax_payment",
+   "ZRA PAYMENT"
+  ],
+  [
+   "r17",
+   "family_transfer",
+   "TRF TO PERSON_16"
+  ],
+  [
+   "r18",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ]
+ ]
+}

@@ -1,0 +1,236 @@
+{
+ "236955a02eb41d79ab1a1134caf52924182ee49b57bd13bac8a3312fa059ff3f": [
+  [
+   "r1",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r2",
+   "airtime_data",
+   "AIRTIME PURCHASE MTN"
+  ],
+  [
+   "r3",
+   "cash_deposit",
+   "CASH DEPOSIT KAFUE"
+  ],
+  [
+   "r4",
+   "cash_withdrawal",
+   "ATM WDL KAFUE"
+  ],
+  [
+   "r5",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r6",
+   "input_purchase",
+   "EFT DR BUILDMART"
+  ],
+  [
+   "r7",
+   "own_account_transfer",
+   "TRF [own AIRTEL"
+  ],
+  [
+   "r8",
+   "wages",
+   "SALARY PERSON_19"
+  ],
+  [
+   "r9",
+   "wages",
+   "SALARY PERSON_20"
+  ],
+  [
+   "r10",
+   "wages",
+   "SALARY PERSON_21"
+  ],
+  [
+   "r11",
+   "wages",
+   "SALARY PERSON_22"
+  ],
+  [
+   "r12",
+   "input_purchase",
+   "EFT DR CEMENT"
+  ],
+  [
+   "r13",
+   "wages",
+   "SALARY PERSON_26"
+  ],
+  [
+   "r14",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r15",
+   "bank_charges",
+   "MONTHLY SERVICE FEE"
+  ],
+  [
+   "r16",
+   "bank_charges",
+   "SMS ALERT FEE"
+  ],
+  [
+   "r17",
+   "utilities",
+   "ZESCO PREPAID"
+  ],
+  [
+   "r18",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r19",
+   "input_purchase",
+   "EFT DR ROOFING"
+  ],
+  [
+   "r20",
+   "airtime_data",
+   "AIRTIME PURCHASE AIRTEL"
+  ],
+  [
+   "r21",
+   "school_fees",
+   "SCHOOL FEES HILLVIEW"
+  ],
+  [
+   "r22",
+   "tax_payment",
+   "ZRA PAYMENT TPIN"
+  ],
+  [
+   "r23",
+   "wages",
+   "SALARY PERSON_46"
+  ],
+  [
+   "r24",
+   "family_transfer",
+   "TRF TO PERSON_56"
+  ],
+  [
+   "r25",
+   "school_fees",
+   "SCHOOL FEES LAKE"
+  ],
+  [
+   "r26",
+   "customer_payment",
+   "Money received from"
+  ],
+  [
+   "r27",
+   "customer_payment",
+   "Money received from"
+  ],
+  [
+   "r28",
+   "input_purchase",
+   "Pay Merchant Cement"
+  ],
+  [
+   "r29",
+   "cash_withdrawal",
+   "Cash Out via"
+  ],
+  [
+   "r30",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r31",
+   "cash_deposit",
+   "Cash In Agent"
+  ],
+  [
+   "r32",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r33",
+   "input_purchase",
+   "Pay Merchant BuildMart"
+  ],
+  [
+   "r34",
+   "input_purchase",
+   "Pay Merchant Roofing"
+  ],
+  [
+   "r35",
+   "own_account_transfer",
+   "Transfer to Bank"
+  ],
+  [
+   "r36",
+   "family_transfer",
+   "Money sent to"
+  ],
+  [
+   "r37",
+   "wages",
+   "Money sent to"
+  ],
+  [
+   "r38",
+   "utilities",
+   "ZESCO Token"
+  ],
+  [
+   "r39",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r40",
+   "wages",
+   "Money sent to"
+  ]
+ ],
+ "d079d004aef4d9345a1fa5339ce565c47fd3dcc0a55a67e624f4980ce298b299": [
+  [
+   "r1",
+   "wages",
+   "Money sent to PERSON_21"
+  ],
+  [
+   "r2",
+   "school_fees",
+   "Payment to Lake View College"
+  ],
+  [
+   "r3",
+   "wages",
+   "Money sent to PERSON_19"
+  ],
+  [
+   "r4",
+   "wages",
+   "Money sent to PERSON_20"
+  ],
+  [
+   "r5",
+   "wages",
+   "Money sent to PERSON_26"
+  ],
+  [
+   "r6",
+   "school_fees",
+   "Payment to Hillview Primary School"
+  ]
+ ]
+}

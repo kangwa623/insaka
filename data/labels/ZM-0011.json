@@ -1,0 +1,179 @@
+{
+ "83691602fcc76a0cb334d02572902465d77d4fa4b0cc874e5dec36aafcc255eb": [
+  [
+   "r1",
+   "input_purchase",
+   "KANYAMA CASH & CARRY"
+  ],
+  [
+   "r2",
+   "cash_withdrawal",
+   "ATM WDL CHOMA"
+  ],
+  [
+   "r3",
+   "cash_deposit",
+   "CASH DEPOSIT CHOMA BRANCH"
+  ],
+  [
+   "r4",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r5",
+   "input_purchase",
+   "TIYANJANE WHOLESALE"
+  ],
+  [
+   "r6",
+   "loan_repayment",
+   "LOAN REPAYMENT MAPALO LENDING"
+  ],
+  [
+   "r7",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r8",
+   "own_account_transfer",
+   "AIRTEL MOMO TRF"
+  ],
+  [
+   "r9",
+   "airtime_data",
+   "AIRTIME PURCHASE AIRTEL"
+  ],
+  [
+   "r10",
+   "bank_charges",
+   "MONTHLY SERVICE FEE"
+  ],
+  [
+   "r11",
+   "bank_charges",
+   "SMS ALERT FEE"
+  ],
+  [
+   "r12",
+   "family_transfer",
+   "TRF TO PERSON_10"
+  ],
+  [
+   "r13",
+   "utilities",
+   "ZESCO PREPAID"
+  ],
+  [
+   "r14",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r15",
+   "school_fees",
+   "SCHOOL FEES SUNRISE"
+  ],
+  [
+   "r16",
+   "input_purchase",
+   "NORTHERN BEVERAGES DEPOT"
+  ],
+  [
+   "r17",
+   "airtime_data",
+   "AIRTIME PURCHASE MTN"
+  ],
+  [
+   "r18",
+   "school_fees",
+   "SCHOOL FEES CHIMWEMWE"
+  ],
+  [
+   "r19",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r20",
+   "customer_payment",
+   "Money received from"
+  ],
+  [
+   "r21",
+   "rent",
+   "PHIRI SHOPS RENTALS"
+  ],
+  [
+   "r22",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r23",
+   "customer_payment",
+   "Money received from"
+  ],
+  [
+   "r24",
+   "input_purchase",
+   "Kanyama Cash & Carry"
+  ],
+  [
+   "r25",
+   "family_transfer",
+   "Money sent to"
+  ],
+  [
+   "r26",
+   "utilities",
+   "ZESCO Token"
+  ],
+  [
+   "r27",
+   "own_account_transfer",
+   "Transfer to Bank ABSA"
+  ],
+  [
+   "r28",
+   "cash_deposit",
+   "Cash In Agent"
+  ],
+  [
+   "r29",
+   "cash_withdrawal",
+   "Cash Out via Agent"
+  ],
+  [
+   "r30",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r31",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r32",
+   "input_purchase",
+   "Tiyanjane Wholesale"
+  ],
+  [
+   "r33",
+   "input_purchase",
+   "Northern Beverages Depot"
+  ],
+  [
+   "r34",
+   "school_fees",
+   "Chimwemwe Basic School"
+  ],
+  [
+   "r35",
+   "school_fees",
+   "Sunrise Secondary School"
+  ]
+ ]
+}

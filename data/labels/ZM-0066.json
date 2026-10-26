@@ -1,0 +1,241 @@
+{
+ "06d519f61fad8e87e9c1e3c2ae1ee047cec1a9903d86c3256222cb3954c60280": [
+  [
+   "r1",
+   "family_transfer",
+   "TRF TO PERSON_01"
+  ],
+  [
+   "r2",
+   "cash_withdrawal",
+   "ATM WDL KASAMA"
+  ],
+  [
+   "r3",
+   "rent",
+   "STANDING ORDER RENT"
+  ],
+  [
+   "r4",
+   "input_purchase",
+   "HATCHWELL DAY-OLD CHICKS"
+  ],
+  [
+   "r5",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r6",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r7",
+   "own_account_transfer",
+   "AIRTEL MOMO TRF"
+  ],
+  [
+   "r8",
+   "own_account_transfer",
+   "MTN MOMO TRF"
+  ],
+  [
+   "r9",
+   "utilities",
+   "ZESCO PREPAID"
+  ],
+  [
+   "r10",
+   "cash_deposit",
+   "CASH DEPOSIT"
+  ],
+  [
+   "r11",
+   "loan_repayment",
+   "LOAN REPAYMENT"
+  ],
+  [
+   "r12",
+   "input_purchase",
+   "MPONGWE FEEDS"
+  ],
+  [
+   "r13",
+   "family_transfer",
+   "TRF TO PERSON_04"
+  ],
+  [
+   "r14",
+   "wages",
+   "SALARY PERSON_05"
+  ],
+  [
+   "r15",
+   "bank_charges",
+   "MONTHLY SERVICE FEE"
+  ],
+  [
+   "r16",
+   "bank_charges",
+   "SMS ALERT FEE"
+  ],
+  [
+   "r17",
+   "airtime_data",
+   "AIRTIME PURCHASE AIRTEL"
+  ],
+  [
+   "r18",
+   "input_purchase",
+   "VET-CARE AGROVET"
+  ],
+  [
+   "r19",
+   "airtime_data",
+   "AIRTIME PURCHASE MTN"
+  ],
+  [
+   "r20",
+   "customer_payment",
+   "Received from [phone]"
+  ],
+  [
+   "r21",
+   "cash_deposit",
+   "Cash In via Agent"
+  ],
+  [
+   "r22",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r23",
+   "input_purchase",
+   "Mpongwe Feeds"
+  ],
+  [
+   "r24",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r25",
+   "own_account_transfer",
+   "Transfer to Bank ABSA"
+  ],
+  [
+   "r26",
+   "cash_withdrawal",
+   "Cash Out via Agent"
+  ],
+  [
+   "r27",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r28",
+   "customer_payment",
+   "Received from [phone]"
+  ],
+  [
+   "r29",
+   "wages",
+   "Sent to [phone] PERSON_05"
+  ],
+  [
+   "r30",
+   "utilities",
+   "ZESCO Token"
+  ],
+  [
+   "r31",
+   "family_transfer",
+   "Sent to [phone] PERSON_01"
+  ],
+  [
+   "r32",
+   "family_transfer",
+   "Sent to [phone] PERSON_04"
+  ],
+  [
+   "r33",
+   "input_purchase",
+   "Hatchwell Day-Old Chicks"
+  ],
+  [
+   "r34",
+   "input_purchase",
+   "Vet-Care Agrovet"
+  ],
+  [
+   "r35",
+   "customer_payment",
+   "Money received from"
+  ],
+  [
+   "r36",
+   "customer_payment",
+   "Money received from"
+  ],
+  [
+   "r37",
+   "own_account_transfer",
+   "Transfer to Bank ABSA"
+  ],
+  [
+   "r38",
+   "input_purchase",
+   "Pay Merchant Vet-Care"
+  ],
+  [
+   "r39",
+   "family_transfer",
+   "Money sent to PERSON_01"
+  ],
+  [
+   "r40",
+   "cash_withdrawal",
+   "Cash Out via Agent"
+  ]
+ ],
+ "462e108cbbbe79a4dd2d8decaa59396f2473d0564aaaee26652f8fc2dd74b5da": [
+  [
+   "r1",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r2",
+   "cash_deposit",
+   "Cash In Agent"
+  ],
+  [
+   "r3",
+   "utilities",
+   "ZESCO Token"
+  ],
+  [
+   "r4",
+   "input_purchase",
+   "Day-Old Chicks"
+  ],
+  [
+   "r5",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r6",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r7",
+   "family_transfer",
+   "Money sent to PERSON_04"
+  ]
+ ]
+}

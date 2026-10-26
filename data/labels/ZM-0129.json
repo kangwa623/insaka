@@ -1,0 +1,216 @@
+{
+ "7414f5f2b867c3be045752845539beed3bc5805e8f7861506f3f16b79f6e11dc": [
+  [
+   "r1",
+   "cash_withdrawal",
+   "ATM WDL"
+  ],
+  [
+   "r2",
+   "rent",
+   "STANDING ORDER RENT"
+  ],
+  [
+   "r3",
+   "utilities",
+   "ZESCO PREPAID"
+  ],
+  [
+   "r4",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r5",
+   "airtime_data",
+   "AIRTIME PURCHASE"
+  ],
+  [
+   "r6",
+   "customer_payment",
+   "EFT CR KALULU LODGE"
+  ],
+  [
+   "r7",
+   "own_account_transfer",
+   "TRF [own AIRTEL wallet]"
+  ],
+  [
+   "r8",
+   "cash_deposit",
+   "CASH DEPOSIT"
+  ],
+  [
+   "r9",
+   "input_purchase",
+   "EFT DR KAFUE SEED"
+  ],
+  [
+   "r10",
+   "wages",
+   "SALARY PERSON_04"
+  ],
+  [
+   "r11",
+   "wages",
+   "SALARY PERSON_05"
+  ],
+  [
+   "r12",
+   "bank_charges",
+   "MONTHLY SERVICE FEE"
+  ],
+  [
+   "r13",
+   "bank_charges",
+   "SMS ALERT FEE"
+  ],
+  [
+   "r14",
+   "tax_payment",
+   "ZRA PAYMENT"
+  ],
+  [
+   "r15",
+   "input_purchase",
+   "EFT DR COPPERHILL FERTILISER"
+  ],
+  [
+   "r16",
+   "wages",
+   "SALARY PERSON_08"
+  ],
+  [
+   "r17",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r18",
+   "family_transfer",
+   "TRF TO PERSON_12"
+  ],
+  [
+   "r19",
+   "airtime_data",
+   "AIRTIME PURCHASE MTN"
+  ],
+  [
+   "r20",
+   "input_purchase",
+   "EFT DR AGRI-CHEM SUPPLIES"
+  ],
+  [
+   "r21",
+   "family_transfer",
+   "TRF TO PERSON_15"
+  ],
+  [
+   "r22",
+   "school_fees",
+   "SCHOOL FEES"
+  ],
+  [
+   "r23",
+   "family_transfer",
+   "TRF TO PERSON_17"
+  ],
+  [
+   "r24",
+   "cash_deposit",
+   "Cash In Agent"
+  ],
+  [
+   "r25",
+   "customer_payment",
+   "Money received from"
+  ],
+  [
+   "r26",
+   "family_transfer",
+   "Money sent to PERSON_17"
+  ],
+  [
+   "r27",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r28",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r29",
+   "family_transfer",
+   "Money sent to PERSON_15"
+  ],
+  [
+   "r30",
+   "input_purchase",
+   "Pay Merchant Kafue Seed"
+  ],
+  [
+   "r31",
+   "own_account_transfer",
+   "Transfer to Bank ABSA"
+  ],
+  [
+   "r32",
+   "wages",
+   "Money sent to PERSON_08"
+  ],
+  [
+   "r33",
+   "cash_withdrawal",
+   "Cash Out via Agent"
+  ],
+  [
+   "r34",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r35",
+   "input_purchase",
+   "Pay Merchant Copperhill Fertiliser"
+  ],
+  [
+   "r36",
+   "school_fees",
+   "Payment to Chimwemwe Basic School"
+  ],
+  [
+   "r37",
+   "school_fees",
+   "Payment to Lake View College"
+  ],
+  [
+   "r38",
+   "wages",
+   "Money sent to PERSON_05"
+  ],
+  [
+   "r39",
+   "family_transfer",
+   "Money sent to PERSON_12"
+  ],
+  [
+   "r40",
+   "utilities",
+   "ZESCO Token"
+  ]
+ ],
+ "49444ea199cb5369992b65ca1b185ae5ffbac85893057f6c3400f815fe82980b": [
+  [
+   "r1",
+   "input_purchase",
+   "Agri-Chem Supplies"
+  ],
+  [
+   "r2",
+   "family_transfer",
+   "Money sent to PERSON_04"
+  ]
+ ]
+}

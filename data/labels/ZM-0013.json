@@ -1,0 +1,396 @@
+{
+ "323fa26b543675c3f834f15964557c137c90e24dcdde9df0995e064725b5ef21": [
+  [
+   "r1",
+   "cash_deposit",
+   "CASH DEPOSIT"
+  ],
+  [
+   "r2",
+   "input_purchase",
+   "SEED DISTRIBUTORS"
+  ],
+  [
+   "r3",
+   "cash_withdrawal",
+   "ATM WDL"
+  ],
+  [
+   "r4",
+   "airtime_data",
+   "AIRTIME PURCHASE"
+  ],
+  [
+   "r5",
+   "own_account_transfer",
+   "own AIRTEL wallet"
+  ],
+  [
+   "r6",
+   "own_account_transfer",
+   "own MTN wallet"
+  ],
+  [
+   "r7",
+   "utilities",
+   "ZESCO PREPAID"
+  ],
+  [
+   "r8",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r9",
+   "input_purchase",
+   "FERTILISER WHOLESALE"
+  ],
+  [
+   "r10",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r11",
+   "wages",
+   "SALARY PERSON_03"
+  ],
+  [
+   "r12",
+   "wages",
+   "SALARY PERSON_04"
+  ],
+  [
+   "r13",
+   "wages",
+   "SALARY PERSON_05"
+  ],
+  [
+   "r14",
+   "wages",
+   "SALARY PERSON_06"
+  ],
+  [
+   "r15",
+   "bank_charges",
+   "MONTHLY SERVICE FEE"
+  ],
+  [
+   "r16",
+   "bank_charges",
+   "SMS ALERT FEE"
+  ],
+  [
+   "r17",
+   "airtime_data",
+   "AIRTIME PURCHASE"
+  ],
+  [
+   "r18",
+   "customer_payment",
+   "EFT CR PERSON_06"
+  ],
+  [
+   "r19",
+   "input_purchase",
+   "AGRI-CHEM SUPPLIES"
+  ],
+  [
+   "r20",
+   "wages",
+   "SALARY PERSON_16"
+  ],
+  [
+   "r21",
+   "customer_payment",
+   "EFT CR PERSON_16"
+  ],
+  [
+   "r22",
+   "tax_payment",
+   "ZRA PAYMENT"
+  ],
+  [
+   "r23",
+   "wages",
+   "SALARY PERSON_27"
+  ],
+  [
+   "r24",
+   "customer_payment",
+   "EFT CR PERSON_30"
+  ],
+  [
+   "r25",
+   "family_transfer",
+   "TRF TO PERSON_33"
+  ],
+  [
+   "r26",
+   "customer_payment",
+   "TRF FROM PERSON_06"
+  ],
+  [
+   "r27",
+   "family_transfer",
+   "TRF TO PERSON_30"
+  ],
+  [
+   "r28",
+   "family_transfer",
+   "TRF TO PERSON_36"
+  ],
+  [
+   "r29",
+   "school_fees",
+   "SCHOOL FEES"
+  ],
+  [
+   "r30",
+   "input_purchase",
+   "Agri-Chem Supplies"
+  ],
+  [
+   "r31",
+   "cash_deposit",
+   "Cash In via Agent"
+  ],
+  [
+   "r32",
+   "customer_payment",
+   "Received from [phone]"
+  ],
+  [
+   "r33",
+   "own_account_transfer",
+   "own Absa account"
+  ],
+  [
+   "r34",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r35",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r36",
+   "cash_withdrawal",
+   "Cash Out via Agent"
+  ],
+  [
+   "r37",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r38",
+   "family_transfer",
+   "Sent to [phone]"
+  ],
+  [
+   "r39",
+   "customer_payment",
+   "Received from [phone]"
+  ],
+  [
+   "r40",
+   "utilities",
+   "ZESCO Token"
+  ]
+ ],
+ "85519e1da7ce8a9b9eb10e9614388128940676e9520ac86f4af5728bb920a9da": [
+  [
+   "r1",
+   "input_purchase",
+   "Kafue Seed Distributors"
+  ],
+  [
+   "r2",
+   "family_transfer",
+   "PERSON_04[owner-surname]"
+  ],
+  [
+   "r3",
+   "customer_payment",
+   "Received from [phone]"
+  ],
+  [
+   "r4",
+   "family_transfer",
+   "PERSON_27"
+  ],
+  [
+   "r5",
+   "customer_payment",
+   "Received from [phone]"
+  ],
+  [
+   "r6",
+   "family_transfer",
+   "PERSON_03"
+  ],
+  [
+   "r7",
+   "family_transfer",
+   "PERSON_06"
+  ],
+  [
+   "r8",
+   "customer_payment",
+   "Received from [phone]"
+  ],
+  [
+   "r9",
+   "family_transfer",
+   "PERSON_05"
+  ],
+  [
+   "r10",
+   "family_transfer",
+   "PERSON_36[owner-surname]"
+  ],
+  [
+   "r11",
+   "family_transfer",
+   "PERSON_16"
+  ],
+  [
+   "r12",
+   "family_transfer",
+   "PERSON_30[owner-surname]"
+  ],
+  [
+   "r13",
+   "school_fees",
+   "Lake View College"
+  ],
+  [
+   "r14",
+   "input_purchase",
+   "Copperhill Fertiliser Wholesale"
+  ],
+  [
+   "r15",
+   "cash_withdrawal",
+   "Cash Out via Agent"
+  ],
+  [
+   "r16",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r17",
+   "customer_payment",
+   "Money received from"
+  ],
+  [
+   "r18",
+   "utilities",
+   "ZESCO Token"
+  ],
+  [
+   "r19",
+   "own_account_transfer",
+   "Transfer to Bank ABSA"
+  ],
+  [
+   "r20",
+   "family_transfer",
+   "PERSON_33"
+  ],
+  [
+   "r21",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r22",
+   "cash_deposit",
+   "Cash In Agent"
+  ],
+  [
+   "r23",
+   "customer_payment",
+   "Money received from"
+  ],
+  [
+   "r24",
+   "customer_payment",
+   "Money received from"
+  ],
+  [
+   "r25",
+   "customer_payment",
+   "Money received from"
+  ],
+  [
+   "r26",
+   "family_transfer",
+   "PERSON_06"
+  ],
+  [
+   "r27",
+   "customer_payment",
+   "Money received from"
+  ],
+  [
+   "r28",
+   "family_transfer",
+   "PERSON_36[owner-surname]"
+  ],
+  [
+   "r29",
+   "school_fees",
+   "Lake View College"
+  ],
+  [
+   "r30",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r31",
+   "family_transfer",
+   "PERSON_30[owner-surname]"
+  ],
+  [
+   "r32",
+   "family_transfer",
+   "PERSON_27"
+  ],
+  [
+   "r33",
+   "family_transfer",
+   "PERSON_03"
+  ],
+  [
+   "r34",
+   "input_purchase",
+   "Copperhill Fertiliser Wholesale"
+  ],
+  [
+   "r35",
+   "family_transfer",
+   "PERSON_04[owner-surname]"
+  ],
+  [
+   "r36",
+   "input_purchase",
+   "Agri-Chem Supplies Zambia"
+  ],
+  [
+   "r37",
+   "input_purchase",
+   "Kafue Seed Distributors"
+  ],
+  [
+   "r38",
+   "family_transfer",
+   "PERSON_16"
+  ]
+ ]
+}

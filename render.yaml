@@ -1,0 +1,19 @@
+# Render blueprint for the Insaka API (free tier). Render -> New -> Blueprint -> this repo.
+services:
+  - type: web
+    name: insaka-zm-api
+    runtime: python
+    plan: free
+    buildCommand: >-
+      pip install -r requirements.txt && pip install -e . &&
+      python -m insaka.generator --n 150 --seed 42 --out data/synthetic --no-pdf &&
+      python -m insaka.demo --seed
+    startCommand: gunicorn "insaka.api:create_app()" --bind 0.0.0.0:$PORT --workers 1 --threads 4 --timeout 300
+    healthCheckPath: /api/users
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.13
+      - key: INSAKA_CORS_ORIGINS
+        value: https://insaka.web.app,https://insaka.firebaseapp.com
+      - key: GROQ_API_KEY
+        sync: false

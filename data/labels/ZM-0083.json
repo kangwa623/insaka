@@ -1,0 +1,159 @@
+{
+ "c6087ea0ed94dc780a1b26b891df29ae5a25d1501b85b31a1e806ce18dd3d788": [
+  [
+   "r1",
+   "cash_withdrawal",
+   "ATM WDL MONZE"
+  ],
+  [
+   "r2",
+   "cash_deposit",
+   "CASH DEPOSIT MONZE"
+  ],
+  [
+   "r3",
+   "input_purchase",
+   "MTENDERE GRAIN BAGS"
+  ],
+  [
+   "r4",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r5",
+   "own_account_transfer",
+   "AIRTEL MOMO TRF"
+  ],
+  [
+   "r6",
+   "utilities",
+   "ZESCO PREPAID"
+  ],
+  [
+   "r7",
+   "input_purchase",
+   "LUANGWA TRANSPORTERS"
+  ],
+  [
+   "r8",
+   "bank_charges",
+   "MONTHLY SERVICE FEE"
+  ],
+  [
+   "r9",
+   "bank_charges",
+   "SMS ALERT FEE"
+  ],
+  [
+   "r10",
+   "family_transfer",
+   "TRF TO PERSON_03"
+  ],
+  [
+   "r11",
+   "customer_payment",
+   "EFT CR PERSON_03"
+  ],
+  [
+   "r12",
+   "input_purchase",
+   "EASTERN GRAIN HAULAGE"
+  ],
+  [
+   "r13",
+   "airtime_data",
+   "AIRTIME PURCHASE MTN"
+  ],
+  [
+   "r14",
+   "family_transfer",
+   "TRF TO PERSON_06"
+  ],
+  [
+   "r15",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r16",
+   "airtime_data",
+   "AIRTIME PURCHASE AIRTEL"
+  ],
+  [
+   "r17",
+   "customer_payment",
+   "Money received from"
+  ],
+  [
+   "r18",
+   "input_purchase",
+   "Eastern Grain Haulage"
+  ],
+  [
+   "r19",
+   "cash_withdrawal",
+   "Cash Out via"
+  ],
+  [
+   "r20",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r21",
+   "school_fees",
+   "Hillview Primary School"
+  ],
+  [
+   "r22",
+   "family_transfer",
+   "Money sent to"
+  ],
+  [
+   "r23",
+   "cash_deposit",
+   "Cash In Agent"
+  ],
+  [
+   "r24",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r25",
+   "own_account_transfer",
+   "Transfer to Bank"
+  ],
+  [
+   "r26",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r27",
+   "input_purchase",
+   "Mtendere Grain Bags"
+  ],
+  [
+   "r28",
+   "input_purchase",
+   "Luangwa Transporters"
+  ],
+  [
+   "r29",
+   "customer_payment",
+   "Money received from"
+  ],
+  [
+   "r30",
+   "utilities",
+   "ZESCO Token"
+  ],
+  [
+   "r31",
+   "family_transfer",
+   "Money sent to"
+  ]
+ ]
+}

@@ -1,0 +1,199 @@
+{
+ "f2ed7053154b2bb6254c10441ba277e299dfd17a8910334839b042adaf2f42a0": [
+  [
+   "r1",
+   "input_purchase",
+   "NORTHERN BEVERAGES DEPOT"
+  ],
+  [
+   "r2",
+   "input_purchase",
+   "KANYAMA CASH & CARRY"
+  ],
+  [
+   "r3",
+   "rent",
+   "RENT KALULU ESTATES"
+  ],
+  [
+   "r4",
+   "input_purchase",
+   "MPONGWE FEEDS"
+  ],
+  [
+   "r5",
+   "customer_payment",
+   "LAKE HARVEST FOODS"
+  ],
+  [
+   "r6",
+   "utilities",
+   "ZESCO PREPAID"
+  ],
+  [
+   "r7",
+   "cash_withdrawal",
+   "ATM WDL SOLWEZI"
+  ],
+  [
+   "r8",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r9",
+   "airtime_data",
+   "AIRTIME PURCHASE AIRTEL"
+  ],
+  [
+   "r10",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r11",
+   "cash_deposit",
+   "CASH DEPOSIT SOLWEZI"
+  ],
+  [
+   "r12",
+   "wages",
+   "SALARY PERSON_10"
+  ],
+  [
+   "r13",
+   "own_account_transfer",
+   "TRF [own MTN wallet]"
+  ],
+  [
+   "r14",
+   "bank_charges",
+   "MONTHLY SERVICE FEE"
+  ],
+  [
+   "r15",
+   "bank_charges",
+   "SMS ALERT FEE"
+  ],
+  [
+   "r16",
+   "bank_charges",
+   "OVERDRAFT INTEREST"
+  ],
+  [
+   "r17",
+   "airtime_data",
+   "AIRTIME PURCHASE MTN"
+  ],
+  [
+   "r18",
+   "customer_payment",
+   "TRF FROM PERSON_13"
+  ],
+  [
+   "r19",
+   "family_transfer",
+   "TRF TO PERSON_18"
+  ],
+  [
+   "r20",
+   "wages",
+   "SALARY PERSON_13"
+  ],
+  [
+   "r21",
+   "school_fees",
+   "SCHOOL FEES MAPALO"
+  ],
+  [
+   "r22",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r23",
+   "family_transfer",
+   "TRF TO PERSON_41"
+  ],
+  [
+   "r24",
+   "family_transfer",
+   "TRF TO PERSON_45"
+  ],
+  [
+   "r25",
+   "customer_payment",
+   "Received from [phone]"
+  ],
+  [
+   "r26",
+   "cash_withdrawal",
+   "Cash Out via Agent"
+  ],
+  [
+   "r27",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r28",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r29",
+   "customer_payment",
+   "Received from [phone]"
+  ],
+  [
+   "r30",
+   "family_transfer",
+   "Sent to [phone]"
+  ],
+  [
+   "r31",
+   "cash_deposit",
+   "Cash In via Agent"
+  ],
+  [
+   "r32",
+   "wages",
+   "Sent to [phone]"
+  ],
+  [
+   "r33",
+   "own_account_transfer",
+   "Transfer to Bank ABSA"
+  ],
+  [
+   "r34",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r35",
+   "family_transfer",
+   "Sent to [phone]"
+  ],
+  [
+   "r36",
+   "customer_payment",
+   "Received from [phone]"
+  ],
+  [
+   "r37",
+   "wages",
+   "Sent to [phone]"
+  ],
+  [
+   "r38",
+   "utilities",
+   "ZESCO Token"
+  ],
+  [
+   "r39",
+   "family_transfer",
+   "Sent to [phone]"
+  ]
+ ]
+}

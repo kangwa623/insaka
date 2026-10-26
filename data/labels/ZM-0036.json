@@ -1,0 +1,184 @@
+{
+ "5a03f777c140d1cd80fc305be8b502827f775b3db4d38018c3eb437ee169ad53": [
+  [
+   "r1",
+   "rent",
+   "STANDING ORDER RENT"
+  ],
+  [
+   "r2",
+   "input_purchase",
+   "MTENDERE GRAIN BAGS"
+  ],
+  [
+   "r3",
+   "airtime_data",
+   "AIRTIME PURCHASE"
+  ],
+  [
+   "r4",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r5",
+   "own_account_transfer",
+   "AIRTEL MOMO TRF"
+  ],
+  [
+   "r6",
+   "input_purchase",
+   "EASTERN GRAIN HAULAGE"
+  ],
+  [
+   "r7",
+   "cash_withdrawal",
+   "ATM WDL"
+  ],
+  [
+   "r8",
+   "cash_deposit",
+   "CASH DEPOSIT"
+  ],
+  [
+   "r9",
+   "input_purchase",
+   "LUANGWA TRANSPORTERS"
+  ],
+  [
+   "r10",
+   "family_transfer",
+   "TRF TO PERSON_03"
+  ],
+  [
+   "r11",
+   "wages",
+   "SALARY PERSON_04"
+  ],
+  [
+   "r12",
+   "bank_charges",
+   "MONTHLY SERVICE FEE"
+  ],
+  [
+   "r13",
+   "bank_charges",
+   "SMS ALERT FEE"
+  ],
+  [
+   "r14",
+   "family_transfer",
+   "TRF TO PERSON_05"
+  ],
+  [
+   "r15",
+   "tax_payment",
+   "ZRA PAYMENT"
+  ],
+  [
+   "r16",
+   "utilities",
+   "ZESCO PREPAID"
+  ],
+  [
+   "r17",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r18",
+   "school_fees",
+   "SCHOOL FEES"
+  ],
+  [
+   "r19",
+   "family_transfer",
+   "TRF TO PERSON_13"
+  ],
+  [
+   "r20",
+   "other",
+   "risk score"
+  ],
+  [
+   "r21",
+   "input_purchase",
+   "Luangwa Transporters"
+  ],
+  [
+   "r22",
+   "customer_payment",
+   "Money received"
+  ],
+  [
+   "r23",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r24",
+   "family_transfer",
+   "Money sent to PERSON_13"
+  ],
+  [
+   "r25",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r26",
+   "own_account_transfer",
+   "Transfer to Bank ABSA"
+  ],
+  [
+   "r27",
+   "utilities",
+   "ZESCO Token"
+  ],
+  [
+   "r28",
+   "input_purchase",
+   "Eastern Grain Haulage"
+  ],
+  [
+   "r29",
+   "cash_deposit",
+   "Cash In Agent"
+  ],
+  [
+   "r30",
+   "cash_withdrawal",
+   "Cash Out via Agent"
+  ],
+  [
+   "r31",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r32",
+   "wages",
+   "Money sent to PERSON_04"
+  ],
+  [
+   "r33",
+   "family_transfer",
+   "Money sent to PERSON_05"
+  ],
+  [
+   "r34",
+   "input_purchase",
+   "Mtendere Grain Bags"
+  ],
+  [
+   "r35",
+   "family_transfer",
+   "Money sent to PERSON_03"
+  ],
+  [
+   "r36",
+   "school_fees",
+   "Chimwemwe Basic School"
+  ]
+ ]
+}

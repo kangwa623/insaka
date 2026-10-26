@@ -1,0 +1,164 @@
+{
+ "1ae88e4c3a73d73fa5ad86a178fc32274691cc1752b2309c956681e97f85999f": [
+  [
+   "r1",
+   "input_purchase",
+   "GREENLEAF SEEDLINGS"
+  ],
+  [
+   "r2",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r3",
+   "cash_withdrawal",
+   "ATM WDL KAFUE"
+  ],
+  [
+   "r4",
+   "utilities",
+   "ZESCO PREPAID"
+  ],
+  [
+   "r5",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r6",
+   "own_account_transfer",
+   "MTN MOMO TRF"
+  ],
+  [
+   "r7",
+   "cash_deposit",
+   "CASH DEPOSIT KAFUE"
+  ],
+  [
+   "r8",
+   "airtime_data",
+   "AIRTIME PURCHASE AIRTEL"
+  ],
+  [
+   "r9",
+   "bank_charges",
+   "MONTHLY SERVICE FEE"
+  ],
+  [
+   "r10",
+   "bank_charges",
+   "SMS ALERT FEE"
+  ],
+  [
+   "r11",
+   "input_purchase",
+   "DRIPPRO IRRIGATION"
+  ],
+  [
+   "r12",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r13",
+   "tax_payment",
+   "ZRA PAYMENT"
+  ],
+  [
+   "r14",
+   "family_transfer",
+   "TRF TO PERSON_11"
+  ],
+  [
+   "r15",
+   "input_purchase",
+   "VET-CARE AGROVET"
+  ],
+  [
+   "r16",
+   "family_transfer",
+   "TRF TO PERSON_14"
+  ],
+  [
+   "r17",
+   "customer_payment",
+   "Received from [phone]"
+  ],
+  [
+   "r18",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r19",
+   "utilities",
+   "ZESCO Token"
+  ],
+  [
+   "r20",
+   "family_transfer",
+   "Sent to [phone]"
+  ],
+  [
+   "r21",
+   "cash_withdrawal",
+   "Cash Out via Agent"
+  ],
+  [
+   "r22",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r23",
+   "own_account_transfer",
+   "Transfer to Bank ABSA"
+  ],
+  [
+   "r24",
+   "customer_payment",
+   "Received from [phone]"
+  ],
+  [
+   "r25",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r26",
+   "input_purchase",
+   "DripPro Irrigation"
+  ],
+  [
+   "r27",
+   "input_purchase",
+   "Greenleaf Seedlings"
+  ],
+  [
+   "r28",
+   "cash_deposit",
+   "Cash In via Agent"
+  ],
+  [
+   "r29",
+   "family_transfer",
+   "Sent to [phone]"
+  ],
+  [
+   "r30",
+   "family_transfer",
+   "Sent to [phone]"
+  ],
+  [
+   "r31",
+   "school_fees",
+   "Sunrise Secondary School"
+  ],
+  [
+   "r32",
+   "input_purchase",
+   "Vet-Care Agrovet"
+  ]
+ ]
+}

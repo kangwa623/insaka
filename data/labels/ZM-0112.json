@@ -1,0 +1,149 @@
+{
+ "ebc03feafb8b39ed42b872a1eeabf53acb3a1027d5c011f608c43e625f073e14": [
+  [
+   "r1",
+   "rent",
+   "STANDING ORDER RENT"
+  ],
+  [
+   "r2",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r3",
+   "family_transfer",
+   "TRF TO PERSON_02"
+  ],
+  [
+   "r4",
+   "own_account_transfer",
+   "TRF [own AIRTEL wallet]"
+  ],
+  [
+   "r5",
+   "input_purchase",
+   "GLAMOUR BEAUTY WHOLESALE"
+  ],
+  [
+   "r6",
+   "input_purchase",
+   "KANYAMA CASH & CARRY"
+  ],
+  [
+   "r7",
+   "cash_deposit",
+   "CASH DEPOSIT MAZABUKA"
+  ],
+  [
+   "r8",
+   "cash_withdrawal",
+   "ATM WDL MAZABUKA"
+  ],
+  [
+   "r9",
+   "utilities",
+   "ZESCO PREPAID"
+  ],
+  [
+   "r10",
+   "loan_repayment",
+   "LOAN REPAYMENT KWACHA"
+  ],
+  [
+   "r11",
+   "airtime_data",
+   "AIRTIME PURCHASE AIRTEL"
+  ],
+  [
+   "r12",
+   "airtime_data",
+   "AIRTIME PURCHASE MTN"
+  ],
+  [
+   "r13",
+   "bank_charges",
+   "MONTHLY SERVICE FEE"
+  ],
+  [
+   "r14",
+   "bank_charges",
+   "SMS ALERT FEE"
+  ],
+  [
+   "r15",
+   "input_purchase",
+   "HAIRLINE IMPORTS"
+  ],
+  [
+   "r16",
+   "tax_payment",
+   "ZRA PAYMENT TPIN"
+  ],
+  [
+   "r17",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r18",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r19",
+   "customer_payment",
+   "Money received from"
+  ],
+  [
+   "r20",
+   "own_account_transfer",
+   "Transfer to Bank ABSA"
+  ],
+  [
+   "r21",
+   "cash_deposit",
+   "Cash In Agent"
+  ],
+  [
+   "r22",
+   "family_transfer",
+   "Money sent to PERSON_02"
+  ],
+  [
+   "r23",
+   "cash_withdrawal",
+   "Cash Out via Agent"
+  ],
+  [
+   "r24",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r25",
+   "utilities",
+   "ZESCO Token"
+  ],
+  [
+   "r26",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r27",
+   "input_purchase",
+   "Pay Merchant Hairline Imports"
+  ],
+  [
+   "r28",
+   "input_purchase",
+   "Pay Merchant Glamour Beauty"
+  ],
+  [
+   "r29",
+   "input_purchase",
+   "Pay Merchant Kanyama Cash"
+  ]
+ ]
+}

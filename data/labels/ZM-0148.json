@@ -1,0 +1,179 @@
+{
+ "f202c9587394c7a340d0976569e4ae2e6255eb43abac5322e001f3267e9fecd1": [
+  [
+   "r1",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r2",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r3",
+   "cash_deposit",
+   "CASH DEPOSIT MONGU BRANCH"
+  ],
+  [
+   "r4",
+   "cash_withdrawal",
+   "ATM WDL MONGU"
+  ],
+  [
+   "r5",
+   "family_transfer",
+   "TRF TO PERSON_03"
+  ],
+  [
+   "r6",
+   "input_purchase",
+   "HATCHWELL DAY-OLD CHICKS"
+  ],
+  [
+   "r7",
+   "loan_repayment",
+   "LOAN REPAYMENT TIYENDE CREDIT"
+  ],
+  [
+   "r8",
+   "own_account_transfer",
+   "AIRTEL MOMO TRF"
+  ],
+  [
+   "r9",
+   "family_transfer",
+   "TRF TO PERSON_04"
+  ],
+  [
+   "r10",
+   "school_fees",
+   "SCHOOL FEES CHIMWEMWE BASIC"
+  ],
+  [
+   "r11",
+   "input_purchase",
+   "EFT DR MPONGWE FEEDS"
+  ],
+  [
+   "r12",
+   "bank_charges",
+   "MONTHLY SERVICE FEE"
+  ],
+  [
+   "r13",
+   "bank_charges",
+   "SMS ALERT FEE"
+  ],
+  [
+   "r14",
+   "utilities",
+   "ZESCO PREPAID ****#"
+  ],
+  [
+   "r15",
+   "airtime_data",
+   "AIRTIME PURCHASE AIRTEL"
+  ],
+  [
+   "r16",
+   "input_purchase",
+   "EFT DR VET-CARE AGROVET"
+  ],
+  [
+   "r17",
+   "wages",
+   "SALARY PERSON_16"
+  ],
+  [
+   "r18",
+   "airtime_data",
+   "AIRTIME PURCHASE MTN"
+  ],
+  [
+   "r19",
+   "school_fees",
+   "SCHOOL FEES HILLVIEW PRIMARY"
+  ],
+  [
+   "r20",
+   "customer_payment",
+   "Money received from [phone]"
+  ],
+  [
+   "r21",
+   "input_purchase",
+   "Pay Merchant Hatchwell Day-Old"
+  ],
+  [
+   "r22",
+   "school_fees",
+   "Payment to Chimwemwe Basic"
+  ],
+  [
+   "r23",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r24",
+   "utilities",
+   "ZESCO Token ****#"
+  ],
+  [
+   "r25",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r26",
+   "cash_withdrawal",
+   "Cash Out via Agent"
+  ],
+  [
+   "r27",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r28",
+   "own_account_transfer",
+   "Transfer to Bank ABSA"
+  ],
+  [
+   "r29",
+   "school_fees",
+   "Payment to Hillview Primary"
+  ],
+  [
+   "r30",
+   "cash_deposit",
+   "Cash In Agent #"
+  ],
+  [
+   "r31",
+   "wages",
+   "Money sent to PERSON_16"
+  ],
+  [
+   "r32",
+   "family_transfer",
+   "Money sent to PERSON_03"
+  ],
+  [
+   "r33",
+   "family_transfer",
+   "Money sent to PERSON_04"
+  ],
+  [
+   "r34",
+   "input_purchase",
+   "Pay Merchant Mpongwe Feeds"
+  ],
+  [
+   "r35",
+   "input_purchase",
+   "Pay Merchant Vet-Care Agrovet"
+  ]
+ ]
+}

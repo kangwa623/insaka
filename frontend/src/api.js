@@ -1,8 +1,11 @@
 // Calls to the Flask API. Sign-in is simulated: the chosen staff member travels in
 // X-User, and the server checks that person's role on every action.
 
+// The API's address: empty for local use (Vite proxies /api); the Render URL in production.
+export const API = import.meta.env.VITE_API_BASE || "";
+
 export async function api(path, user, { method = "GET", body } = {}) {
-  const res = await fetch(`/api${path}`, {
+  const res = await fetch(`${API}/api${path}`, {
     method,
     headers: { "Content-Type": "application/json", ...(user ? { "X-User": user } : {}) },
     body: body ? JSON.stringify(body) : undefined,

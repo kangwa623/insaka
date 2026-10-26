@@ -1,0 +1,231 @@
+{
+ "f0d01f3587a9ec67f73b66136ccdf1fee77fb92159d0139d4c3e1c6e27460a3b": [
+  [
+   "r1",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r2",
+   "input_purchase",
+   "DRIPPRO IRRIGATION"
+  ],
+  [
+   "r3",
+   "utilities",
+   "ZESCO PREPAID"
+  ],
+  [
+   "r4",
+   "tax_payment",
+   "ZRA PAYMENT"
+  ],
+  [
+   "r5",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r6",
+   "own_account_transfer",
+   "MTN MOMO TRF"
+  ],
+  [
+   "r7",
+   "own_account_transfer",
+   "AIRTEL MOMO TRF"
+  ],
+  [
+   "r8",
+   "cash_withdrawal",
+   "ATM WDL"
+  ],
+  [
+   "r9",
+   "airtime_data",
+   "AIRTIME PURCHASE"
+  ],
+  [
+   "r10",
+   "cash_deposit",
+   "CASH DEPOSIT"
+  ],
+  [
+   "r11",
+   "bank_charges",
+   "MONTHLY SERVICE FEE"
+  ],
+  [
+   "r12",
+   "bank_charges",
+   "SMS ALERT FEE"
+  ],
+  [
+   "r13",
+   "input_purchase",
+   "GREENLEAF SEEDLINGS"
+  ],
+  [
+   "r14",
+   "school_fees",
+   "SCHOOL FEES"
+  ],
+  [
+   "r15",
+   "school_fees",
+   "SCHOOL FEES"
+  ],
+  [
+   "r16",
+   "airtime_data",
+   "AIRTIME PURCHASE"
+  ],
+  [
+   "r17",
+   "input_purchase",
+   "VET-CARE AGROVET"
+  ],
+  [
+   "r18",
+   "family_transfer",
+   "TRF TO PERSON_05"
+  ],
+  [
+   "r19",
+   "customer_payment",
+   "Received from"
+  ],
+  [
+   "r20",
+   "own_account_transfer",
+   "Transfer to Bank"
+  ],
+  [
+   "r21",
+   "family_transfer",
+   "Sent to"
+  ],
+  [
+   "r22",
+   "cash_deposit",
+   "Cash In"
+  ],
+  [
+   "r23",
+   "customer_payment",
+   "Received from"
+  ],
+  [
+   "r24",
+   "cash_withdrawal",
+   "Cash Out"
+  ],
+  [
+   "r25",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r26",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r27",
+   "input_purchase",
+   "Greenleaf Seedlings"
+  ],
+  [
+   "r28",
+   "school_fees",
+   "Mapalo Academy"
+  ],
+  [
+   "r29",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r30",
+   "family_transfer",
+   "Sent to"
+  ],
+  [
+   "r31",
+   "utilities",
+   "ZESCO Token"
+  ],
+  [
+   "r32",
+   "school_fees",
+   "Chimwemwe Basic School"
+  ],
+  [
+   "r33",
+   "cash_withdrawal",
+   "Cash Out"
+  ],
+  [
+   "r34",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r35",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r36",
+   "customer_payment",
+   "Money received"
+  ],
+  [
+   "r37",
+   "own_account_transfer",
+   "Transfer to Bank"
+  ],
+  [
+   "r38",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r39",
+   "cash_deposit",
+   "Cash In"
+  ],
+  [
+   "r40",
+   "family_transfer",
+   "Money sent to"
+  ]
+ ],
+ "83e540dc006a93b93a322cfc454a40ea22482b42b71cf358ba1174f4dffa8cd1": [
+  [
+   "r1",
+   "utilities",
+   "ZESCO Token"
+  ],
+  [
+   "r2",
+   "family_transfer",
+   "Money sent to PERSON_05"
+  ],
+  [
+   "r3",
+   "customer_payment",
+   "Money received from"
+  ],
+  [
+   "r4",
+   "family_transfer",
+   "Money sent to PERSON_14"
+  ],
+  [
+   "r5",
+   "input_purchase",
+   "DripPro Irrigation"
+  ]
+ ]
+}

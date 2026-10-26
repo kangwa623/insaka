@@ -1,0 +1,169 @@
+{
+ "a180abed4dcbe11af066b7a37fb8406b34580a2d4bec0dec14e00a8256d9bf7c": [
+  [
+   "r1",
+   "input_purchase",
+   "EASTERN GRAIN HAULAGE"
+  ],
+  [
+   "r2",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r3",
+   "cash_deposit",
+   "CASH DEPOSIT CHONGWE"
+  ],
+  [
+   "r4",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r5",
+   "cash_withdrawal",
+   "ATM WDL CHONGWE"
+  ],
+  [
+   "r6",
+   "wages",
+   "SALARY PERSON_04"
+  ],
+  [
+   "r7",
+   "own_account_transfer",
+   "AIRTEL MOMO TRF"
+  ],
+  [
+   "r8",
+   "bank_charges",
+   "MONTHLY SERVICE FEE"
+  ],
+  [
+   "r9",
+   "bank_charges",
+   "SMS ALERT FEE"
+  ],
+  [
+   "r10",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r11",
+   "airtime_data",
+   "AIRTIME PURCHASE AIRTEL"
+  ],
+  [
+   "r12",
+   "input_purchase",
+   "LUANGWA TRANSPORTERS"
+  ],
+  [
+   "r13",
+   "utilities",
+   "ZESCO PREPAID"
+  ],
+  [
+   "r14",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r15",
+   "airtime_data",
+   "AIRTIME PURCHASE MTN"
+  ],
+  [
+   "r16",
+   "input_purchase",
+   "MTENDERE GRAIN BAGS"
+  ],
+  [
+   "r17",
+   "family_transfer",
+   "TRF TO PERSON_09"
+  ],
+  [
+   "r18",
+   "family_transfer",
+   "TRF TO PERSON_10"
+  ],
+  [
+   "r19",
+   "customer_payment",
+   "Money received from"
+  ],
+  [
+   "r20",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r21",
+   "cash_withdrawal",
+   "Cash Out via"
+  ],
+  [
+   "r22",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r23",
+   "family_transfer",
+   "Money sent to"
+  ],
+  [
+   "r24",
+   "utilities",
+   "ZESCO Token"
+  ],
+  [
+   "r25",
+   "family_transfer",
+   "Money sent to"
+  ],
+  [
+   "r26",
+   "cash_deposit",
+   "Cash In Agent"
+  ],
+  [
+   "r27",
+   "own_account_transfer",
+   "Transfer to Bank"
+  ],
+  [
+   "r28",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r29",
+   "input_purchase",
+   "Luangwa Transporters"
+  ],
+  [
+   "r30",
+   "input_purchase",
+   "Mtendere Grain Bags"
+  ],
+  [
+   "r31",
+   "customer_payment",
+   "Money received from"
+  ],
+  [
+   "r32",
+   "input_purchase",
+   "Eastern Grain Haulage"
+  ],
+  [
+   "r33",
+   "wages",
+   "Money sent to"
+  ]
+ ]
+}

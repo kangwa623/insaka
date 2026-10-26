@@ -259,6 +259,27 @@ Two evaluations feed it:
 
 **Resetting the demo:** `python -m insaka.agent MWILA-001` prepares Mwila's case afresh, back to "Awaiting RM review". With `--mode rules` it uses the deterministic agent and needs no Groq quota.
 
+## Deploy
+
+**Live at https://insaka.web.app.** The screens are on Firebase Hosting (project `insaka-genaithon`, site `insaka`), and the API is on Render (`https://insaka-zm-api.onrender.com`).
+
+**API on Render** ([render.yaml](render.yaml)): Render → New → Blueprint → this repo, and paste `GROQ_API_KEY` when asked.
+- The build regenerates the seed-42 synthetic data (no PDFs) and seeds the demo pipeline.
+- It runs under gunicorn with one worker, because case state lives in files.
+- `INSAKA_CORS_ORIGINS` limits browser access to the Firebase site.
+
+**Screens on Firebase** ([firebase.json](firebase.json)):
+```powershell
+cd frontend; npm run build; cd ..        # uses VITE_API_BASE from frontend/.env.production
+firebase deploy --only hosting
+```
+
+**Limits of the free tier:**
+- **Sleep:** Render sleeps after 15 minutes idle. The first request then takes up to a minute, and the screens show a "waking the server" notice meanwhile.
+- **Resets:** Render's disk resets on every restart or redeploy. Approvals, edits and uploads made on the public site don't survive, and Mwila's case returns to "Awaiting RM review".
+- **Simulated sign-in:** anyone with the link can act as any of the synthetic staff. The data is synthetic, but don't post the link publicly.
+- **Quota:** a live "Prepare case" on the public site uses the Groq key's daily quota.
+
 ## Tests
 
 ```powershell

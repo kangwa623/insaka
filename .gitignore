@@ -14,9 +14,8 @@ data/synthetic/statements/*
 !data/synthetic/transactions/MWILA-001_*
 !data/synthetic/statements/MWILA-001_*
 
-# Cached model labels and memos: only Mwila's, so the demo runs without an API key.
-data/labels/*
-!data/labels/MWILA-001.json
+# Cached Qwen labels are kept (synthetic clients only), so the deployed demo needs no
+# model calls; memo drafts only for Mwila.
 data/memos/*
 !data/memos/MWILA-001*
 

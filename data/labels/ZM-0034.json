@@ -1,0 +1,231 @@
+{
+ "63ae8caee1f50d0a623d41e610ed3627c3e3df262bfb63df7d2f521a617c9c6f": [
+  [
+   "r1",
+   "input_purchase",
+   "CEMENT & STEEL"
+  ],
+  [
+   "r2",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r3",
+   "cash_deposit",
+   "CASH DEPOSIT"
+  ],
+  [
+   "r4",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r5",
+   "customer_payment",
+   "EFT CR PERSON_03"
+  ],
+  [
+   "r6",
+   "cash_withdrawal",
+   "ATM WDL"
+  ],
+  [
+   "r7",
+   "input_purchase",
+   "BUILDMART WHOLESALE"
+  ],
+  [
+   "r8",
+   "own_account_transfer",
+   "TRF [own MTN wallet]"
+  ],
+  [
+   "r9",
+   "airtime_data",
+   "AIRTIME PURCHASE MTN"
+  ],
+  [
+   "r10",
+   "family_transfer",
+   "TRF TO PERSON_12"
+  ],
+  [
+   "r11",
+   "wages",
+   "SALARY PERSON_15"
+  ],
+  [
+   "r12",
+   "wages",
+   "SALARY PERSON_17"
+  ],
+  [
+   "r13",
+   "wages",
+   "SALARY PERSON_18"
+  ],
+  [
+   "r14",
+   "wages",
+   "SALARY PERSON_03"
+  ],
+  [
+   "r15",
+   "wages",
+   "SALARY PERSON_19"
+  ],
+  [
+   "r16",
+   "bank_charges",
+   "MONTHLY SERVICE FEE"
+  ],
+  [
+   "r17",
+   "bank_charges",
+   "SMS ALERT FEE"
+  ],
+  [
+   "r18",
+   "input_purchase",
+   "ROOFING SHEETS ZAMBIA"
+  ],
+  [
+   "r19",
+   "wages",
+   "SALARY PERSON_26"
+  ],
+  [
+   "r20",
+   "tax_payment",
+   "ZRA PAYMENT"
+  ],
+  [
+   "r21",
+   "airtime_data",
+   "AIRTIME PURCHASE AIRTEL"
+  ],
+  [
+   "r22",
+   "utilities",
+   "ZESCO PREPAID"
+  ],
+  [
+   "r23",
+   "school_fees",
+   "SCHOOL FEES"
+  ],
+  [
+   "r24",
+   "customer_payment",
+   "TRF FROM PERSON_03"
+  ],
+  [
+   "r25",
+   "customer_payment",
+   "Received from [phone]"
+  ],
+  [
+   "r26",
+   "cash_deposit",
+   "Cash In via Agent"
+  ],
+  [
+   "r27",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r28",
+   "own_account_transfer",
+   "Transfer to Bank ABSA"
+  ],
+  [
+   "r29",
+   "cash_withdrawal",
+   "Cash Out via Agent"
+  ],
+  [
+   "r30",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r31",
+   "utilities",
+   "ZESCO Token"
+  ],
+  [
+   "r32",
+   "family_transfer",
+   "Sent to [phone] PERSON_12"
+  ],
+  [
+   "r33",
+   "wages",
+   "Sent to [phone] PERSON_26"
+  ],
+  [
+   "r34",
+   "customer_payment",
+   "Received from [phone] PERSON_03"
+  ],
+  [
+   "r35",
+   "wages",
+   "Sent to [phone] PERSON_17"
+  ],
+  [
+   "r36",
+   "wages",
+   "Sent to [phone] PERSON_03"
+  ],
+  [
+   "r37",
+   "wages",
+   "Sent to [phone] PERSON_18"
+  ],
+  [
+   "r38",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r39",
+   "input_purchase",
+   "Roofing Sheets Zambia"
+  ],
+  [
+   "r40",
+   "school_fees",
+   "Payment to Lake View College"
+  ]
+ ],
+ "389c8bf2db7400f24e66f887c3e2303a4144fe27b1efd86ae33618fef0e2c2a9": [
+  [
+   "r1",
+   "input_purchase",
+   "Cement & Steel Distributors"
+  ],
+  [
+   "r2",
+   "wages",
+   "Sent to [phone] PERSON_19"
+  ],
+  [
+   "r3",
+   "wages",
+   "Sent to [phone] PERSON_15"
+  ],
+  [
+   "r4",
+   "school_fees",
+   "Hillview Primary School"
+  ],
+  [
+   "r5",
+   "input_purchase",
+   "BuildMart Wholesale"
+  ]
+ ]
+}

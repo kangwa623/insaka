@@ -1,0 +1,226 @@
+{
+ "d6bb17ec82cab2cfd8a545bf10a4a8e4727a2cb1a2ee00c18ceddcfd42ff191f": [
+  [
+   "r1",
+   "cash_withdrawal",
+   "ATM WDL CHIPATA"
+  ],
+  [
+   "r2",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r3",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r4",
+   "airtime_data",
+   "AIRTIME PURCHASE MTN"
+  ],
+  [
+   "r5",
+   "input_purchase",
+   "CEMENT & STEEL DISTRIBUTORS"
+  ],
+  [
+   "r6",
+   "utilities",
+   "ZESCO PREPAID"
+  ],
+  [
+   "r7",
+   "input_purchase",
+   "ROOFING SHEETS ZAMBIA"
+  ],
+  [
+   "r8",
+   "own_account_transfer",
+   "MTN MOMO TRF"
+  ],
+  [
+   "r9",
+   "cash_deposit",
+   "CASH DEPOSIT CHIPATA BRANCH"
+  ],
+  [
+   "r10",
+   "family_transfer",
+   "TRF TO PERSON_06"
+  ],
+  [
+   "r11",
+   "wages",
+   "SALARY PERSON_19"
+  ],
+  [
+   "r12",
+   "wages",
+   "SALARY PERSON_20"
+  ],
+  [
+   "r13",
+   "wages",
+   "SALARY PERSON_21"
+  ],
+  [
+   "r14",
+   "wages",
+   "SALARY PERSON_22"
+  ],
+  [
+   "r15",
+   "input_purchase",
+   "BUILDMART WHOLESALE"
+  ],
+  [
+   "r16",
+   "bank_charges",
+   "MONTHLY SERVICE FEE"
+  ],
+  [
+   "r17",
+   "bank_charges",
+   "SMS ALERT FEE"
+  ],
+  [
+   "r18",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r19",
+   "school_fees",
+   "SCHOOL FEES HILLVIEW PRIMARY"
+  ],
+  [
+   "r20",
+   "wages",
+   "SALARY PERSON_56"
+  ],
+  [
+   "r21",
+   "wages",
+   "SALARY PERSON_57"
+  ],
+  [
+   "r22",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r23",
+   "customer_payment",
+   "Received from [phone] PERSON"
+  ],
+  [
+   "r24",
+   "own_account_transfer",
+   "Transfer to Bank ABSA"
+  ],
+  [
+   "r25",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r26",
+   "cash_withdrawal",
+   "Cash Out via Agent"
+  ],
+  [
+   "r27",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r28",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r29",
+   "customer_payment",
+   "Received from [phone] PERSON"
+  ],
+  [
+   "r30",
+   "family_transfer",
+   "Sent to [phone] PERSON_06"
+  ],
+  [
+   "r31",
+   "loan_repayment",
+   "Loan Repayment Kwacha Microfinance"
+  ],
+  [
+   "r32",
+   "input_purchase",
+   "Merchant Payment BuildMart Wholesale"
+  ],
+  [
+   "r33",
+   "wages",
+   "Sent to [phone] PERSON_56"
+  ],
+  [
+   "r34",
+   "cash_deposit",
+   "Cash In via Agent"
+  ],
+  [
+   "r35",
+   "wages",
+   "Sent to [phone] PERSON_57"
+  ],
+  [
+   "r36",
+   "input_purchase",
+   "Merchant Payment Roofing Sheets"
+  ],
+  [
+   "r37",
+   "input_purchase",
+   "Merchant Payment Cement & Steel"
+  ],
+  [
+   "r38",
+   "utilities",
+   "ZESCO Token"
+  ],
+  [
+   "r39",
+   "wages",
+   "Sent to [phone] PERSON_21"
+  ],
+  [
+   "r40",
+   "wages",
+   "Sent to [phone] PERSON_22"
+  ]
+ ],
+ "30b80d469435400094b7c39d1f6f5b45c87aadfe83c4231f8876b3175732db32": [
+  [
+   "r1",
+   "wages",
+   "Sent to [phone] PERSON_19"
+  ],
+  [
+   "r2",
+   "family_transfer",
+   "Sent to [phone] PERSON_76[owner-surname]"
+  ],
+  [
+   "r3",
+   "wages",
+   "Sent to [phone] PERSON_20"
+  ],
+  [
+   "r4",
+   "school_fees",
+   "Payment to Hillview Primary School"
+  ]
+ ]
+}

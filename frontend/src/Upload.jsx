@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { API } from "./api.js";
 
 const WALLETS = { mtn: "MTN MoMo", airtel: "Airtel Money" };
 
@@ -14,7 +15,7 @@ export default function Upload({ token }) {
   const [done, setDone] = useState(null);
 
   useEffect(() => {
-    fetch(`/api/upload/${token}`).then(async (r) => {
+    fetch(`${API}/api/upload/${token}`).then(async (r) => {
       const d = await r.json();
       if (!r.ok) throw new Error(d.error);
       setInfo(d);
@@ -27,7 +28,7 @@ export default function Upload({ token }) {
     info.consents.forEach(({ key }) => form.append(key, ticks[key] ? "true" : "false"));
     Object.entries(files).forEach(([ch, f]) => f && form.append(ch, f));
     try {
-      const r = await fetch(`/api/upload/${token}`, { method: "POST", body: form });
+      const r = await fetch(`${API}/api/upload/${token}`, { method: "POST", body: form });
       const d = await r.json();
       if (!r.ok) throw new Error(d.error);
       setDone(d);

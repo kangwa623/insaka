@@ -1,0 +1,256 @@
+{
+ "139125806d0393b7b14cc7c7c0cc1b622a0d6068a14d69d6c485cf0c14eefe6e": [
+  [
+   "r1",
+   "cash_withdrawal",
+   "ATM WDL LIVINGSTONE"
+  ],
+  [
+   "r2",
+   "cash_deposit",
+   "CASH DEPOSIT LIVINGSTONE BRANCH"
+  ],
+  [
+   "r3",
+   "input_purchase",
+   "VET-CARE AGROVET"
+  ],
+  [
+   "r4",
+   "customer_payment",
+   "GREENFIELD MILLERS LTD"
+  ],
+  [
+   "r5",
+   "own_account_transfer",
+   "MTN MOMO TRF"
+  ],
+  [
+   "r6",
+   "own_account_transfer",
+   "AIRTEL MOMO TRF"
+  ],
+  [
+   "r7",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r8",
+   "utilities",
+   "ZESCO PREPAID"
+  ],
+  [
+   "r9",
+   "input_purchase",
+   "GREENLEAF SEEDLINGS"
+  ],
+  [
+   "r10",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r11",
+   "wages",
+   "SALARY PERSON_02"
+  ],
+  [
+   "r12",
+   "input_purchase",
+   "DRIPPRO IRRIGATION"
+  ],
+  [
+   "r13",
+   "bank_charges",
+   "MONTHLY SERVICE FEE"
+  ],
+  [
+   "r14",
+   "bank_charges",
+   "SMS ALERT FEE"
+  ],
+  [
+   "r15",
+   "airtime_data",
+   "AIRTIME PURCHASE MTN"
+  ],
+  [
+   "r16",
+   "tax_payment",
+   "ZRA PAYMENT TPIN"
+  ],
+  [
+   "r17",
+   "family_transfer",
+   "TRF TO PERSON_08"
+  ],
+  [
+   "r18",
+   "airtime_data",
+   "AIRTIME PURCHASE AIRTEL"
+  ],
+  [
+   "r19",
+   "family_transfer",
+   "TRF TO PERSON_12"
+  ],
+  [
+   "r20",
+   "customer_payment",
+   "Received from [phone]"
+  ],
+  [
+   "r21",
+   "cash_withdrawal",
+   "Cash Out via Agent"
+  ],
+  [
+   "r22",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r23",
+   "own_account_transfer",
+   "Transfer to Bank ABSA"
+  ],
+  [
+   "r24",
+   "cash_deposit",
+   "Cash In via Agent"
+  ],
+  [
+   "r25",
+   "utilities",
+   "ZESCO Token"
+  ],
+  [
+   "r26",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r27",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r28",
+   "family_transfer",
+   "Sent to [phone]"
+  ],
+  [
+   "r29",
+   "input_purchase",
+   "Vet-Care Agrovet"
+  ],
+  [
+   "r30",
+   "input_purchase",
+   "DripPro Irrigation"
+  ],
+  [
+   "r31",
+   "customer_payment",
+   "Received from [phone]"
+  ],
+  [
+   "r32",
+   "input_purchase",
+   "Greenleaf Seedlings"
+  ],
+  [
+   "r33",
+   "family_transfer",
+   "Sent to [phone]"
+  ],
+  [
+   "r34",
+   "wages",
+   "Sent to [phone]"
+  ],
+  [
+   "r35",
+   "family_transfer",
+   "Sent to [phone]"
+  ],
+  [
+   "r36",
+   "customer_payment",
+   "Money received from"
+  ],
+  [
+   "r37",
+   "cash_deposit",
+   "Cash In Agent"
+  ],
+  [
+   "r38",
+   "cash_withdrawal",
+   "Cash Out via Agent"
+  ],
+  [
+   "r39",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r40",
+   "own_account_transfer",
+   "Transfer to Bank ABSA"
+  ]
+ ],
+ "3dbf0ae869e6de17886ebfebd51be93d06c9912e53df9446467510167d95cbaf": [
+  [
+   "r1",
+   "input_purchase",
+   "Greenleaf Seedlings"
+  ],
+  [
+   "r2",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r3",
+   "family_transfer",
+   "PERSON_08[owner-surname]"
+  ],
+  [
+   "r4",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r5",
+   "utilities",
+   "ZESCO Token"
+  ],
+  [
+   "r6",
+   "family_transfer",
+   "PERSON_12"
+  ],
+  [
+   "r7",
+   "family_transfer",
+   "PERSON_35[owner-surname]"
+  ],
+  [
+   "r8",
+   "input_purchase",
+   "DripPro Irrigation"
+  ],
+  [
+   "r9",
+   "wages",
+   "PERSON_02"
+  ],
+  [
+   "r10",
+   "input_purchase",
+   "Vet-Care Agrovet"
+  ]
+ ]
+}

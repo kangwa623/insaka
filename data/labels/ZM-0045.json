@@ -1,0 +1,201 @@
+{
+ "0695e5315083f1b617252813f51ad2076cdb230f3d921e4a331a6181a0d36861": [
+  [
+   "r1",
+   "cash_deposit",
+   "CASH DEPOSIT"
+  ],
+  [
+   "r2",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r3",
+   "input_purchase",
+   "TIYANJANE WHOLESALE"
+  ],
+  [
+   "r4",
+   "rent",
+   "RENT TOWN COUNCIL"
+  ],
+  [
+   "r5",
+   "utilities",
+   "ZESCO PREPAID"
+  ],
+  [
+   "r6",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r7",
+   "cash_withdrawal",
+   "ATM WDL"
+  ],
+  [
+   "r8",
+   "airtime_data",
+   "AIRTIME PURCHASE"
+  ],
+  [
+   "r9",
+   "wages",
+   "SALARY PERSON_12"
+  ],
+  [
+   "r10",
+   "own_account_transfer",
+   "MTN MOMO TRF"
+  ],
+  [
+   "r11",
+   "bank_charges",
+   "MONTHLY SERVICE FEE"
+  ],
+  [
+   "r12",
+   "bank_charges",
+   "SMS ALERT FEE"
+  ],
+  [
+   "r13",
+   "input_purchase",
+   "NORTHERN BEVERAGES DEPOT"
+  ],
+  [
+   "r14",
+   "airtime_data",
+   "AIRTIME PURCHASE"
+  ],
+  [
+   "r15",
+   "input_purchase",
+   "KANYAMA CASH & CARRY"
+  ],
+  [
+   "r16",
+   "tax_payment",
+   "ZRA PAYMENT"
+  ],
+  [
+   "r17",
+   "family_transfer",
+   "TRF TO PERSON_25"
+  ],
+  [
+   "r18",
+   "family_transfer",
+   "TRF TO PERSON_31"
+  ],
+  [
+   "r19",
+   "school_fees",
+   "SCHOOL FEES"
+  ],
+  [
+   "r20",
+   "customer_payment",
+   "Received from"
+  ],
+  [
+   "r21",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r22",
+   "family_transfer",
+   "Sent to PERSON_46"
+  ],
+  [
+   "r23",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r24",
+   "cash_withdrawal",
+   "Cash Out via Agent"
+  ],
+  [
+   "r25",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r26",
+   "family_transfer",
+   "Sent to PERSON_31"
+  ],
+  [
+   "r27",
+   "cash_deposit",
+   "Cash In via Agent"
+  ],
+  [
+   "r28",
+   "own_account_transfer",
+   "Transfer to Bank ABSA"
+  ],
+  [
+   "r29",
+   "input_purchase",
+   "Kanyama Cash & Carry"
+  ],
+  [
+   "r30",
+   "family_transfer",
+   "Sent to PERSON_25"
+  ],
+  [
+   "r31",
+   "utilities",
+   "ZESCO Token"
+  ],
+  [
+   "r32",
+   "wages",
+   "Sent to PERSON_12"
+  ],
+  [
+   "r33",
+   "input_purchase",
+   "Northern Beverages Depot"
+  ],
+  [
+   "r34",
+   "input_purchase",
+   "Tiyanjane Wholesale"
+  ],
+  [
+   "r35",
+   "school_fees",
+   "Chimwemwe Basic School"
+  ]
+ ],
+ "ead04b5eaf8b37f538bb02124d3194d8b95d8782cbaf62116b2985475a8ba150": [
+  [
+   "r1",
+   "family_transfer",
+   "Sent to [phone] PERSON_46"
+  ],
+  [
+   "r2",
+   "family_transfer",
+   "Sent to [phone] PERSON_31"
+  ],
+  [
+   "r3",
+   "family_transfer",
+   "Sent to [phone] PERSON_25"
+  ],
+  [
+   "r4",
+   "wages",
+   "Sent to [phone] PERSON_12"
+  ]
+ ]
+}

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { CHANNELS } from "./api.js";
+import { API, CHANNELS } from "./api.js";
 
 const SOURCE = { absa_internal: "Held internally", uploaded: "Uploaded", requested: "Requested" };
 
@@ -9,7 +9,7 @@ export default function Documents({ cid, user, me, notify }) {
   const [channel, setChannel] = useState("absa");
   const [file, setFile] = useState(null);
   const [busy, setBusy] = useState(false);
-  useEffect(() => { setD(null); fetch(`/api/cases/${cid}/documents`, { headers: { "X-User": user } }).then((r) => r.json()).then(setD); }, [cid, user]);
+  useEffect(() => { setD(null); fetch(`${API}/api/cases/${cid}/documents`, { headers: { "X-User": user } }).then((r) => r.json()).then(setD); }, [cid, user]);
   if (!d || d.error) return null;
   const link = `${window.location.origin}${d.link}`;
 
@@ -19,7 +19,7 @@ export default function Documents({ cid, user, me, notify }) {
     form.append("channel", channel);
     form.append("file", file);
     try {
-      const r = await fetch(`/api/cases/${cid}/upload`, { method: "POST", headers: { "X-User": user }, body: form });
+      const r = await fetch(`${API}/api/cases/${cid}/upload`, { method: "POST", headers: { "X-User": user }, body: form });
       const data = await r.json();
       if (!r.ok) throw new Error(data.error);
       setD(data); setFile(null);

@@ -1,0 +1,221 @@
+{
+ "f73f71233a7593cc7b386f20556590184122ebfb56f2d2b8eadc8ea4f9a851f9": [
+  [
+   "r1",
+   "input_purchase",
+   "AGRI-CHEM SUPPLIES"
+  ],
+  [
+   "r2",
+   "input_purchase",
+   "KAFUE SEED"
+  ],
+  [
+   "r3",
+   "rent",
+   "RENT KALULU"
+  ],
+  [
+   "r4",
+   "cash_deposit",
+   "CASH DEPOSIT"
+  ],
+  [
+   "r5",
+   "cash_withdrawal",
+   "ATM WDL"
+  ],
+  [
+   "r6",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r7",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r8",
+   "family_transfer",
+   "TRF TO PERSON_04"
+  ],
+  [
+   "r9",
+   "own_account_transfer",
+   "TRF [own AIRTEL wallet]"
+  ],
+  [
+   "r10",
+   "own_account_transfer",
+   "TRF [own MTN wallet]"
+  ],
+  [
+   "r11",
+   "wages",
+   "SALARY PERSON_07"
+  ],
+  [
+   "r12",
+   "utilities",
+   "ZESCO PREPAID"
+  ],
+  [
+   "r13",
+   "airtime_data",
+   "AIRTIME PURCHASE"
+  ],
+  [
+   "r14",
+   "bank_charges",
+   "MONTHLY SERVICE FEE"
+  ],
+  [
+   "r15",
+   "bank_charges",
+   "SMS ALERT FEE"
+  ],
+  [
+   "r16",
+   "bank_charges",
+   "OVERDRAFT INTEREST"
+  ],
+  [
+   "r17",
+   "family_transfer",
+   "TRF TO PERSON_13"
+  ],
+  [
+   "r18",
+   "wages",
+   "SALARY PERSON_16"
+  ],
+  [
+   "r19",
+   "airtime_data",
+   "AIRTIME PURCHASE"
+  ],
+  [
+   "r20",
+   "input_purchase",
+   "FERTILISER WHOLESALE"
+  ],
+  [
+   "r21",
+   "customer_payment",
+   "Received from [phone]"
+  ],
+  [
+   "r22",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r23",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r24",
+   "cash_withdrawal",
+   "Cash Out via Agent"
+  ],
+  [
+   "r25",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r26",
+   "cash_deposit",
+   "Cash In via Agent"
+  ],
+  [
+   "r27",
+   "own_account_transfer",
+   "Transfer to Bank ABSA"
+  ],
+  [
+   "r28",
+   "family_transfer",
+   "Sent to [phone] PERSON_13"
+  ],
+  [
+   "r29",
+   "wages",
+   "Sent to [phone] PERSON_16"
+  ],
+  [
+   "r30",
+   "wages",
+   "Sent to [phone] PERSON_07"
+  ],
+  [
+   "r31",
+   "utilities",
+   "ZESCO Token"
+  ],
+  [
+   "r32",
+   "family_transfer",
+   "Sent to [phone] PERSON_04"
+  ],
+  [
+   "r33",
+   "customer_payment",
+   "Money received from [phone]"
+  ],
+  [
+   "r34",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r35",
+   "cash_deposit",
+   "Cash In Agent"
+  ],
+  [
+   "r36",
+   "cash_withdrawal",
+   "Cash Out via Agent"
+  ],
+  [
+   "r37",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r38",
+   "own_account_transfer",
+   "Transfer to Bank ABSA"
+  ],
+  [
+   "r39",
+   "utilities",
+   "ZESCO Token"
+  ],
+  [
+   "r40",
+   "airtime_data",
+   "Data Bundle"
+  ]
+ ],
+ "22fa6423ad83dc8640ce702bb169d52a33ace920af6e69ab2237f6bdf87fd489": [
+  [
+   "r1",
+   "wages",
+   "Money sent to PERSON_07"
+  ],
+  [
+   "r2",
+   "family_transfer",
+   "Money sent to PERSON_13"
+  ],
+  [
+   "r3",
+   "other",
+   "Money sent to PERSON_04"
+  ]
+ ]
+}

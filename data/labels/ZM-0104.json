@@ -1,0 +1,358 @@
+{
+ "82713b0f293e991d3d59562769478db55112e42df192e327bb779b1252374806": [
+  [
+   "r1",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r2",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r3",
+   "cash_deposit",
+   "CASH DEPOSIT KABWE"
+  ],
+  [
+   "r4",
+   "input_purchase",
+   "NORTHERN BEVERAGES DEPOT"
+  ],
+  [
+   "r5",
+   "utilities",
+   "ZESCO PREPAID"
+  ],
+  [
+   "r6",
+   "cash_withdrawal",
+   "ATM WDL KABWE"
+  ],
+  [
+   "r7",
+   "own_account_transfer",
+   "MTN MOMO TRF"
+  ],
+  [
+   "r8",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r9",
+   "own_account_transfer",
+   "AIRTEL MOMO TRF"
+  ],
+  [
+   "r10",
+   "input_purchase",
+   "TIYANJANE WHOLESALE"
+  ],
+  [
+   "r11",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r12",
+   "wages",
+   "SALARY PERSON_37"
+  ],
+  [
+   "r13",
+   "wages",
+   "SALARY PERSON_40"
+  ],
+  [
+   "r14",
+   "family_transfer",
+   "TRF TO PERSON_41"
+  ],
+  [
+   "r15",
+   "wages",
+   "SALARY PERSON_42"
+  ],
+  [
+   "r16",
+   "bank_charges",
+   "MONTHLY SERVICE FEE"
+  ],
+  [
+   "r17",
+   "bank_charges",
+   "SMS ALERT FEE"
+  ],
+  [
+   "r18",
+   "customer_payment",
+   "TRF FROM PERSON_54"
+  ],
+  [
+   "r19",
+   "customer_payment",
+   "EFT CR PERSON_54"
+  ],
+  [
+   "r20",
+   "wages",
+   "SALARY PERSON_57"
+  ],
+  [
+   "r21",
+   "wages",
+   "SALARY PERSON_54"
+  ],
+  [
+   "r22",
+   "tax_payment",
+   "ZRA PAYMENT TPIN"
+  ],
+  [
+   "r23",
+   "school_fees",
+   "SCHOOL FEES SUNRISE"
+  ],
+  [
+   "r24",
+   "school_fees",
+   "SCHOOLS FEES MAPALO"
+  ],
+  [
+   "r25",
+   "airtime_data",
+   "AIRTIME PURCHASE AIRTEL"
+  ],
+  [
+   "r26",
+   "family_transfer",
+   "TRF TO PERSON_68"
+  ],
+  [
+   "r27",
+   "input_purchase",
+   "KANYAMA CASH & CARRY"
+  ],
+  [
+   "r28",
+   "wages",
+   "SALARY PERSON_70"
+  ],
+  [
+   "r29",
+   "airtime_data",
+   "AIRTIME PURCHASE MTN"
+  ],
+  [
+   "r30",
+   "customer_payment",
+   "Received from [phone]"
+  ],
+  [
+   "r31",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r32",
+   "own_account_transfer",
+   "Transfer to Bank ABSA"
+  ],
+  [
+   "r33",
+   "cash_deposit",
+   "Cash In via Agent"
+  ],
+  [
+   "r34",
+   "customer_payment",
+   "Received from [phone]"
+  ],
+  [
+   "r35",
+   "customer_payment",
+   "Received from [phone]"
+  ],
+  [
+   "r36",
+   "cash_withdrawal",
+   "Cash Out via Agent"
+  ],
+  [
+   "r37",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r38",
+   "wages",
+   "Sent to [phone]"
+  ],
+  [
+   "r39",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r40",
+   "customer_payment",
+   "Sent to [phone]"
+  ]
+ ],
+ "95b866481a47d45348f36a7406e4ee2551b62be5a11485795bcfe814fc33b506": [
+  [
+   "r1",
+   "utilities",
+   "ZESCO Token"
+  ],
+  [
+   "r2",
+   "input_purchase",
+   "Tiyanjane Wholesale"
+  ],
+  [
+   "r3",
+   "input_purchase",
+   "Kanyama Cash & Carry"
+  ],
+  [
+   "r4",
+   "input_purchase",
+   "Northern Beverages Depot"
+  ],
+  [
+   "r5",
+   "family_transfer",
+   "PERSON_41[owner-surname]"
+  ],
+  [
+   "r6",
+   "wages",
+   "PERSON_40"
+  ],
+  [
+   "r7",
+   "family_transfer",
+   "PERSON_68"
+  ],
+  [
+   "r8",
+   "school_fees",
+   "Sunrise Secondary School"
+  ],
+  [
+   "r9",
+   "wages",
+   "PERSON_57"
+  ],
+  [
+   "r10",
+   "wages",
+   "PERSON_37"
+  ],
+  [
+   "r11",
+   "customer_payment",
+   "Money received from"
+  ],
+  [
+   "r12",
+   "customer_payment",
+   "Money received from"
+  ],
+  [
+   "r13",
+   "cash_deposit",
+   "Cash In Agent"
+  ],
+  [
+   "r14",
+   "own_account_transfer",
+   "Transfer to Bank ABSA"
+  ],
+  [
+   "r15",
+   "cash_withdrawal",
+   "Cash Out via Agent"
+  ],
+  [
+   "r16",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r17",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r18",
+   "wages",
+   "PERSON_57"
+  ],
+  [
+   "r19",
+   "customer_payment",
+   "Money received from"
+  ],
+  [
+   "r20",
+   "input_purchase",
+   "Tiyanjane Wholesale"
+  ],
+  [
+   "r21",
+   "family_transfer",
+   "PERSON_41[owner-surname]"
+  ],
+  [
+   "r22",
+   "wages",
+   "PERSON_37"
+  ],
+  [
+   "r23",
+   "utilities",
+   "ZESCO Token"
+  ],
+  [
+   "r24",
+   "family_transfer",
+   "PERSON_68"
+  ],
+  [
+   "r25",
+   "wages",
+   "PERSON_70"
+  ],
+  [
+   "r26",
+   "wages",
+   "PERSON_42"
+  ],
+  [
+   "r27",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r28",
+   "wages",
+   "PERSON_54"
+  ],
+  [
+   "r29",
+   "school_fees",
+   "Mapalo Academy"
+  ]
+ ],
+ "8537fc758973bbb7e0653e7c87ca8c8fa575c5a6bfe46ea58129839d99bb0cfa": [
+  [
+   "r1",
+   "school_fees",
+   "SCHOOL FEES MAPALO"
+  ]
+ ]
+}

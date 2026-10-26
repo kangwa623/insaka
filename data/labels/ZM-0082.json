@@ -1,0 +1,246 @@
+{
+ "7138e77d50a6d3a3622ba19b9eebf03db3d84a0215073acb92c5b7749dffbb72": [
+  [
+   "r1",
+   "input_purchase",
+   "FUEL POINT SERVICE STATION"
+  ],
+  [
+   "r2",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r3",
+   "airtime_data",
+   "AIRTIME PURCHASE AIRTEL"
+  ],
+  [
+   "r4",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r5",
+   "cash_withdrawal",
+   "ATM WDL MWINILUNGA"
+  ],
+  [
+   "r6",
+   "family_transfer",
+   "TRF TO PERSON_08"
+  ],
+  [
+   "r7",
+   "cash_deposit",
+   "CASH DEPOSIT MWINILUNGA"
+  ],
+  [
+   "r8",
+   "own_account_transfer",
+   "MTN MOMO TRF"
+  ],
+  [
+   "r9",
+   "utilities",
+   "ZESCO PREPAID"
+  ],
+  [
+   "r10",
+   "wages",
+   "SALARY PERSON_11"
+  ],
+  [
+   "r11",
+   "input_purchase",
+   "TYRE WORLD ZAMBIA"
+  ],
+  [
+   "r12",
+   "wages",
+   "SALARY PERSON_12"
+  ],
+  [
+   "r13",
+   "own_account_transfer",
+   "AIRTEL MOMO TRF"
+  ],
+  [
+   "r14",
+   "bank_charges",
+   "MONTHLY SERVICE FEE"
+  ],
+  [
+   "r15",
+   "bank_charges",
+   "SMS ALERT FEE"
+  ],
+  [
+   "r16",
+   "input_purchase",
+   "SPARES CORNER MOTORS"
+  ],
+  [
+   "r17",
+   "tax_payment",
+   "ZRA PAYMENT TPIN"
+  ],
+  [
+   "r18",
+   "airtime_data",
+   "AIRTIME PURCHASE MTN"
+  ],
+  [
+   "r19",
+   "customer_payment",
+   "TRF FROM PERSON_12"
+  ],
+  [
+   "r20",
+   "customer_payment",
+   "Received from [phone]"
+  ],
+  [
+   "r21",
+   "input_purchase",
+   "Tyre World Zambia"
+  ],
+  [
+   "r22",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r23",
+   "customer_payment",
+   "Received from [phone]"
+  ],
+  [
+   "r24",
+   "own_account_transfer",
+   "Transfer to Bank ABSA"
+  ],
+  [
+   "r25",
+   "cash_deposit",
+   "Cash In via Agent"
+  ],
+  [
+   "r26",
+   "cash_withdrawal",
+   "Cash Out via Agent"
+  ],
+  [
+   "r27",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r28",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r29",
+   "family_transfer",
+   "Sent to [phone]"
+  ],
+  [
+   "r30",
+   "wages",
+   "Sent to [phone]"
+  ],
+  [
+   "r31",
+   "input_purchase",
+   "Spares Corner Motors"
+  ],
+  [
+   "r32",
+   "utilities",
+   "ZESCO Token"
+  ],
+  [
+   "r33",
+   "input_purchase",
+   "Fuel Point Service Station"
+  ],
+  [
+   "r34",
+   "wages",
+   "Sent to [phone]"
+  ],
+  [
+   "r35",
+   "customer_payment",
+   "Money received from"
+  ],
+  [
+   "r36",
+   "cash_deposit",
+   "Cash In Agent"
+  ],
+  [
+   "r37",
+   "input_purchase",
+   "Fuel Point Service Station"
+  ],
+  [
+   "r38",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r39",
+   "cash_withdrawal",
+   "Cash Out via Agent"
+  ],
+  [
+   "r40",
+   "bank_charges",
+   "Cash Out Fee"
+  ]
+ ],
+ "582a12c6cb3d13cc3d8a2ad6efb0b07a54becd9a8f04e2ec29298c45cf2a9138": [
+  [
+   "r1",
+   "own_account_transfer",
+   "Transfer to Bank ABSA"
+  ],
+  [
+   "r2",
+   "family_transfer",
+   "Money sent to PERSON_08"
+  ],
+  [
+   "r3",
+   "input_purchase",
+   "Pay Merchant Spares Corner"
+  ],
+  [
+   "r4",
+   "input_purchase",
+   "Pay Merchant Tyre World"
+  ],
+  [
+   "r5",
+   "customer_payment",
+   "Money received from [phone]"
+  ],
+  [
+   "r6",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r7",
+   "wages",
+   "Money sent to PERSON_11"
+  ],
+  [
+   "r8",
+   "utilities",
+   "ZESCO Token ****#"
+  ]
+ ]
+}

@@ -1,0 +1,154 @@
+{
+ "bf7ae7a13c868e5ad332b0b01fd4963d4f8d30d101bd28e606f01bc748dba377": [
+  [
+   "r1",
+   "cash_withdrawal",
+   "ATM WDL MANSA"
+  ],
+  [
+   "r2",
+   "cash_deposit",
+   "CASH DEPOSIT MANSA"
+  ],
+  [
+   "r3",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r4",
+   "utilities",
+   "ZESCO PREPAID"
+  ],
+  [
+   "r5",
+   "family_transfer",
+   "TRF TO PERSON_02"
+  ],
+  [
+   "r6",
+   "airtime_data",
+   "AIRTIME PURCHASE AIRTEL"
+  ],
+  [
+   "r7",
+   "own_account_transfer",
+   "MTN MOMO TRF"
+  ],
+  [
+   "r8",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r9",
+   "input_purchase",
+   "EFT DR KAMWALA"
+  ],
+  [
+   "r10",
+   "bank_charges",
+   "MONTHLY SERVICE FEE"
+  ],
+  [
+   "r11",
+   "bank_charges",
+   "SMS ALERT FEE"
+  ],
+  [
+   "r12",
+   "input_purchase",
+   "EFT DR CHITENGE"
+  ],
+  [
+   "r13",
+   "input_purchase",
+   "EFT DR NEEDLECRAFT"
+  ],
+  [
+   "r14",
+   "airtime_data",
+   "AIRTIME PURCHASE MTN"
+  ],
+  [
+   "r15",
+   "tax_payment",
+   "ZRA PAYMENT TPIN"
+  ],
+  [
+   "r16",
+   "family_transfer",
+   "TRF TO PERSON_10"
+  ],
+  [
+   "r17",
+   "input_purchase",
+   "Merchant Payment Kamwala"
+  ],
+  [
+   "r18",
+   "customer_payment",
+   "Received from [phone]"
+  ],
+  [
+   "r19",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r20",
+   "cash_withdrawal",
+   "Cash Out via"
+  ],
+  [
+   "r21",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r22",
+   "cash_deposit",
+   "Cash In via"
+  ],
+  [
+   "r23",
+   "input_purchase",
+   "Merchant Payment Needlecraft"
+  ],
+  [
+   "r24",
+   "loan_repayment",
+   "Loan Repayment Kwacha"
+  ],
+  [
+   "r25",
+   "own_account_transfer",
+   "Transfer to Bank"
+  ],
+  [
+   "r26",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r27",
+   "utilities",
+   "ZESCO Token"
+  ],
+  [
+   "r28",
+   "family_transfer",
+   "Sent to [phone]"
+  ],
+  [
+   "r29",
+   "family_transfer",
+   "Sent to [phone]"
+  ],
+  [
+   "r30",
+   "input_purchase",
+   "Merchant Payment Chitenge"
+  ]
+ ]
+}

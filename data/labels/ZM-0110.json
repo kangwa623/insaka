@@ -1,0 +1,164 @@
+{
+ "3e2415130992d7a8c945cf2cb7fcb88c692248bedde93e232cb87e2c4f4b1b42": [
+  [
+   "r1",
+   "cash_deposit",
+   "CASH DEPOSIT"
+  ],
+  [
+   "r2",
+   "cash_withdrawal",
+   "ATM WDL"
+  ],
+  [
+   "r3",
+   "input_purchase",
+   "HATCHWELL DAY-OLD CHICKS"
+  ],
+  [
+   "r4",
+   "rent",
+   "RENT PHIRI SHOPS"
+  ],
+  [
+   "r5",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r6",
+   "own_account_transfer",
+   "TRF [own AIRTEL wallet]"
+  ],
+  [
+   "r7",
+   "loan_repayment",
+   "LOAN REPAYMENT"
+  ],
+  [
+   "r8",
+   "bank_charges",
+   "MONTHLY SERVICE FEE"
+  ],
+  [
+   "r9",
+   "bank_charges",
+   "SMS ALERT FEE"
+  ],
+  [
+   "r10",
+   "input_purchase",
+   "VET-CARE AGROVET"
+  ],
+  [
+   "r11",
+   "family_transfer",
+   "TRF TO PERSON_04"
+  ],
+  [
+   "r12",
+   "utilities",
+   "ZESCO PREPAID"
+  ],
+  [
+   "r13",
+   "tax_payment",
+   "ZRA PAYMENT"
+  ],
+  [
+   "r14",
+   "input_purchase",
+   "MPONGWE FEEDS"
+  ],
+  [
+   "r15",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r16",
+   "family_transfer",
+   "TRF TO PERSON_08"
+  ],
+  [
+   "r17",
+   "airtime_data",
+   "AIRTIME PURCHASE"
+  ],
+  [
+   "r18",
+   "family_transfer",
+   "TRF TO PERSON_11"
+  ],
+  [
+   "r19",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r20",
+   "customer_payment",
+   "Money received from"
+  ],
+  [
+   "r21",
+   "input_purchase",
+   "Vet-Care Agrovet"
+  ],
+  [
+   "r22",
+   "own_account_transfer",
+   "Transfer to Bank ABSA"
+  ],
+  [
+   "r23",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r24",
+   "cash_deposit",
+   "Cash In Agent"
+  ],
+  [
+   "r25",
+   "cash_withdrawal",
+   "Cash Out via Agent"
+  ],
+  [
+   "r26",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r27",
+   "family_transfer",
+   "Money sent to PERSON_08"
+  ],
+  [
+   "r28",
+   "utilities",
+   "ZESCO Token"
+  ],
+  [
+   "r29",
+   "family_transfer",
+   "Money sent to PERSON_04"
+  ],
+  [
+   "r30",
+   "input_purchase",
+   "Hatchwell Day-Old Chicks"
+  ],
+  [
+   "r31",
+   "family_transfer",
+   "Money sent to PERSON_11"
+  ],
+  [
+   "r32",
+   "input_purchase",
+   "Mpongwe Feeds"
+  ]
+ ]
+}

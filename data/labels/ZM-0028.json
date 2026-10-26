@@ -1,0 +1,161 @@
+{
+ "c0c5aed0fd3d04680441b0cddb672d2bacb49a7f5fce506b3a3ae8aed2f8c0af": [
+  [
+   "r1",
+   "cash_deposit",
+   "CASH DEPOSIT"
+  ],
+  [
+   "r2",
+   "rent",
+   "RENT MWANZA PROPERTIES"
+  ],
+  [
+   "r3",
+   "input_purchase",
+   "KANYAMA CASH & CARRY"
+  ],
+  [
+   "r4",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r5",
+   "cash_withdrawal",
+   "ATM WDL"
+  ],
+  [
+   "r6",
+   "tax_payment",
+   "ZRA PAYMENT"
+  ],
+  [
+   "r7",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r8",
+   "utilities",
+   "ZESCO PREPAID"
+  ],
+  [
+   "r9",
+   "own_account_transfer",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r10",
+   "bank_charges",
+   "MONTHLY SERVICE FEE"
+  ],
+  [
+   "r11",
+   "bank_charges",
+   "SMS ALERT FEE"
+  ],
+  [
+   "r12",
+   "family_transfer",
+   "TRF TO PERSON_09"
+  ],
+  [
+   "r13",
+   "input_purchase",
+   "MPONGWE FEEDS"
+  ],
+  [
+   "r14",
+   "input_purchase",
+   "NORTHERN BEVERAGES DEPOT"
+  ],
+  [
+   "r15",
+   "airtime_data",
+   "AIRTIME PURCHASE MTN"
+  ],
+  [
+   "r16",
+   "school_fees",
+   "SCHOOL FEES"
+  ],
+  [
+   "r17",
+   "airtime_data",
+   "AIRTIME PURCHASE AIRTEL"
+  ],
+  [
+   "r18",
+   "customer_payment",
+   "Received from [phone]"
+  ],
+  [
+   "r19",
+   "cash_withdrawal",
+   "Cash Out via Agent"
+  ],
+  [
+   "r20",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r21",
+   "family_transfer",
+   "Sent to [phone]"
+  ],
+  [
+   "r22",
+   "utilities",
+   "ZESCO Token"
+  ],
+  [
+   "r23",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r24",
+   "input_purchase",
+   "Northern Beverages Depot"
+  ],
+  [
+   "r25",
+   "input_purchase",
+   "Kanyama Cash & Carry"
+  ],
+  [
+   "r26",
+   "cash_deposit",
+   "Cash In via Agent"
+  ],
+  [
+   "r27",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r28",
+   "own_account_transfer",
+   "Transfer to Bank ABSA"
+  ],
+  [
+   "r29",
+   "customer_payment",
+   "Received from [phone]"
+  ],
+  [
+   "r30",
+   "input_purchase",
+   "Mpongwe Feeds"
+  ]
+ ],
+ "1b2a01d4297f153cb06169282b7dcd089ab2f0996d4b466a9ae7acb884170318": [
+  [
+   "r1",
+   "own_account_transfer",
+   "MTN MOMO TRF"
+  ]
+ ]
+}

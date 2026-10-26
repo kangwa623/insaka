@@ -1,0 +1,211 @@
+{
+ "31ac54d27e35b006876ce3ee0d3d359c5dc09dfaa72d3a6f81912e38ccf514e2": [
+  [
+   "r1",
+   "airtime_data",
+   "AIRTIME PURCHASE"
+  ],
+  [
+   "r2",
+   "cash_deposit",
+   "CASH DEPOSIT"
+  ],
+  [
+   "r3",
+   "customer_payment",
+   "EFT CR"
+  ],
+  [
+   "r4",
+   "input_purchase",
+   "KAFUE SEED"
+  ],
+  [
+   "r5",
+   "cash_withdrawal",
+   "ATM WDL"
+  ],
+  [
+   "r6",
+   "customer_payment",
+   "TRF FROM"
+  ],
+  [
+   "r7",
+   "utilities",
+   "ZESCO PREPAID"
+  ],
+  [
+   "r8",
+   "customer_payment",
+   "EFT CR"
+  ],
+  [
+   "r9",
+   "own_account_transfer",
+   "MTN MOMO"
+  ],
+  [
+   "r10",
+   "wages",
+   "SALARY PERSON_03"
+  ],
+  [
+   "r11",
+   "wages",
+   "SALARY PERSON_04"
+  ],
+  [
+   "r12",
+   "bank_charges",
+   "SERVICE FEE"
+  ],
+  [
+   "r13",
+   "bank_charges",
+   "SMS ALERT"
+  ],
+  [
+   "r14",
+   "tax_payment",
+   "ZRA PAYMENT"
+  ],
+  [
+   "r15",
+   "school_fees",
+   "SCHOOL FEES"
+  ],
+  [
+   "r16",
+   "school_fees",
+   "SCHOOL FEES"
+  ],
+  [
+   "r17",
+   "family_transfer",
+   "TRF TO"
+  ],
+  [
+   "r18",
+   "input_purchase",
+   "FERTILISER WHOLESALE"
+  ],
+  [
+   "r19",
+   "airtime_data",
+   "AIRTIME PURCHASE"
+  ],
+  [
+   "r20",
+   "input_purchase",
+   "AGRI-CHEM SUPPLIES"
+  ],
+  [
+   "r21",
+   "family_transfer",
+   "TRF TO"
+  ],
+  [
+   "r22",
+   "cash_withdrawal",
+   "Cash Out"
+  ],
+  [
+   "r23",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r24",
+   "customer_payment",
+   "Received from"
+  ],
+  [
+   "r25",
+   "rent",
+   "PHIRI SHOPS"
+  ],
+  [
+   "r26",
+   "input_purchase",
+   "Agri-Chem Supplies"
+  ],
+  [
+   "r27",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r28",
+   "input_purchase",
+   "Kafue Seed"
+  ],
+  [
+   "r29",
+   "cash_deposit",
+   "Cash In"
+  ],
+  [
+   "r30",
+   "customer_payment",
+   "Received from"
+  ],
+  [
+   "r31",
+   "family_transfer",
+   "Sent to"
+  ],
+  [
+   "r32",
+   "own_account_transfer",
+   "Transfer to Bank"
+  ],
+  [
+   "r33",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r34",
+   "family_transfer",
+   "Sent to"
+  ],
+  [
+   "r35",
+   "wages",
+   "Sent to"
+  ],
+  [
+   "r36",
+   "utilities",
+   "ZESCO Token"
+  ],
+  [
+   "r37",
+   "input_purchase",
+   "Copperhill Fertiliser"
+  ],
+  [
+   "r38",
+   "wages",
+   "Sent to"
+  ],
+  [
+   "r39",
+   "school_fees",
+   "Chimwemwe Basic"
+  ],
+  [
+   "r40",
+   "family_transfer",
+   "Sent to"
+  ]
+ ],
+ "aa94d007a9be3e23a0679133d21a5c7a03bcfe542f29888f9e9eeba878aaf6b4": [
+  [
+   "r1",
+   "school_fees",
+   "Lake View College"
+  ]
+ ]
+}

@@ -1,0 +1,281 @@
+{
+ "db8a3df5a510bc21a809fbb1dde77207dc30cd5a5d6f6f72572e60f91e67f118": [
+  [
+   "r1",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r2",
+   "input_purchase",
+   "KANYAMA CASH & CARRY"
+  ],
+  [
+   "r3",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r4",
+   "rent",
+   "RENT TOWN COUNCIL MARKET"
+  ],
+  [
+   "r5",
+   "family_transfer",
+   "TRF TO PERSON_10"
+  ],
+  [
+   "r6",
+   "cash_deposit",
+   "CASH DEPOSIT MPOROKOSO BRANCH"
+  ],
+  [
+   "r7",
+   "customer_payment",
+   "TRF FROM PERSON_11"
+  ],
+  [
+   "r8",
+   "customer_payment",
+   "EFT CR PERSON_11"
+  ],
+  [
+   "r9",
+   "customer_payment",
+   "TRF FROM PERSON[owner-surname]"
+  ],
+  [
+   "r10",
+   "customer_payment",
+   "EFT CR PERSON[owner-surname]"
+  ],
+  [
+   "r11",
+   "cash_withdrawal",
+   "ATM WDL MPOROKOSO"
+  ],
+  [
+   "r12",
+   "input_purchase",
+   "TIYANJANE WHOLESALE"
+  ],
+  [
+   "r13",
+   "wages",
+   "SALARY PERSON_11"
+  ],
+  [
+   "r14",
+   "wages",
+   "SALARY PERSON_35"
+  ],
+  [
+   "r15",
+   "own_account_transfer",
+   "MTN MOMO TRF [own MTN wallet]"
+  ],
+  [
+   "r16",
+   "wages",
+   "SALARY PERSON_37[owner-surname]"
+  ],
+  [
+   "r17",
+   "bank_charges",
+   "MONTHLY SERVICE FEE"
+  ],
+  [
+   "r18",
+   "bank_charges",
+   "SMS ALERT FEE"
+  ],
+  [
+   "r19",
+   "airtime_data",
+   "AIRTIME PURCHASE MTN"
+  ],
+  [
+   "r20",
+   "utilities",
+   "ZESCO PREPAID ****#"
+  ],
+  [
+   "r21",
+   "customer_payment",
+   "TRF FROM PERSON_10"
+  ],
+  [
+   "r22",
+   "wages",
+   "SALARY PERSON_59"
+  ],
+  [
+   "r23",
+   "school_fees",
+   "SCHOOL FEES SUNRISE SECONDARY SCHOOL"
+  ],
+  [
+   "r24",
+   "school_fees",
+   "SCHOOL FEES MAPALO ACADEMY"
+  ],
+  [
+   "r25",
+   "wages",
+   "SALARY PERSON_63"
+  ],
+  [
+   "r26",
+   "customer_payment",
+   "EFT CR PERSON_37[owner-surname]"
+  ],
+  [
+   "r27",
+   "airtime_data",
+   "AIRTIME PURCHASE AIRTEL"
+  ],
+  [
+   "r28",
+   "wages",
+   "SALARY PERSON_71"
+  ],
+  [
+   "r29",
+   "customer_payment",
+   "EFT CR PERSON_10"
+  ],
+  [
+   "r30",
+   "input_purchase",
+   "NORTHERN BEVERAGES DEPOT"
+  ],
+  [
+   "r31",
+   "customer_payment",
+   "TRF FROM PERSON_37[owner-surname]"
+  ],
+  [
+   "r32",
+   "customer_payment",
+   "Received from [phone] PERSON"
+  ],
+  [
+   "r33",
+   "family_transfer",
+   "Sent to [phone] PERSON_10"
+  ],
+  [
+   "r34",
+   "customer_payment",
+   "Received from [phone] PERSON_11"
+  ],
+  [
+   "r35",
+   "cash_withdrawal",
+   "Cash Out via Agent #"
+  ],
+  [
+   "r36",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r37",
+   "cash_deposit",
+   "Cash In via Agent #"
+  ],
+  [
+   "r38",
+   "customer_payment",
+   "Received from [phone] PERSON[owner-surname]"
+  ],
+  [
+   "r39",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r40",
+   "utilities",
+   "ZESCO Token ****#"
+  ]
+ ],
+ "2d9b7a828fecc42cfa303aa1faba2095eda4f0946c66868041c5a3cedeca1a10": [
+  [
+   "r1",
+   "customer_payment",
+   "Received from [phone]"
+  ],
+  [
+   "r2",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r3",
+   "wages",
+   "Sent to [phone]"
+  ],
+  [
+   "r4",
+   "wages",
+   "Sent to [phone]"
+  ],
+  [
+   "r5",
+   "wages",
+   "Sent to [phone]"
+  ],
+  [
+   "r6",
+   "own_account_transfer",
+   "Transfer to Bank ABSA"
+  ],
+  [
+   "r7",
+   "input_purchase",
+   "Merchant Payment Tiyanjane"
+  ],
+  [
+   "r8",
+   "input_purchase",
+   "Merchant Payment Northern"
+  ],
+  [
+   "r9",
+   "customer_payment",
+   "Received from [phone]"
+  ],
+  [
+   "r10",
+   "family_transfer",
+   "Sent to [phone]"
+  ],
+  [
+   "r11",
+   "wages",
+   "Sent to [phone]"
+  ],
+  [
+   "r12",
+   "wages",
+   "Sent to [phone]"
+  ],
+  [
+   "r13",
+   "input_purchase",
+   "Merchant Payment Kanyama"
+  ],
+  [
+   "r14",
+   "school_fees",
+   "Payment to Mapalo"
+  ],
+  [
+   "r15",
+   "school_fees",
+   "Payment to Sunrise"
+  ]
+ ]
+}

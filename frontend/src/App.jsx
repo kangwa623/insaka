@@ -33,7 +33,13 @@ export default function App() {
     setTimeout(() => setToast(null), 5000);
   };
 
-  useEffect(() => { api("/users").then(setUsers); }, []);
+  // Free hosting sleeps when idle: if the first call is slow, say so until it answers.
+  const [waking, setWaking] = useState(false);
+  useEffect(() => {
+    const slow = setTimeout(() => setWaking(true), 3000);
+    api("/users").then(setUsers).catch((e) => notify(e.message, "error"))
+      .finally(() => { clearTimeout(slow); setWaking(false); });
+  }, []);
   const loadCases = useCallback(() => api("/cases", user).then(setCases).catch((e) => notify(e.message, "error")), [user]);
   useEffect(() => { loadCases(); }, [loadCases]);
 
@@ -153,6 +159,7 @@ export default function App() {
       )}
 
       {drawer && <SourceDrawer drawer={drawer} rowsById={rowsById} close={() => setDrawer(null)} />}
+      {waking && <div className="toast">Waking the server (free hosting sleeps when idle); this can take up to a minute…</div>}
       {toast && <div className={`toast ${toast.kind}`}>{toast.text}</div>}
     </div>
   );

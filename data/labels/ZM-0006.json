@@ -1,0 +1,191 @@
+{
+ "aec1e1a2e6bd2d098f2fb171a06df9972ee225406ad85628cc3c79f06f9209cb": [
+  [
+   "r1",
+   "family_transfer",
+   "TRF TO PERSON_01"
+  ],
+  [
+   "r2",
+   "cash_deposit",
+   "CASH DEPOSIT"
+  ],
+  [
+   "r3",
+   "cash_withdrawal",
+   "ATM WDL"
+  ],
+  [
+   "r4",
+   "airtime_data",
+   "AIRTIME PURCHASE"
+  ],
+  [
+   "r5",
+   "input_purchase",
+   "NEEDLECRAFT SUPPLIES"
+  ],
+  [
+   "r6",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r7",
+   "input_purchase",
+   "KAMWALA FABRICS"
+  ],
+  [
+   "r8",
+   "own_account_transfer",
+   "MTN MOMO TRF"
+  ],
+  [
+   "r9",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r10",
+   "bank_charges",
+   "MONTHLY SERVICE FEE"
+  ],
+  [
+   "r11",
+   "bank_charges",
+   "SMS ALERT FEE"
+  ],
+  [
+   "r12",
+   "school_fees",
+   "SCHOOL FEES"
+  ],
+  [
+   "r13",
+   "tax_payment",
+   "ZRA PAYMENT"
+  ],
+  [
+   "r14",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r15",
+   "school_fees",
+   "SCHOOL FEES"
+  ],
+  [
+   "r16",
+   "utilities",
+   "ZESCO PREPAID"
+  ],
+  [
+   "r17",
+   "family_transfer",
+   "TRF TO PERSON_08"
+  ],
+  [
+   "r18",
+   "airtime_data",
+   "AIRTIME PURCHASE"
+  ],
+  [
+   "r19",
+   "input_purchase",
+   "CHITENGE HOUSE"
+  ],
+  [
+   "r20",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r21",
+   "customer_payment",
+   "Received from"
+  ],
+  [
+   "r22",
+   "input_purchase",
+   "Needlecraft Supplies"
+  ],
+  [
+   "r23",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r24",
+   "family_transfer",
+   "Sent to PERSON_01"
+  ],
+  [
+   "r25",
+   "cash_deposit",
+   "Cash In via Agent"
+  ],
+  [
+   "r26",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r27",
+   "customer_payment",
+   "Received from"
+  ],
+  [
+   "r28",
+   "own_account_transfer",
+   "Transfer to Bank"
+  ],
+  [
+   "r29",
+   "utilities",
+   "ZESCO Token"
+  ],
+  [
+   "r30",
+   "family_transfer",
+   "Sent to PERSON_08"
+  ],
+  [
+   "r31",
+   "cash_withdrawal",
+   "Cash Out via Agent"
+  ],
+  [
+   "r32",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r33",
+   "input_purchase",
+   "Kamwala Fabrics"
+  ],
+  [
+   "r34",
+   "school_fees",
+   "Sunrise Secondary School"
+  ],
+  [
+   "r35",
+   "input_purchase",
+   "Chitenge House"
+  ]
+ ],
+ "d86f9adc1396540b6b279ae5b240cdc3d604055d0bfb068d723c307ed9e6b6c4": [
+  [
+   "r1",
+   "family_transfer",
+   "Sent to [phone] PERSON_01"
+  ],
+  [
+   "r2",
+   "family_transfer",
+   "Sent to [phone] PERSON_08"
+  ]
+ ]
+}

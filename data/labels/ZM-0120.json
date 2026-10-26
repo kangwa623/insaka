@@ -1,0 +1,169 @@
+{
+ "b6080c91f885d3b93584096f01d707d4fc5836d42c2ba8cc596d8490190ca3d5": [
+  [
+   "r1",
+   "family_transfer",
+   "TRF TO PERSON_01"
+  ],
+  [
+   "r2",
+   "cash_deposit",
+   "CASH DEPOSIT"
+  ],
+  [
+   "r3",
+   "cash_withdrawal",
+   "ATM WDL"
+  ],
+  [
+   "r4",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r5",
+   "airtime_data",
+   "AIRTIME PURCHASE"
+  ],
+  [
+   "r6",
+   "input_purchase",
+   "SEED DISTRIBUTORS"
+  ],
+  [
+   "r7",
+   "bank_charges",
+   "MONTHLY SERVICE FEE"
+  ],
+  [
+   "r8",
+   "bank_charges",
+   "SMS ALERT FEE"
+  ],
+  [
+   "r9",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r10",
+   "input_purchase",
+   "TRACTOR HIRE"
+  ],
+  [
+   "r11",
+   "own_account_transfer",
+   "TRF [own MTN wallet]"
+  ],
+  [
+   "r12",
+   "school_fees",
+   "SCHOOL FEES"
+  ],
+  [
+   "r13",
+   "utilities",
+   "ZESCO PREPAID"
+  ],
+  [
+   "r14",
+   "family_transfer",
+   "TRF TO PERSON_06"
+  ],
+  [
+   "r15",
+   "input_purchase",
+   "FERT AGENT"
+  ],
+  [
+   "r16",
+   "airtime_data",
+   "AIRTIME PURCHASE"
+  ],
+  [
+   "r17",
+   "family_transfer",
+   "TRF TO PERSON_10"
+  ],
+  [
+   "r18",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r19",
+   "rent",
+   "MWANZA PROPERTIES"
+  ],
+  [
+   "r20",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r21",
+   "customer_payment",
+   "Received from [phone]"
+  ],
+  [
+   "r22",
+   "input_purchase",
+   "Seed Distributors"
+  ],
+  [
+   "r23",
+   "cash_deposit",
+   "Cash In via Agent"
+  ],
+  [
+   "r24",
+   "utilities",
+   "ZESCO Token"
+  ],
+  [
+   "r25",
+   "family_transfer",
+   "Sent to [phone]"
+  ],
+  [
+   "r26",
+   "family_transfer",
+   "Sent to [phone]"
+  ],
+  [
+   "r27",
+   "own_account_transfer",
+   "Transfer to Bank ABSA"
+  ],
+  [
+   "r28",
+   "school_fees",
+   "Mapalo Academy"
+  ],
+  [
+   "r29",
+   "cash_withdrawal",
+   "Cash Out via Agent"
+  ],
+  [
+   "r30",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r31",
+   "family_transfer",
+   "Sent to [phone]"
+  ],
+  [
+   "r32",
+   "input_purchase",
+   "Village Fert Agent"
+  ],
+  [
+   "r33",
+   "school_fees",
+   "Hillview Primary School"
+  ]
+ ]
+}

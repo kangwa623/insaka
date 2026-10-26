@@ -1,0 +1,179 @@
+{
+ "ece8c1c156c009f8bb879093d03c5882b9bc98cead57f65d21b971ddf58fc5de": [
+  [
+   "r1",
+   "cash_deposit",
+   "CASH DEPOSIT"
+  ],
+  [
+   "r2",
+   "utilities",
+   "ZESCO PREPAID"
+  ],
+  [
+   "r3",
+   "cash_withdrawal",
+   "ATM WDL"
+  ],
+  [
+   "r4",
+   "rent",
+   "STANDING ORDER RENT"
+  ],
+  [
+   "r5",
+   "input_purchase",
+   "NEEDLECRAFT SUPPLIES"
+  ],
+  [
+   "r6",
+   "own_account_transfer",
+   "MTN MOMO TRF"
+  ],
+  [
+   "r7",
+   "customer_payment",
+   "UNITY SCHOOLS KITCHEN"
+  ],
+  [
+   "r8",
+   "input_purchase",
+   "KAMWALA FABRICS"
+  ],
+  [
+   "r9",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r10",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r11",
+   "input_purchase",
+   "CHITENGE HOUSE"
+  ],
+  [
+   "r12",
+   "bank_charges",
+   "MONTHLY SERVICE FEE"
+  ],
+  [
+   "r13",
+   "bank_charges",
+   "SMS ALERT FEE"
+  ],
+  [
+   "r14",
+   "tax_payment",
+   "ZRA PAYMENT"
+  ],
+  [
+   "r15",
+   "family_transfer",
+   "TRF TO PERSON_05"
+  ],
+  [
+   "r16",
+   "family_transfer",
+   "TRF TO PERSON_06"
+  ],
+  [
+   "r17",
+   "airtime_data",
+   "AIRTIME PURCHASE"
+  ],
+  [
+   "r18",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r19",
+   "airtime_data",
+   "AIRTIME PURCHASE"
+  ],
+  [
+   "r20",
+   "school_fees",
+   "SCHOOL FEES"
+  ],
+  [
+   "r21",
+   "cash_deposit",
+   "Cash In via Agent"
+  ],
+  [
+   "r22",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r23",
+   "cash_withdrawal",
+   "Cash Out via Agent"
+  ],
+  [
+   "r24",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r25",
+   "customer_payment",
+   "Received from [phone]"
+  ],
+  [
+   "r26",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r27",
+   "own_account_transfer",
+   "Transfer to Bank ABSA"
+  ],
+  [
+   "r28",
+   "family_transfer",
+   "Sent to [phone] PERSON_05"
+  ],
+  [
+   "r29",
+   "family_transfer",
+   "Sent to [phone] PERSON_06"
+  ],
+  [
+   "r30",
+   "input_purchase",
+   "Merchant Payment Chitenge House"
+  ],
+  [
+   "r31",
+   "customer_payment",
+   "Received from [phone]"
+  ],
+  [
+   "r32",
+   "school_fees",
+   "Payment to Lake View"
+  ],
+  [
+   "r33",
+   "input_purchase",
+   "Merchant Payment Needlecraft"
+  ],
+  [
+   "r34",
+   "input_purchase",
+   "Merchant Payment Kamwala"
+  ],
+  [
+   "r35",
+   "utilities",
+   "ZESCO Token"
+  ]
+ ]
+}

@@ -1,0 +1,176 @@
+{
+ "5b65d9484ada9c98b21a1f4d28851625ec1411857f9f324108f5da8ee9dcb951": [
+  [
+   "r1",
+   "cash_deposit",
+   "CASH DEPOSIT"
+  ],
+  [
+   "r2",
+   "cash_withdrawal",
+   "ATM WDL"
+  ],
+  [
+   "r3",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r4",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r5",
+   "own_account_transfer",
+   "MTN MOMO TRF"
+  ],
+  [
+   "r6",
+   "family_transfer",
+   "TRF TO PERSON_08"
+  ],
+  [
+   "r7",
+   "utilities",
+   "ZESCO PREPAID"
+  ],
+  [
+   "r8",
+   "wages",
+   "SALARY PERSON_09"
+  ],
+  [
+   "r9",
+   "input_purchase",
+   "HATCHWELL DAY-OLD CHICKS"
+  ],
+  [
+   "r10",
+   "input_purchase",
+   "VET-CARE AGROVET"
+  ],
+  [
+   "r11",
+   "bank_charges",
+   "MONTHLY SERVICE FEE"
+  ],
+  [
+   "r12",
+   "bank_charges",
+   "SMS ALERT FEE"
+  ],
+  [
+   "r13",
+   "tax_payment",
+   "ZRA PAYMENT"
+  ],
+  [
+   "r14",
+   "airtime_data",
+   "AIRTIME PURCHASE"
+  ],
+  [
+   "r15",
+   "family_transfer",
+   "TRF TO PERSON_15"
+  ],
+  [
+   "r16",
+   "airtime_data",
+   "AIRTIME PURCHASE"
+  ],
+  [
+   "r17",
+   "customer_payment",
+   "Received from"
+  ],
+  [
+   "r18",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r19",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r20",
+   "input_purchase",
+   "Mpongwe Feeds"
+  ],
+  [
+   "r21",
+   "own_account_transfer",
+   "Transfer to Bank"
+  ],
+  [
+   "r22",
+   "loan_repayment",
+   "Loan Repayment"
+  ],
+  [
+   "r23",
+   "family_transfer",
+   "Sent to PERSON_15"
+  ],
+  [
+   "r24",
+   "cash_deposit",
+   "Cash In via Agent"
+  ],
+  [
+   "r25",
+   "cash_withdrawal",
+   "Cash Out via Agent"
+  ],
+  [
+   "r26",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r27",
+   "input_purchase",
+   "Hatchwell Day-Old Chicks"
+  ],
+  [
+   "r28",
+   "utilities",
+   "ZESCO Token"
+  ],
+  [
+   "r29",
+   "family_transfer",
+   "Sent to PERSON_08"
+  ],
+  [
+   "r30",
+   "wages",
+   "Sent to PERSON_09"
+  ],
+  [
+   "r31",
+   "input_purchase",
+   "Vet-Care Agrovet"
+  ]
+ ],
+ "66f329fe2aec5ff0782a3f61b3fa33db4da9461a128a6cfe47cf440ba364ff4a": [
+  [
+   "r1",
+   "family_transfer",
+   "Sent to [phone] PERSON_15"
+  ],
+  [
+   "r2",
+   "family_transfer",
+   "Sent to [phone] PERSON_08"
+  ],
+  [
+   "r3",
+   "wages",
+   "Sent to [phone] PERSON_09"
+  ]
+ ]
+}

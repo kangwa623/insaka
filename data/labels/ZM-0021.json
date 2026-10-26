@@ -1,0 +1,241 @@
+{
+ "561209050f0e2c1338f1d93c9b637e660e85f228c7731e6662180a9a720386e6": [
+  [
+   "r1",
+   "cash_deposit",
+   "CASH DEPOSIT"
+  ],
+  [
+   "r2",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r3",
+   "utilities",
+   "ZESCO PREPAID"
+  ],
+  [
+   "r4",
+   "cash_withdrawal",
+   "ATM WDL"
+  ],
+  [
+   "r5",
+   "input_purchase",
+   "FUEL POINT"
+  ],
+  [
+   "r6",
+   "customer_payment",
+   "UNITY SCHOOLS KITCHEN"
+  ],
+  [
+   "r7",
+   "own_account_transfer",
+   "own AIRTEL wallet"
+  ],
+  [
+   "r8",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r9",
+   "bank_charges",
+   "MONTHLY SERVICE FEE"
+  ],
+  [
+   "r10",
+   "bank_charges",
+   "SMS ALERT FEE"
+  ],
+  [
+   "r11",
+   "input_purchase",
+   "TYRE WORLD"
+  ],
+  [
+   "r12",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r13",
+   "tax_payment",
+   "ZRA PAYMENT"
+  ],
+  [
+   "r14",
+   "own_account_transfer",
+   "own MTN wallet"
+  ],
+  [
+   "r15",
+   "airtime_data",
+   "AIRTIME PURCHASE"
+  ],
+  [
+   "r16",
+   "input_purchase",
+   "SPARES CORNER"
+  ],
+  [
+   "r17",
+   "family_transfer",
+   "TRF TO PERSON_06"
+  ],
+  [
+   "r18",
+   "airtime_data",
+   "AIRTIME PURCHASE"
+  ],
+  [
+   "r19",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r20",
+   "family_transfer",
+   "TRF TO PERSON_11"
+  ],
+  [
+   "r21",
+   "cash_deposit",
+   "Cash In via Agent"
+  ],
+  [
+   "r22",
+   "input_purchase",
+   "Tyre World Zambia"
+  ],
+  [
+   "r23",
+   "customer_payment",
+   "Received from [phone]"
+  ],
+  [
+   "r24",
+   "family_transfer",
+   "Sent to [phone]"
+  ],
+  [
+   "r25",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r26",
+   "cash_withdrawal",
+   "Cash Out via Agent"
+  ],
+  [
+   "r27",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r28",
+   "utilities",
+   "ZESCO Token"
+  ],
+  [
+   "r29",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r30",
+   "family_transfer",
+   "Sent to [phone]"
+  ],
+  [
+   "r31",
+   "customer_payment",
+   "Received from [phone]"
+  ],
+  [
+   "r32",
+   "own_account_transfer",
+   "own Absa account"
+  ],
+  [
+   "r33",
+   "input_purchase",
+   "Fuel Point Service"
+  ],
+  [
+   "r34",
+   "family_transfer",
+   "Sent to [phone]"
+  ],
+  [
+   "r35",
+   "customer_payment",
+   "Money received from"
+  ],
+  [
+   "r36",
+   "own_account_transfer",
+   "own Absa account"
+  ],
+  [
+   "r37",
+   "cash_withdrawal",
+   "Cash Out via Agent"
+  ],
+  [
+   "r38",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r39",
+   "family_transfer",
+   "Money sent to"
+  ],
+  [
+   "r40",
+   "cash_deposit",
+   "Cash In Agent"
+  ]
+ ],
+ "12be32cdc2d40d080b50d8405dfef60296d3f3bef76d63ae318b5882913b5931": [
+  [
+   "r1",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r2",
+   "input_purchase",
+   "Fuel Point Service"
+  ],
+  [
+   "r3",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r4",
+   "customer_payment",
+   "Money received from"
+  ],
+  [
+   "r5",
+   "family_transfer",
+   "Money sent to"
+  ],
+  [
+   "r6",
+   "utilities",
+   "ZESCO Token"
+  ],
+  [
+   "r7",
+   "input_purchase",
+   "Tyre World Zambia"
+  ]
+ ]
+}

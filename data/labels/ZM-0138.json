@@ -1,0 +1,204 @@
+{
+ "addfbc2ef544dd4e4929215c848043819b4608f5aac7711f159d0fb76e6abf0c": [
+  [
+   "r1",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r2",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r3",
+   "cash_withdrawal",
+   "ATM WDL MPIKA"
+  ],
+  [
+   "r4",
+   "utilities",
+   "ZESCO PREPAID"
+  ],
+  [
+   "r5",
+   "cash_deposit",
+   "CASH DEPOSIT MPIKA"
+  ],
+  [
+   "r6",
+   "own_account_transfer",
+   "MTN MOMO TRF"
+  ],
+  [
+   "r7",
+   "input_purchase",
+   "NORTHERN BEVERAGES DEPOT"
+  ],
+  [
+   "r8",
+   "customer_payment",
+   "EFT CR PERSON_13"
+  ],
+  [
+   "r9",
+   "family_transfer",
+   "TRF TO PERSON_19"
+  ],
+  [
+   "r10",
+   "wages",
+   "SALARY PERSON_13"
+  ],
+  [
+   "r11",
+   "wages",
+   "SALARY PERSON_22"
+  ],
+  [
+   "r12",
+   "input_purchase",
+   "KANYAMA CASH & CARRY"
+  ],
+  [
+   "r13",
+   "bank_charges",
+   "MONTHLY SERVICE FEE"
+  ],
+  [
+   "r14",
+   "bank_charges",
+   "SMS ALERT FEE"
+  ],
+  [
+   "r15",
+   "input_purchase",
+   "MPONGWE FEEDS"
+  ],
+  [
+   "r16",
+   "tax_payment",
+   "ZRA PAYMENT"
+  ],
+  [
+   "r17",
+   "family_transfer",
+   "TRF TO PERSON_31"
+  ],
+  [
+   "r18",
+   "airtime_data",
+   "AIRTIME PURCHASE AIRTEL"
+  ],
+  [
+   "r19",
+   "family_transfer",
+   "TRF TO PERSON_53"
+  ],
+  [
+   "r20",
+   "customer_payment",
+   "TRF FROM PERSON_13"
+  ],
+  [
+   "r21",
+   "school_fees",
+   "SCHOOL FEES SUNRISE"
+  ],
+  [
+   "r22",
+   "airtime_data",
+   "AIRTIME PURCHASE MTN"
+  ],
+  [
+   "r23",
+   "customer_payment",
+   "Received from [phone]"
+  ],
+  [
+   "r24",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r25",
+   "utilities",
+   "ZESCO Token"
+  ],
+  [
+   "r26",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r27",
+   "family_transfer",
+   "Sent to [phone]"
+  ],
+  [
+   "r28",
+   "own_account_transfer",
+   "Transfer to Bank ABSA"
+  ],
+  [
+   "r29",
+   "cash_withdrawal",
+   "Cash Out via Agent"
+  ],
+  [
+   "r30",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r31",
+   "customer_payment",
+   "Received from [phone]"
+  ],
+  [
+   "r32",
+   "cash_deposit",
+   "Cash In via Agent"
+  ],
+  [
+   "r33",
+   "family_transfer",
+   "Sent to [phone]"
+  ],
+  [
+   "r34",
+   "wages",
+   "Sent to [phone]"
+  ],
+  [
+   "r35",
+   "wages",
+   "Sent to [phone]"
+  ],
+  [
+   "r36",
+   "school_fees",
+   "Payment to Sunrise"
+  ],
+  [
+   "r37",
+   "family_transfer",
+   "Sent to [phone]"
+  ],
+  [
+   "r38",
+   "input_purchase",
+   "Merchant Payment Kanyama"
+  ],
+  [
+   "r39",
+   "input_purchase",
+   "Merchant Payment Northern"
+  ],
+  [
+   "r40",
+   "input_purchase",
+   "Merchant Payment Mpongwe"
+  ]
+ ]
+}

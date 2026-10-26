@@ -1,0 +1,231 @@
+{
+ "0eaac9bffc383d68fb34aaeab0916984e680b0f1421fe59d247d751193727ac0": [
+  [
+   "r1",
+   "customer_payment",
+   "EFT CR PERSON"
+  ],
+  [
+   "r2",
+   "cash_withdrawal",
+   "ATM WDL PETAUKE"
+  ],
+  [
+   "r3",
+   "customer_payment",
+   "TRF FROM PERSON"
+  ],
+  [
+   "r4",
+   "airtime_data",
+   "AIRTIME PURCHASE MTN"
+  ],
+  [
+   "r5",
+   "own_account_transfer",
+   "MTN MOMO TRF"
+  ],
+  [
+   "r6",
+   "cash_deposit",
+   "CASH DEPOSIT PETAUKE"
+  ],
+  [
+   "r7",
+   "input Purchase",
+   "CITY MARKET SUPPLIERS"
+  ],
+  [
+   "r8",
+   "family_transfer",
+   "TRF TO"
+  ],
+  [
+   "r9",
+   "bank_charges",
+   "MONTHLY SERVICE FEE"
+  ],
+  [
+   "r10",
+   "bank_chages",
+   "SALARY ALERT FEE"
+  ],
+  [
+   "r11",
+   "utils",
+   "ZESCO PREPAID"
+  ],
+  [
+   "r12",
+   "input Purchase",
+   "SOWOTO MARKET WHOLESALERS"
+  ],
+  [
+   "r13",
+   "airtime_data",
+   "PURCHAS AIRTEL"
+  ],
+  [
+   "r14",
+   "tax_payment",
+   "ZRA PAYMENT"
+  ],
+  [
+   "r15",
+   "input Purchase",
+   "TIYANJANE WHOLESALE"
+  ],
+  [
+   "r16",
+   "school_fees",
+   "SCHOOL FEES"
+  ],
+  [
+   "r17",
+   "customer_payment",
+   "TRF FROM"
+  ],
+  [
+   "r18",
+   "wages",
+   "SALARY"
+  ],
+  [
+   "r19",
+   "customer_payment",
+   "EFT CR"
+  ],
+  [
+   "r20",
+   "customer_payment",
+   "Received from"
+  ],
+  [
+   "r21",
+   "customer_payment",
+   "Received from"
+  ],
+  [
+   "r22",
+   "airtime_data",
+   "Airtime Purchase"
+  ],
+  [
+   "r23",
+   "airtime_data",
+   "Data Bundle"
+  ],
+  [
+   "r24",
+   "own_account_transfer",
+   "Transfer to Bank"
+  ],
+  [
+   "r25",
+   "input Purchase",
+   "Merchant Payment"
+  ],
+  [
+   "r26",
+   "cash_withdrawal",
+   "Cash Out"
+  ],
+  [
+   "r27",
+   "bank_chages",
+   "Cash Out Fee"
+  ],
+  [
+   "r28",
+   "cash_deposit",
+   "Cash In"
+  ],
+  [
+   "r29",
+   "family_transfer",
+   "Sent to"
+  ],
+  [
+   "r30",
+   "wages",
+   "Sent to"
+  ],
+  [
+   "r31",
+   "utils",
+   "ZESCO Token"
+  ],
+  [
+   "r32",
+   "input Purchase",
+   "Merchant Payment"
+  ],
+  [
+   "r33",
+   "input Purchase",
+   "Merchant Payment"
+  ],
+  [
+   "r34",
+   "school_fees",
+   "Payment to"
+  ]
+ ],
+ "bfc7e1166777acffedcc4074272685f34a4b8b9f151eb95e5c5b778041bb4069": [
+  [
+   "r1",
+   "input_purchase",
+   "CITY MARKET SUPPLIERS"
+  ],
+  [
+   "r2",
+   "bank_charges",
+   "SMS ALERT FEE"
+  ],
+  [
+   "r3",
+   "utilities",
+   "ZESCO PREPAID"
+  ],
+  [
+   "r4",
+   "input_purchase",
+   "SOWETO MARKET WHOLESALERS"
+  ],
+  [
+   "r5",
+   "airtime_data",
+   "AIRTIME PURCHASE AIRTEL"
+  ],
+  [
+   "r6",
+   "input_purchase",
+   "TIYANJANE WHOLESALE"
+  ],
+  [
+   "r7",
+   "input_purchase",
+   "Soweto Market Wholesalers"
+  ],
+  [
+   "r8",
+   "bank_charges",
+   "Cash Out Fee"
+  ],
+  [
+   "r9",
+   "utilities",
+   "ZESCO Token"
+  ],
+  [
+   "r10",
+   "input_purchase",
+   "City Market Suppliers"
+  ],
+  [
+   "r11",
+   "input_purchase",
+   "Tiyanjane Wholesale"
+  ]
+ ]
+}
