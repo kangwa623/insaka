@@ -3,6 +3,8 @@ import { api, fmtFigure, kwacha, STATUS } from "./api.js";
 import AgentPanel from "./AgentPanel.jsx";
 import Actions from "./Actions.jsx";
 import CashflowChart from "./CashflowChart.jsx";
+import Brief from "./Brief.jsx";
+import Documents from "./Documents.jsx";
 import Evaluation from "./Evaluation.jsx";
 import Memo from "./Memo.jsx";
 import Pamodzi from "./Pamodzi.jsx";
@@ -124,14 +126,16 @@ export default function App() {
             <>
               <ClientHeader client={client} c={c} />
               <Actions c={c} client={client} me={me} busy={busy} act={act} />
+              <Documents key={`${selected}-${c?.status}`} cid={selected} user={user} me={me} notify={notify} />
               {c && (
                 <>
                   <nav className="tabs">
-                    {[["memo", "Credit memo"], ["cashflow", "Cash flow"], ["pamodzi", "Pamodzi view"],
+                    {[["brief", "Pre-visit brief"], ["memo", "Credit memo"], ["cashflow", "Cash flow"], ["pamodzi", "Pamodzi view"],
                       ["transactions", "Transactions"], ["audit", "Audit trail"]].map(([k, l]) => (
                       <button key={k} className={tab === k ? "on" : ""} onClick={() => setTab(k)}>{l}</button>
                     ))}
                   </nav>
+                  {tab === "brief" && <Brief cid={selected} user={user} c={c} open={setDrawer} />}
                   {tab === "memo" && <Memo c={c} me={me} busy={busy} act={act} rowsById={rowsById} open={setDrawer} />}
                   {tab === "cashflow" && <CashflowChart c={c} ledger={ledger} open={setDrawer} />}
                   {tab === "pamodzi" && <Pamodzi cid={selected} user={user} open={setDrawer} />}

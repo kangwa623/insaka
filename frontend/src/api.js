@@ -70,5 +70,5 @@ export function fmtFigure(fig) {
     const [y, m] = String(fig.value).split("-");
     return `${MONTHS[+m - 1]} ${y}`;
   }
-  return String(fig.value);
+  return typeof fig.value === "number" && !Number.isInteger(fig.value) ? fig.value.toFixed(2) : String(fig.value);
 }

@@ -12,7 +12,9 @@ from pathlib import Path
 
 from flask import Flask, abort, jsonify, request, send_from_directory
 
+from .agent.tools import upload_token
 from .case import USERS, NotAllowed, load_case, load_ledger
+from .uploads import CONSENTS, UploadRejected, accept_statement, load_record, record_consent
 
 FRONTEND = Path(__file__).resolve().parents[2] / "frontend" / "dist"
 EVALUATIONS = ("parsing", "labelling", "labelling_holdout", "scoring", "memo", "agent")
@@ -30,9 +32,11 @@ def _finite(o):
 
 
 def create_app(data_dir="data/synthetic", cases_dir="data/cases", agent_dir="data/agent",
-               evaluation_dir="data/evaluation", **agent_settings) -> Flask:
+               evaluation_dir="data/evaluation", uploads_dir="data/uploads", **agent_settings) -> Flask:
     app = Flask(__name__, static_folder=None)
+    app.config["MAX_CONTENT_LENGTH"] = 25 * 1024 * 1024
     data_dir, cases_dir, evaluation_dir = Path(data_dir), Path(cases_dir), Path(evaluation_dir)
+    uploads_dir = Path(uploads_dir)
 
     def clients() -> dict:
         return {c["client_id"]: c for c in
@@ -48,6 +52,26 @@ def create_app(data_dir="data/synthetic", cases_dir="data/cases", agent_dir="dat
         if not (cases_dir / f"{cid}.json").exists():
             abort(404, description=f"no case prepared for {cid} yet")
         return load_case(cid, cases_dir)
+
+    def audit_if_case(cid: str, who: str, action: str, details: dict) -> None:
+        if (cases_dir / f"{cid}.json").exists():
+            case = load_case(cid, cases_dir)
+            case._audit(who, action, case.status, details)
+
+    def documents(cid: str) -> dict:
+        client = clients()[cid]
+        record = load_record(cid, uploads_dir)
+        listed = []
+        for ch, account in client["channels"].items():
+            uploaded = record["files"].get(ch)
+            source = ("uploaded" if uploaded else "absa_internal" if ch == "absa" else "requested")
+            listed.append({"channel": ch, "account": account, "source": source, "upload": uploaded})
+        return {"token": upload_token(cid), "link": f"/upload/{upload_token(cid)}",
+                "consent": record["consent"], "statements": listed}
+
+    @app.errorhandler(UploadRejected)
+    def rejected(e):
+        return jsonify(error=str(e)), 400
 
     @app.errorhandler(NotAllowed)
     def not_allowed(e):
@@ -114,6 +138,65 @@ def create_app(data_dir="data/synthetic", cases_dir="data/cases", agent_dir="dat
         user()
         return jsonify(load_ledger(cid, cases_dir))
 
+    @app.get("/api/cases/<cid>/brief")
+    def brief(cid):
+        user()
+        case = case_or_404(cid)
+        from .brief import build_brief
+        return jsonify(build_brief(case.data, load_ledger(cid, cases_dir), clients()[cid]))
+
+    @app.get("/api/cases/<cid>/documents")
+    def case_documents(cid):
+        user()
+        if cid not in clients():
+            abort(404, description=f"no client {cid}")
+        return jsonify(documents(cid))
+
+    @app.post("/api/cases/<cid>/upload")
+    def rm_upload(cid):
+        u = user()
+        if "rm" not in USERS[u]["roles"]:
+            raise NotAllowed(f"{u} cannot upload statements; RMs do")
+        client = clients().get(cid) or abort(404, description=f"no client {cid}")
+        channel = request.form.get("channel", "")
+        f = request.files.get("file")
+        summary = accept_statement(client, channel, f.read() if f else b"", u, uploads_dir)
+        audit_if_case(cid, u, "upload_statement", summary)
+        return jsonify(documents(cid))
+
+    # The customer's secure link: no staff sign-in, the token identifies the application.
+    def client_for_token(token: str) -> dict:
+        found = next((c for c in clients().values() if upload_token(c["client_id"]) == token), None)
+        if not found:
+            abort(404, description="This link is not valid. Ask your relationship manager for a new one.")
+        return found
+
+    @app.get("/api/upload/<token>")
+    def upload_info(token):
+        c = client_for_token(token)
+        record = load_record(c["client_id"], uploads_dir)
+        return jsonify(business_name=c["business_name"], bank="Absa Bank Zambia",
+                       requested=[{"channel": ch, "account": acc} for ch, acc in c["channels"].items()
+                                  if ch != "absa"],
+                       consents=[{"key": k, "text": t} for k, t in CONSENTS.items()],
+                       consent=record["consent"],
+                       uploaded=sorted(record["files"]))
+
+    @app.post("/api/upload/<token>")
+    def customer_upload(token):
+        c = client_for_token(token)
+        cid = c["client_id"]
+        consent = record_consent(cid, {k: request.form.get(k) == "true" for k in CONSENTS}, uploads_dir)
+        audit_if_case(cid, "customer", "customer_consent", {"at": consent["at"]})
+        accepted = []
+        for ch in [ch for ch in c["channels"] if ch != "absa"]:
+            f = request.files.get(ch)
+            if f and f.filename:
+                summary = accept_statement(c, ch, f.read(), "customer", uploads_dir)
+                audit_if_case(cid, "customer", "customer_upload", summary)
+                accepted.append(summary)
+        return jsonify(accepted=accepted, uploaded=sorted(load_record(cid, uploads_dir)["files"]))
+
     @app.get("/api/cases/<cid>/pamodzi")
     def pamodzi(cid):
         user()
@@ -133,7 +216,8 @@ def create_app(data_dir="data/synthetic", cases_dir="data/cases", agent_dir="dat
             raise NotAllowed("this case is already with people; it cannot be re-run")
         from .agent import run_case
         mode = (request.get_json(silent=True) or {}).get("mode", "llm")
-        run_case(cid, mode, data_dir, cases_dir=cases_dir, agent_dir=agent_dir, **agent_settings)
+        run_case(cid, mode, data_dir, cases_dir=cases_dir, agent_dir=agent_dir,
+                 uploads_dir=uploads_dir, **agent_settings)
         return jsonify(client=clients()[cid], **load_case(cid, cases_dir).view(u))
 
     def act(cid, fn):

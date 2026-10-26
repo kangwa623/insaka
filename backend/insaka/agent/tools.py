@@ -110,12 +110,16 @@ def read_statement(case: AgentCase, channel: str) -> dict:
                                                  if w not in case.requested]}
 
 
+def upload_token(client_id: str) -> str:
+    """The client's secure upload link token (stable, so the link can be re-sent)."""
+    return hashlib.sha256(f"insaka-upload:{client_id}".encode()).hexdigest()[:16]
+
+
 def request_documents(case: AgentCase, channels: list) -> dict:
-    token = hashlib.sha256(f"{case.client_id}:{sorted(channels)}".encode()).hexdigest()[:12]
     case.requested += [c for c in channels if c not in case.requested]
     case.available |= set(channels)
     return {"requested": channels, "simulated": True,
-            "upload_link": f"https://insaka.example/upload/{token}",
+            "upload_link": f"/upload/{upload_token(case.client_id)}",
             "consent_screen_shown": True,
             "note": "In the prototype the customer uploads at once; read the statements next."}
 

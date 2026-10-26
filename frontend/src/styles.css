@@ -267,3 +267,51 @@ td.neg { color: var(--bad); }
 .deal-time { font-size: 11.5px; margin-top: 5px; }
 .col-escalated { background: var(--bad-bg); }
 .more { color: var(--muted); font-size: 12px; text-align: center; padding: 4px; }
+
+/* Pre-visit brief */
+.brief { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.brief-card h3 { margin: 0 0 8px; font-size: 15px; }
+.brief-card p { line-height: 1.55; margin: 6px 0; }
+.brief-links { display: flex; gap: 12px; flex-wrap: wrap; }
+.brief-list { margin: 0; padding-left: 18px; display: grid; gap: 8px; line-height: 1.5; }
+.brief-list .why { color: var(--text-2); font-size: 12.5px; }
+.small-note { font-size: 12.5px; }
+.sparkline { width: 100%; max-width: 360px; height: auto; display: block; }
+.spark-line { fill: none; stroke: var(--series-1); stroke-width: 2; }
+.spark-dot { fill: var(--series-1); }
+.spark-dot.recent { fill: var(--text); }
+button.figure.small { font-size: 12px; }
+.issue-escalation { color: var(--warn); }
+.issue-escalation.stop, .issue-unverified { color: var(--bad); }
+.issue-next { font-weight: 600; }
+.flag-icon { display: inline-grid; place-items: center; width: 16px; height: 16px; border-radius: 50%; background: var(--bad-bg); color: var(--bad); font-size: 11px; font-weight: 700; }
+
+/* Documents card */
+.documents { display: grid; gap: 10px; padding: 12px 18px; }
+.doc-list { display: flex; flex-wrap: wrap; gap: 8px; }
+.doc { font-size: 12.5px; padding: 3px 9px; border-radius: 6px; background: var(--surface-2); }
+.doc-uploaded { background: var(--good-bg); color: var(--good); }
+.doc-requested { background: var(--warn-bg); color: var(--warn); }
+.doc-actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font-size: 13px; }
+.doc-actions a { color: var(--accent); }
+.rm-upload { margin-left: auto; display: flex; gap: 6px; align-items: center; }
+.rm-upload select { padding: 5px; border: 1px solid var(--line); border-radius: 6px; }
+
+/* Customer upload page (phone) */
+.phone { min-height: 100vh; display: flex; justify-content: center; background: var(--bg); padding: 16px; }
+.phone-card { width: 100%; max-width: 420px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 18px; display: grid; gap: 12px; align-content: start; }
+.phone-brand { font-family: "Source Serif 4", Georgia, serif; font-size: 22px; color: var(--accent); font-weight: 600; }
+.phone-brand span { font-family: Inter, sans-serif; font-size: 13px; color: var(--text-2); font-weight: 400; }
+.phone-card h1 { font-size: 21px; margin: 0; }
+.phone-card h2 { font-size: 14px; margin: 0 0 6px; }
+.phone-card p { margin: 0; line-height: 1.5; }
+.phone-section { border-top: 1px solid var(--line); padding-top: 12px; display: grid; gap: 8px; }
+.file-row { display: grid; gap: 6px; font-size: 14px; }
+.file-row em { color: var(--good); font-style: normal; font-weight: 600; }
+.consent { display: grid; grid-template-columns: 22px 1fr; gap: 8px; font-size: 14px; line-height: 1.45; align-items: start; }
+.consent input { width: 18px; height: 18px; margin-top: 2px; }
+.phone-error { background: var(--bad-bg); color: var(--bad); padding: 8px 10px; border-radius: 6px; font-size: 13px; }
+button.wide { width: 100%; padding: 12px; font-size: 15px; }
+.tiny { font-size: 12px; }
+.phone-list { margin: 0; padding-left: 18px; }
+@media (max-width: 900px) { .brief { grid-template-columns: 1fr; } }

@@ -1,0 +1,11 @@
+{
+  "_note": "Synthetic product catalogue and holdings for the prototype's pre-visit brief. Not real Absa products; every client is taken to hold the business current account only.",
+  "held_by_everyone": ["business_current_account"],
+  "products": {
+    "business_current_account": {"name": "Business current account", "what": "The account the statements come from."},
+    "merchant_collections": {"name": "Merchant QR and MoMo collections", "what": "Customers pay by QR or MoMo straight into the business account, so takings are recorded without cash handling."},
+    "seasonal_savings": {"name": "Seasonal savings account", "what": "Set aside part of the peak months' income to carry the business through the lean months."},
+    "crop_asset_insurance": {"name": "Crop and asset insurance", "what": "Cover against drought, pests or loss of stock and equipment."},
+    "momo_repayments": {"name": "MoMo-linked repayments", "what": "Instalments collected from the wallet the business is paid into, timed to its busy days."}
+  }
+}

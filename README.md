@@ -223,6 +223,19 @@ For front-end development, run `npm run dev` in `frontend/` alongside the API; V
 - **Agent activity panel:** each step, its reason and result; refused calls are shown in red. **Replay** animates the run, for the demo.
 - Opening `/?tab=cashflow` or `/?figure=peak_month_income` jumps straight to a tab or a figure's sources.
 
+**Pre-visit brief** (the first tab on the client page; [brief.py](backend/insaka/brief.py)): what to know before meeting the client. Each part is built by code and opens the figures or lines behind it:
+- **Cash-flow trend:** the last quarter against the one before, and against what the business's season predicts. For Mwila: down 40%, against a predicted 39% fall, so in line with her season.
+- **Products the client doesn't hold:** suggestions with a reason and a figure behind each. The catalogue and holdings are mocked, in [data/mocks/products.json](data/mocks/products.json).
+- **Open issues:** escalations, lines needing review, Unverified lines, the mocked checks still to confirm, and the next step.
+- **Risk flags.**
+
+**Statements from the customer** ([uploads.py](backend/insaka/uploads.py)): the agent's document request is now a real link, `/upload/<token>`, to a phone-sized customer page with no staff sign-in.
+- The customer ticks three consent statements (share for this assessment, kept only for the assessment period, Data Protection Act No. 3 of 2021) and attaches their MoMo statement PDF. Nothing is stored without consent.
+- Each file must parse as a statement of the requested kind and belong to the account on the application; anything else is refused with the reason.
+- An RM can upload a statement from the client page's documents card, which also shows each statement's source and the consent status.
+- Uploads and consent go into the case's audit log. Files are kept in `data/uploads/`, which is never committed.
+- When the agent next prepares the case, it uses the uploaded statements first.
+
 **Pamodzi view** (a tab on the client page): Absa, MTN and Airtel combined month by month ([pamodzi.py](backend/insaka/pamodzi.py)).
 - Money in and money out per account. Money moved between the owner's own accounts is shown on its own and left out, so it isn't counted twice.
 - Every amount opens its statement lines.
