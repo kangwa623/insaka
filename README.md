@@ -4,8 +4,7 @@
 
 Insaka reads a small business's bank and mobile-money statements and drafts a credit memo
 for the relationship manager, in which every figure links back to the statement lines it
-came from. This is the prototype for the Absa GenAI-Thon (SME & Financial Inclusion).
-It runs on synthetic data only.
+came from. It runs on synthetic data only.
 
 ## Setup
 
