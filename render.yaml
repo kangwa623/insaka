@@ -15,5 +15,7 @@ services:
         value: 3.10.13
       - key: INSAKA_CORS_ORIGINS
         value: https://insaka.web.app,https://insaka.firebaseapp.com
+      - key: INSAKA_SITE_URL
+        value: https://insaka.web.app
       - key: GROQ_API_KEY
         sync: false

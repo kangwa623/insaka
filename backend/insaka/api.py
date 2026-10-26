@@ -11,7 +11,7 @@ import json
 import os
 from pathlib import Path
 
-from flask import Flask, abort, jsonify, request, send_from_directory
+from flask import Flask, abort, jsonify, redirect, request, send_from_directory
 
 from .agent.tools import upload_token
 from .case import USERS, NotAllowed, load_case, load_ledger
@@ -33,7 +33,8 @@ def _finite(o):
 
 
 def create_app(data_dir="data/synthetic", cases_dir="data/cases", agent_dir="data/agent",
-               evaluation_dir="data/evaluation", uploads_dir="data/uploads", **agent_settings) -> Flask:
+               evaluation_dir="data/evaluation", uploads_dir="data/uploads", frontend_dir=FRONTEND,
+               **agent_settings) -> Flask:
     app = Flask(__name__, static_folder=None)
     app.config["MAX_CONTENT_LENGTH"] = 25 * 1024 * 1024
     # The screens are served from Firebase and call this API on Render: allow those origins
@@ -51,7 +52,8 @@ def create_app(data_dir="data/synthetic", cases_dir="data/cases", agent_dir="dat
             response.headers["Access-Control-Max-Age"] = "3600"
         return response
     data_dir, cases_dir, evaluation_dir = Path(data_dir), Path(cases_dir), Path(evaluation_dir)
-    uploads_dir = Path(uploads_dir)
+    uploads_dir, frontend_dir = Path(uploads_dir), Path(frontend_dir)
+    site_url = os.environ.get("INSAKA_SITE_URL", "https://insaka.web.app").rstrip("/")
 
     def clients() -> dict:
         return {c["client_id"]: c for c in
@@ -261,13 +263,14 @@ def create_app(data_dir="data/synthetic", cases_dir="data/cases", agent_dir="dat
     @app.get("/", defaults={"path": ""})
     @app.get("/<path:path>")
     def frontend(path):
-        if not FRONTEND.exists():
-            return ("The screens are not built yet: run `npm install` and `npm run build` "
-                    "in frontend/.", 503)
-        target = FRONTEND / path
+        if not frontend_dir.exists():
+            # Deployed, the screens live on Firebase: send visitors there, keeping the path
+            # so a customer's /upload/<token> link still works.
+            return redirect(f"{site_url}/{path}", 302)
+        target = frontend_dir / path
         if path and target.is_file():
-            return send_from_directory(FRONTEND, path)
-        return send_from_directory(FRONTEND, "index.html")
+            return send_from_directory(frontend_dir, path)
+        return send_from_directory(frontend_dir, "index.html")
 
     return app
 

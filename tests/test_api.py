@@ -87,3 +87,11 @@ def test_cross_origin_headers(monkeypatch):
     assert pre.status_code == 200 and "X-User" in pre.headers["Access-Control-Allow-Headers"]
     other = c.get("/api/users", headers={"Origin": "https://evil.example"})
     assert "Access-Control-Allow-Origin" not in other.headers
+
+
+def test_without_built_screens_visitors_go_to_the_site(tmp_path):
+    c = create_app(frontend_dir=tmp_path / "missing").test_client()
+    r = c.get("/")
+    assert r.status_code == 302 and r.headers["Location"] == "https://insaka.web.app/"
+    r = c.get("/upload/abc123")
+    assert r.headers["Location"] == "https://insaka.web.app/upload/abc123"
