@@ -85,7 +85,7 @@ export default function Upload({ token }) {
             <button className="primary wide" disabled={!allTicked || !chosen || busy} onClick={submit}>
               {busy ? "Checking…" : "Share statements"}
             </button>
-            <p className="muted tiny">Your details are masked before any AI system sees them. A person at the bank makes every decision.</p>
+            <p className="muted tiny">Every business has a story. Your details are masked before any AI system sees them, and a person at the bank makes every decision.</p>
           </>
         )}
       </div>

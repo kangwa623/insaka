@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import { CHANNELS, fmtFigure as fmt, kwacha, MONTHS } from "./api.js";
+import { TableView } from "./charts.jsx";
 
 // Business income by month, one stacked bar per month: bank and wallets combined into
 // one picture of how the business trades. Months come from the memo's own figure, so
@@ -102,6 +103,8 @@ export default function CashflowChart({ c, ledger, open }) {
           </div>
         )}
       </div>
+      <TableView head={["Month", ...present.map((s) => CHANNELS[s]), "Total"]}
+                 rows={data.map((d) => [d.month, ...present.map((s) => kwacha(d.parts[s])), kwacha(d.total)])} />
     </section>
   );
 }

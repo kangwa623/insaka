@@ -1,1 +1,1 @@
-"""Insaka: every figure traceable, every decision human."""
+"""Insaka: every business has a story."""

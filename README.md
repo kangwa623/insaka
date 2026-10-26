@@ -1,6 +1,6 @@
 # Insaka
 
-*Every figure traceable, every decision human.*
+*Every business has a story.*
 
 Insaka reads a small business's bank and mobile-money statements and drafts a credit memo
 for the relationship manager, in which every figure links back to the statement lines it

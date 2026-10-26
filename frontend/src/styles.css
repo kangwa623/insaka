@@ -1,25 +1,32 @@
 :root {
-  --bg: #f4f3ef;
-  --surface: #fcfcfb;
-  --surface-2: #f0efea;
-  --line: #e2e0d8;
-  --text: #0b0b0b;
-  --text-2: #52514e;
-  --muted: #74726c;
-  --accent: #1f5f8b;
+  /* Absa brand colours: chrome, actions and accents */
+  --absa-red: #dc0032;
+  --absa-crimson: #af144b;
+  --absa-burgundy: #870a3c;
+  --absa-blush: #fbeaf0;
+  --brand-gradient: linear-gradient(90deg, #870a3c 0%, #af144b 55%, #dc0032 100%);
+  --bg: #f5f3f2;
+  --surface: #ffffff;
+  --surface-2: #f3efee;
+  --line: #e6e0de;
+  --text: #1a1416;
+  --text-2: #4f4548;
+  --muted: #7a6f72;
+  --accent: var(--absa-crimson);
   --accent-ink: #ffffff;
-  --accent-soft: #e6eef5;
-  /* chart series, fixed order: channel -> colour (validated reference palette) */
-  --series-absa: #2a78d6;
-  --series-mtn: #eb6834;
-  --series-airtel: #1baf7a;
-  --series-1: #2a78d6;
-  --series-2: #eb6834;
-  /* status: reserved, always with an icon and a label */
+  --accent-soft: var(--absa-blush);
+  /* chart series, fixed order: channel -> colour, following each provider's brand
+     where it can (validated: CVD and normal-vision separation pass, all pairs) */
+  --series-absa: #af144b;
+  --series-mtn: #eda100;
+  --series-airtel: #2a78d6;
+  --series-1: #af144b;
+  --series-2: #2a78d6;
+  /* status: reserved, always with an icon and a label; "bad" is kept apart from brand red */
   --good: #0f7a3d;   --good-bg: #e5f3ea;
   --info: #2a5fa8;   --info-bg: #e7eef8;
   --warn: #8a5a00;   --warn-bg: #fbf0d9;
-  --bad: #b3261e;    --bad-bg: #fbe7e5;
+  --bad: #9b1c1c;    --bad-bg: #fdecec;
   font-family: Inter, system-ui, sans-serif;
   color: var(--text);
   background: var(--bg);
@@ -38,7 +45,7 @@ button, input, select, textarea { font: inherit; }
   padding: 10px 20px; background: var(--surface); border-bottom: 1px solid var(--line);
 }
 .brand { display: flex; align-items: baseline; gap: 12px; }
-.wordmark { font-family: "Source Serif 4", Georgia, serif; font-size: 24px; font-weight: 600; color: var(--accent); }
+.wordmark { font-family: Inter, system-ui, sans-serif; font-weight: 700; font-size: 24px; font-weight: 600; color: var(--accent); }
 .tagline { color: var(--text-2); font-style: italic; }
 .pill { font-size: 12px; padding: 3px 10px; border-radius: 999px; background: var(--surface-2); color: var(--text-2); }
 .signin { margin-left: auto; display: flex; align-items: center; gap: 8px; color: var(--text-2); }
@@ -65,7 +72,7 @@ button, input, select, textarea { font: inherit; }
 .card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 18px 20px; }
 
 .client-top { display: flex; justify-content: space-between; gap: 20px; }
-.client h1 { font-family: "Source Serif 4", Georgia, serif; font-size: 26px; margin: 0 0 4px; }
+.client h1 { font-family: Inter, system-ui, sans-serif; font-weight: 700; font-size: 26px; margin: 0 0 4px; }
 .request { margin-top: 8px; }
 .client-right { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
 .band { text-align: right; display: grid; }
@@ -96,7 +103,7 @@ button.link { background: none; border: 0; color: var(--accent); cursor: pointer
 .tabs button.on { color: var(--text); border-bottom-color: var(--accent); font-weight: 600; }
 
 .memo-head { margin-bottom: 8px; }
-.memo-section h2 { font-family: "Source Serif 4", Georgia, serif; font-size: 17px; margin: 18px 0 6px; display: flex; gap: 8px; align-items: baseline; }
+.memo-section h2 { font-family: Inter, system-ui, sans-serif; font-weight: 700; font-size: 17px; margin: 18px 0 6px; display: flex; gap: 8px; align-items: baseline; }
 .memo-section p { line-height: 1.65; margin: 0; }
 button.figure {
   background: var(--accent-soft); color: var(--accent); border: 0; border-bottom: 1.5px solid var(--accent);
@@ -173,7 +180,7 @@ td.credit { color: var(--good); }
 .baseline { stroke: var(--text-2); stroke-width: 1; }
 .axis { fill: var(--muted); font-size: 11px; }
 .hit { fill: transparent; cursor: pointer; }
-.hit:hover { fill: rgba(31, 95, 139, .06); }
+.hit:hover { fill: rgba(175, 20, 75, .06); }
 .tooltip { position: absolute; top: 8px; transform: translateX(-50%); background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; font-size: 12px; box-shadow: 0 4px 14px rgba(0,0,0,.1); pointer-events: none; min-width: 170px; }
 .tooltip div { display: flex; align-items: center; }
 .tooltip span { margin-left: auto; padding-left: 12px; font-variant-numeric: tabular-nums; }
@@ -197,9 +204,9 @@ td.credit { color: var(--good); }
 
 /* Evaluation screen */
 .eval { flex: 1; min-height: 0; overflow-y: auto; padding: 20px 28px 48px; display: flex; flex-direction: column; gap: 14px; max-width: 1240px; width: 100%; margin: 0 auto; }
-.eval-head h1 { font-family: "Source Serif 4", Georgia, serif; margin: 0 0 4px; font-size: 26px; }
+.eval-head h1 { font-family: Inter, system-ui, sans-serif; font-weight: 700; margin: 0 0 4px; font-size: 26px; }
 .eval-head p { margin: 0; }
-.eval h2 { font-family: "Source Serif 4", Georgia, serif; font-size: 19px; margin: 0 0 6px; }
+.eval h2 { font-family: Inter, system-ui, sans-serif; font-weight: 700; font-size: 19px; margin: 0 0 6px; }
 .eval h3 { font-size: 13.5px; margin: 16px 0 6px; color: var(--text-2); }
 .eval p { line-height: 1.55; }
 .scorecard td { padding: 9px 6px; }
@@ -300,7 +307,7 @@ button.figure.small { font-size: 12px; }
 /* Customer upload page (phone) */
 .phone { min-height: 100vh; display: flex; justify-content: center; background: var(--bg); padding: 16px; }
 .phone-card { width: 100%; max-width: 420px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px 18px; display: grid; gap: 12px; align-content: start; }
-.phone-brand { font-family: "Source Serif 4", Georgia, serif; font-size: 22px; color: var(--accent); font-weight: 600; }
+.phone-brand { font-family: Inter, system-ui, sans-serif; font-weight: 700; font-size: 22px; color: var(--accent); font-weight: 600; }
 .phone-brand span { font-family: Inter, sans-serif; font-size: 13px; color: var(--text-2); font-weight: 400; }
 .phone-card h1 { font-size: 21px; margin: 0; }
 .phone-card h2 { font-size: 14px; margin: 0 0 6px; }
@@ -315,3 +322,26 @@ button.wide { width: 100%; padding: 12px; font-size: 15px; }
 .tiny { font-size: 12px; }
 .phone-list { margin: 0; padding-left: 18px; }
 @media (max-width: 900px) { .brief { grid-template-columns: 1fr; } }
+
+/* ---- Absa theme: chrome ---- */
+.topbar { background: var(--brand-gradient); border-bottom: 0; color: #fff; padding: 12px 22px; }
+.wordmark { color: #fff; font-weight: 800; letter-spacing: -0.02em; }
+.tagline { color: rgba(255, 255, 255, .88); font-style: normal; font-weight: 500; }
+.topbar .pill { background: rgba(255, 255, 255, .16); color: #fff; border: 1px solid rgba(255, 255, 255, .3); }
+.screens button { color: rgba(255, 255, 255, .85); border-radius: 0; border-bottom: 2px solid transparent; padding: 6px 4px; margin: 0 8px; }
+.screens button:hover { color: #fff; }
+.screens button.on { background: none; color: #fff; font-weight: 700; border-bottom-color: #fff; }
+.signin { color: rgba(255, 255, 255, .9); }
+.signin select { border-color: transparent; color: var(--text); }
+button.primary { background: var(--absa-crimson); transition: background .15s; }
+button.primary:hover:not(:disabled) { background: var(--absa-burgundy); }
+button.secondary { border-color: var(--absa-crimson); color: var(--absa-crimson); }
+button.secondary:hover:not(:disabled) { background: var(--absa-blush); }
+button:focus-visible, select:focus-visible, input:focus-visible, textarea:focus-visible,
+a:focus-visible { outline: 2px solid var(--absa-crimson); outline-offset: 2px; }
+.cases li.active { box-shadow: inset 4px 0 0 var(--absa-crimson); }
+.actions { border-left-color: var(--absa-crimson); }
+.drawer-value { color: var(--absa-crimson); }
+.phone-brand { background: var(--brand-gradient); color: #fff; margin: -20px -18px 4px; padding: 16px 18px;
+  border-radius: 14px 14px 0 0; font-family: Inter, system-ui, sans-serif; font-weight: 800; }
+.phone-brand span { color: rgba(255, 255, 255, .9); }

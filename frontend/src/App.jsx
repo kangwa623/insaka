@@ -89,7 +89,7 @@ export default function App() {
       <header className="topbar">
         <div className="brand">
           <span className="wordmark">Insaka</span>
-          <span className="tagline">Every figure traceable, every decision human.</span>
+          <span className="tagline">Every business has a story.</span>
         </div>
         <nav className="screens">
           {[["cases", "Cases"], ["pipeline", "Pipeline"], ["evaluation", "Evaluation"]].map(([k, l]) => (
