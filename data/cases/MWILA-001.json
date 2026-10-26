@@ -4,8 +4,14 @@
   "requested_amount": 25000,
   "payout_account": "096****318",
   "status": "awaiting_rm",
-  "prepared_by": "Insaka agent (rules)",
-  "escalations": [],
+  "prepared_by": "Insaka agent (qwen/qwen3.8-27b)",
+  "escalations": [
+    {
+      "kind": "thin_history",
+      "stop": false,
+      "reason": "Credit bureau returned no history (thin file). Flagging for RM awareness; the cash-flow record is strong and risk band is Low, so carrying on."
+    }
+  ],
   "checks": {
     "pacra": {
       "service": "PACRA",
@@ -4024,12 +4030,12 @@
     "written_by": "llm:qwen/qwen3.8-27b"
   },
   "agent_run": {
-    "mode": "rules",
-    "model": "rules",
-    "steps_used": 11,
+    "mode": "llm",
+    "model": "qwen/qwen3.8-27b",
+    "steps_used": 12,
     "refused_calls": 0,
-    "tokens": 0,
-    "replayed": false,
+    "tokens": 30034,
+    "replayed": true,
     "model_fallback": null,
     "steps": [
       {
@@ -4038,7 +4044,7 @@
         "args": {
           "channel": "absa"
         },
-        "reason": "The Absa history is held internally, so it comes first.",
+        "reason": "Read the client's Absa current account statement to begin building the credit case for MWILA-001.",
         "status": "ok",
         "result": {
           "channel": "absa",
@@ -4050,7 +4056,7 @@
             "mtn"
           ]
         },
-        "ms": 2831
+        "ms": 1278
       },
       {
         "step": 2,
@@ -4060,7 +4066,7 @@
             "mtn"
           ]
         },
-        "reason": "The applicant listed these wallets; they complete the picture of income.",
+        "reason": "Request the MTN MoMo wallet statement the applicant listed on the application.",
         "status": "ok",
         "result": {
           "requested": [
@@ -4079,7 +4085,7 @@
         "args": {
           "channel": "mtn"
         },
-        "reason": "The customer uploaded the mtn statement.",
+        "reason": "Read the uploaded MTN MoMo wallet statement to complete the statement set.",
         "status": "ok",
         "result": {
           "channel": "mtn",
@@ -4089,13 +4095,13 @@
           "months_covered_by_all_statements_read": 12,
           "listed_wallets_not_yet_requested": []
         },
-        "ms": 3760
+        "ms": 3048
       },
       {
         "step": 4,
         "tool": "verify_statements",
         "args": {},
-        "reason": "Check for edits and cross-match transfers before using any figure.",
+        "reason": "Run the tamper check and cross-match wallet-to-bank transfers against Absa's records before labelling or scoring.",
         "status": "ok",
         "result": {
           "passed": true,
@@ -4116,13 +4122,13 @@
           "transfers_without_partner": 0,
           "flagged_rows": 0
         },
-        "ms": 5
+        "ms": 3
       },
       {
         "step": 5,
         "tool": "check_registration",
         "args": {},
-        "reason": "Confirm the business exists before analysis.",
+        "reason": "Confirm the business with PACRA before proceeding to analysis, as required.",
         "status": "ok",
         "result": {
           "service": "PACRA",
@@ -4135,9 +4141,36 @@
       },
       {
         "step": 6,
+        "tool": "check_tax_status",
+        "args": {},
+        "reason": "Confirm TPIN and tax compliance with ZRA before scoring.",
+        "status": "ok",
+        "result": {
+          "service": "ZRA",
+          "mocked": true,
+          "declared": true,
+          "status": "compliant"
+        },
+        "ms": 0
+      },
+      {
+        "step": 7,
+        "tool": "check_credit_bureau",
+        "args": {},
+        "reason": "Run the mandatory credit-bureau check before scoring.",
+        "status": "ok",
+        "result": {
+          "service": "Credit bureau",
+          "mocked": true,
+          "status": "no_hit"
+        },
+        "ms": 0
+      },
+      {
+        "step": 8,
         "tool": "label_transactions",
         "args": {},
-        "reason": "Categorise every row so income and costs can be computed.",
+        "reason": "Label every transaction with a category, quoting its source row, before scoring.",
         "status": "ok",
         "result": {
           "rows": 645,
@@ -4154,40 +4187,13 @@
           "rows_needing_review": 0,
           "rows_with_text_that_reads_like_instructions": 0
         },
-        "ms": 641
-      },
-      {
-        "step": 7,
-        "tool": "check_tax_status",
-        "args": {},
-        "reason": "A required check before scoring.",
-        "status": "ok",
-        "result": {
-          "service": "ZRA",
-          "mocked": true,
-          "declared": true,
-          "status": "compliant"
-        },
-        "ms": 0
-      },
-      {
-        "step": 8,
-        "tool": "check_credit_bureau",
-        "args": {},
-        "reason": "A required check before scoring.",
-        "status": "ok",
-        "result": {
-          "service": "Credit bureau",
-          "mocked": true,
-          "status": "no_hit"
-        },
-        "ms": 0
+        "ms": 24
       },
       {
         "step": 9,
         "tool": "score_risk",
         "args": {},
-        "reason": "All checks done; compute features and the score.",
+        "reason": "Compute the cash-flow features, findings and the risk score for the case.",
         "status": "ok",
         "result": {
           "probability_of_default": 0.012,
@@ -4204,13 +4210,28 @@
             "how much income varies beyond the normal season"
           ]
         },
-        "ms": 27
+        "ms": 17
       },
       {
         "step": 10,
+        "tool": "escalate",
+        "args": {
+          "kind": "thin_history"
+        },
+        "reason": "Credit bureau returned no history (thin file). Flagging for RM awareness; the cash-flow record is strong and risk band is Low, so carrying on.",
+        "status": "ok",
+        "result": {
+          "recorded": true,
+          "kind": "thin_history",
+          "case_stopped": false
+        },
+        "ms": 0
+      },
+      {
+        "step": 11,
         "tool": "draft_memo",
         "args": {},
-        "reason": "Write the case up with every figure linked.",
+        "reason": "Draft the credit memo, inserting and linking every figure, to complete the case for RM review.",
         "status": "ok",
         "result": {
           "written_by": "llm:qwen/qwen3.8-27b",
@@ -4218,19 +4239,19 @@
           "figures_linked_to_source": 23,
           "numbers_without_source": 0
         },
-        "ms": 2284
+        "ms": 36
       },
       {
-        "step": 11,
+        "step": 12,
         "tool": "submit_for_review",
         "args": {},
-        "reason": "The case is ready for the RM.",
+        "reason": "Case for MWILA-001 is complete: statements verified, PACRA/ZRA/credit checks done, transactions labelled, risk scored Low, memo drafted. Submitting for RM decision.",
         "status": "ok",
         "result": {
           "status": "Awaiting RM review",
           "note": "The RM reviews and edits the memo; an approver decides."
         },
-        "ms": 2
+        "ms": 1
       }
     ]
   },
