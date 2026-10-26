@@ -156,10 +156,10 @@ export function TableView({ head, rows }) {
   return (
     <details className="table-view">
       <summary>Show as table</summary>
-      <table className="rows">
+      <div className="table-scroll"><table className="rows">
         <thead><tr>{head.map((h) => <th key={h}>{h}</th>)}</tr></thead>
         <tbody>{rows.map((r, i) => <tr key={i}>{r.map((c, k) => <td key={k}>{c}</td>)}</tr>)}</tbody>
-      </table>
+      </table></div>
     </details>
   );
 }

@@ -96,7 +96,7 @@ export default function App() {
             <button key={k} className={screen === k ? "on" : ""} onClick={() => { setScreen(k); if (k !== "cases") loadCases(); }}>{l}</button>
           ))}
         </nav>
-        <span className="pill synthetic">Synthetic data · prototype</span>
+        <span className="pill synthetic">Synthetic data<span className="pill-more"> · prototype</span></span>
         <label className="signin">
           Signed in as
           <select value={user} onChange={(e) => setUser(e.target.value)}>
@@ -128,6 +128,8 @@ export default function App() {
         </aside>
 
         <main className="main">
+          <CasePicker cases={cases} selected={selected}
+                      onPick={(cid) => { setSelected(cid); setTab("memo"); }} />
           {client && (
             <>
               <ClientHeader client={client} c={c} />
@@ -162,6 +164,31 @@ export default function App() {
       {waking && <div className="toast">Waking the server (free hosting sleeps when idle); this can take up to a minute…</div>}
       {toast && <div className={`toast ${toast.kind}`}>{toast.text}</div>}
     </div>
+  );
+}
+
+// On tablets and phones the case list gives way to this picker (shown by CSS below 900px).
+const STAGE_ORDER = ["awaiting_rm", "submitted", "approved", "escalated", "disbursed", "declined", "not_started"];
+
+function CasePicker({ cases, selected, onPick }) {
+  return (
+    <label className="case-picker">
+      <span>Case</span>
+      <select value={selected} onChange={(e) => onPick(e.target.value)}>
+        {STAGE_ORDER.map((status) => {
+          const list = cases.filter((k) => k.status === status);
+          return list.length > 0 && (
+            <optgroup key={status} label={`${STATUS[status]} (${list.length})`}>
+              {list.map((k) => (
+                <option key={k.client_id} value={k.client_id}>
+                  {k.business_name} · {k.town} · {kwacha(k.requested_amount)}
+                </option>
+              ))}
+            </optgroup>
+          );
+        })}
+      </select>
+    </label>
   );
 }
 

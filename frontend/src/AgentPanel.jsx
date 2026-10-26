@@ -41,12 +41,16 @@ export default function AgentPanel({ run, escalations, replayKey, onReplay }) {
     return () => clearInterval(t);
   }, [replayKey, steps.length]);
 
+  // Open by default, except on phones, where it sits below the case, folded.
+  const folded = typeof window !== "undefined" && window.matchMedia("(max-width: 599px)").matches;
+
   return (
     <aside className="agent">
-      <div className="agent-head">
-        <h3>Agent activity</h3>
-        {steps.length > 0 && <button className="link" onClick={onReplay}>Replay</button>}
-      </div>
+      <details className="agent-fold" open={!folded}>
+      <summary className="agent-head">
+        <h3>Agent activity{steps.length > 0 && <span className="agent-count"> · {steps.length} steps</span>}</h3>
+        {steps.length > 0 && <button className="link" onClick={(e) => { e.preventDefault(); onReplay(); }}>Replay</button>}
+      </summary>
       {!run ? (
         <p className="muted">The agent hasn't run on this case.</p>
       ) : (
@@ -78,6 +82,7 @@ export default function AgentPanel({ run, escalations, replayKey, onReplay }) {
           )}
         </>
       )}
+      </details>
     </aside>
   );
 }

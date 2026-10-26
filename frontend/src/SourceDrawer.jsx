@@ -24,9 +24,11 @@ export default function SourceDrawer({ drawer, rowsById, close }) {
   return (
     <div className="drawer-backdrop" onClick={close}>
       <aside className="drawer" onClick={(e) => e.stopPropagation()} role="dialog" aria-label="Figure source">
-        <button className="close" onClick={close} aria-label="Close">×</button>
-        <div className="drawer-value">{drawer.title}</div>
-        <div className="drawer-label">{drawer.label}</div>
+        <div className="drawer-head">
+          <button className="close" onClick={close} aria-label="Close">×</button>
+          <div className="drawer-value">{drawer.title}</div>
+          <div className="drawer-label">{drawer.label}</div>
+        </div>
 
         {rows.length > 0 ? (
           <>
@@ -38,7 +40,7 @@ export default function SourceDrawer({ drawer, rowsById, close }) {
             <div className="trust-row">
               {Object.entries(trust).map(([t, n]) => <span key={t}><Trust level={t} /> {n}</span>)}
             </div>
-            <table className="rows">
+            <div className="table-scroll"><table className="rows">
               <thead>
                 <tr><th>Date</th><th>Source</th><th>Description</th><th>Category</th><th className="num">Amount</th><th>Trust</th></tr>
               </thead>
@@ -54,7 +56,7 @@ export default function SourceDrawer({ drawer, rowsById, close }) {
                   </tr>
                 ))}
               </tbody>
-            </table>
+            </table></div>
             {rows.length > limit && (
               <button className="link" onClick={() => setLimit((l) => l + 200)}>
                 Show more ({rows.length - limit} remaining)

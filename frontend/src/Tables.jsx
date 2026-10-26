@@ -18,7 +18,7 @@ export function Transactions({ ledger }) {
         </select>
         <span className="muted">{rows.length} of {ledger.length} rows</span>
       </div>
-      <table className="rows">
+      <div className="table-scroll"><table className="rows">
         <thead>
           <tr><th>Date</th><th>Source</th><th>Description</th><th>Category</th><th>Labelled by</th><th className="num">Amount</th><th>Trust</th></tr>
         </thead>
@@ -37,7 +37,7 @@ export function Transactions({ ledger }) {
             </tr>
           ))}
         </tbody>
-      </table>
+      </table></div>
       {rows.length > limit && <button className="link" onClick={() => setLimit((l) => l + 300)}>Show more</button>}
     </section>
   );

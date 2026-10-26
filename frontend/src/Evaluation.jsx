@@ -79,14 +79,14 @@ export default function Evaluation({ user }) {
 
       <section className="card">
         <h2>Scorecard</h2>
-        <table className="rows scorecard">
+        <div className="table-scroll"><table className="rows scorecard">
           <thead><tr><th>What we measure</th><th>Success threshold</th><th>Result</th><th>Status</th></tr></thead>
           <tbody>
             {scorecard.map(([what, bar, result, state]) => (
               <tr key={what}><td><b>{what}</b></td><td>{bar}</td><td>{result}</td><td><Status state={state} /></td></tr>
             ))}
           </tbody>
-        </table>
+        </table></div>
       </section>
 
       {e.parsing && <Parsing p={e.parsing} />}
@@ -190,7 +190,7 @@ function Findings({ f }) {
       <h2>Finding detection</h2>
       <p className="muted">Each finding is a rule on the features, compared with the findings planted in the data.
         Seasonal income is reported as context, not as a risk.</p>
-      <table className="rows">
+      <div className="table-scroll"><table className="rows">
         <thead><tr><th>Finding</th><th>Planted (demo)</th><th className="num">Precision</th><th className="num">Recall</th><th className="num">F1 demo</th><th className="num">F1 held-out</th></tr></thead>
         <tbody>
           {Object.entries(f.demo).map(([k, v]) => (
@@ -198,7 +198,7 @@ function Findings({ f }) {
               <td className="num">{num(v.recall, 2)}</td><td className="num">{num(v.f1, 2)}</td><td className="num">{num(f.holdout[k].f1, 2)}</td></tr>
           ))}
         </tbody>
-      </table>
+      </table></div>
     </section>
   );
 }
@@ -225,9 +225,9 @@ function Fairness({ hold, lab }) {
       <p className="muted">Risk results on the {hold.clients.toLocaleString()} held-out clients (overall AUROC {num(overall)});
         labelling F1 on the held-out labelling sample. A group more than {MATERIAL} below the overall AUROC is flagged;
         groups with fewer than 10 defaults are too small to judge.</p>
-      <table className="rows"><thead>{head}</thead><tbody>{group("gender")}</tbody></table>
+      <div className="table-scroll"><table className="rows"><thead>{head}</thead><tbody>{group("gender")}</tbody></table></div>
       <h3>By province</h3>
-      <table className="rows"><thead>{head}</thead><tbody>{group("province")}</tbody></table>
+      <div className="table-scroll"><table className="rows"><thead>{head}</thead><tbody>{group("province")}</tbody></table></div>
     </section>
   );
 }
@@ -242,7 +242,7 @@ function Agent({ a }) {
     <section className="card">
       <h2>The agent follows the rules</h2>
       <p className="muted">Each scenario checked against the outcome the brief's rules demand. Complies in <b>{pct(a.compliance, 0)}</b> of {a.judged} scenarios.</p>
-      <table className="rows">
+      <div className="table-scroll"><table className="rows">
         <thead><tr><th>Scenario</th><th>Client</th><th>Outcome</th><th className="num">Steps</th><th className="num">Refused</th><th>Escalations</th><th>Result</th></tr></thead>
         <tbody>
           {Object.entries(a.scenarios).map(([k, s]) => (
@@ -252,7 +252,7 @@ function Agent({ a }) {
               <td><Status state={s.compliant ? "met" : "missed"} /></td></tr>
           ))}
         </tbody>
-      </table>
+      </table></div>
     </section>
   );
 }

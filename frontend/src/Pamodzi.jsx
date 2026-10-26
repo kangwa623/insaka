@@ -111,7 +111,7 @@ export default function Pamodzi({ cid, user, open }) {
           : ` ${p.balance_check.mismatches.length} account-months do not reconcile with their balances (an edited statement).`}
       </p>
 
-      <table className="rows pamodzi-table">
+      <div className="table-scroll"><table className="rows pamodzi-table">
         <thead>
           <tr><th rowSpan={2}>Month</th>
             {ch.map((c) => <th key={c} colSpan={3} className="group">{CHANNELS[c]}</th>)}
@@ -139,7 +139,7 @@ export default function Pamodzi({ cid, user, open }) {
             <td className="num">{kwacha(t.in)}</td><td className="num">{kwacha(t.out)}</td><td className="num">{kwacha(t.net)}</td>
           </tr>
         </tbody>
-      </table>
+      </table></div>
     </section>
   );
 }
