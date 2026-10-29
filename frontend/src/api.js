@@ -1,18 +1,57 @@
-// Calls to the Flask API. Sign-in is simulated: the chosen staff member travels in
-// X-User, and the server checks that person's role on every action.
+// Calls to the Flask API. Staff sign in with a password and an authenticator code; the
+// signed access token is kept for this browser tab only (sessionStorage) and sent as a
+// Bearer token. The server checks the role, the case owner and the limits on every action.
 
 // The API's address: empty for local use (Vite proxies /api); the Render URL in production.
 export const API = import.meta.env.VITE_API_BASE || "";
 
-export async function api(path, user, { method = "GET", body } = {}) {
-  const res = await fetch(`${API}/api${path}`, {
-    method,
-    headers: { "Content-Type": "application/json", ...(user ? { "X-User": user } : {}) },
-    body: body ? JSON.stringify(body) : undefined,
-  });
-  const data = await res.json().catch(() => ({}));
-  if (!res.ok) throw new Error(data.error || `${res.status} ${res.statusText}`);
-  return data;
+const KEY = "insaka.session";
+
+export const session = {
+  get() {
+    try { return JSON.parse(sessionStorage.getItem(KEY)); } catch { return null; }
+  },
+  set(s) {
+    try { sessionStorage.setItem(KEY, JSON.stringify(s)); } catch { /* private mode */ }
+  },
+  clear() {
+    try { sessionStorage.removeItem(KEY); } catch { /* private mode */ }
+  },
+};
+
+export function authHeaders() {
+  const s = session.get();
+  return s?.token ? { Authorization: `Bearer ${s.token}` } : {};
+}
+
+const RETRY = new Set([502, 503, 504]);
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+// GETs are retried with backoff when the server is waking up or briefly unavailable; a
+// rejected sign-in (401) ends the session everywhere in the app.
+export async function api(path, _user, { method = "GET", body } = {}) {
+  const attempts = method === "GET" ? 3 : 1;
+  for (let i = 0; i < attempts; i++) {
+    let res;
+    try {
+      res = await fetch(`${API}/api${path}`, {
+        method,
+        headers: { "Content-Type": "application/json", ...authHeaders() },
+        body: body ? JSON.stringify(body) : undefined,
+      });
+    } catch (e) {
+      if (i < attempts - 1) { await sleep(1000 * 2 ** i); continue; }
+      throw new Error("The server can't be reached. It may be waking up; try again in a minute.");
+    }
+    if (RETRY.has(res.status) && i < attempts - 1) { await sleep(1000 * 2 ** i); continue; }
+    const data = await res.json().catch(() => ({}));
+    if (res.status === 401 && session.get()) {
+      session.clear();
+      window.dispatchEvent(new Event("insaka:signed-out"));
+    }
+    if (!res.ok) throw new Error(data.error || `${res.status} ${res.statusText}`);
+    return data;
+  }
 }
 
 export const kwacha = (v) => `${v < 0 ? "−" : ""}K${Math.abs(Math.round(v)).toLocaleString("en-ZM")}`;

@@ -4,18 +4,20 @@ from insaka.agent import NoChat
 from insaka.api import create_app
 from insaka.generator import MWILA_ID, generate
 
+from conftest import auth_headers
+
 
 @pytest.fixture(scope="module")
 def client(tmp_path_factory):
     out = tmp_path_factory.mktemp("api")
     generate(5, 42, out, pdfs=False)
-    app = create_app(out, out / "cases", out / "agent", label_method="rules",
-                     memo_chat=NoChat(), registry={})
+    app = create_app(out, out / "cases", out / "agent", security_dir=out / "security",
+                     label_method="rules", memo_chat=NoChat(), registry={})
     return app.test_client()
 
 
 def call(client, method, path, user=None, body=None):
-    headers = {"X-User": user} if user else {}
+    headers = auth_headers(client.application, user) if user else {}
     return getattr(client, method)(f"/api{path}", headers=headers, json=body)
 
 
@@ -83,8 +85,8 @@ def test_cross_origin_headers(monkeypatch):
     assert ok.headers["Access-Control-Allow-Origin"] == "https://insaka.web.app"
     pre = c.options("/api/cases/MWILA-001/submit", headers={
         "Origin": "https://insaka.web.app", "Access-Control-Request-Method": "POST",
-        "Access-Control-Request-Headers": "X-User, Content-Type"})
-    assert pre.status_code == 200 and "X-User" in pre.headers["Access-Control-Allow-Headers"]
+        "Access-Control-Request-Headers": "Authorization, Content-Type"})
+    assert pre.status_code == 200 and "Authorization" in pre.headers["Access-Control-Allow-Headers"]
     other = c.get("/api/users", headers={"Origin": "https://evil.example"})
     assert "Access-Control-Allow-Origin" not in other.headers
 

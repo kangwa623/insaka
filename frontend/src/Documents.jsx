@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { API, CHANNELS } from "./api.js";
+import { API, api, authHeaders, CHANNELS } from "./api.js";
 
 const SOURCE = { absa_internal: "Held internally", uploaded: "Uploaded", requested: "Requested" };
 
@@ -9,7 +9,7 @@ export default function Documents({ cid, user, me, notify }) {
   const [channel, setChannel] = useState("absa");
   const [file, setFile] = useState(null);
   const [busy, setBusy] = useState(false);
-  useEffect(() => { setD(null); fetch(`${API}/api/cases/${cid}/documents`, { headers: { "X-User": user } }).then((r) => r.json()).then(setD); }, [cid, user]);
+  useEffect(() => { setD(null); api(`/cases/${cid}/documents`).then(setD).catch(() => setD(null)); }, [cid, user]);
   if (!d || d.error) return null;
   const link = `${window.location.origin}${d.link}`;
 
@@ -19,7 +19,7 @@ export default function Documents({ cid, user, me, notify }) {
     form.append("channel", channel);
     form.append("file", file);
     try {
-      const r = await fetch(`${API}/api/cases/${cid}/upload`, { method: "POST", headers: { "X-User": user }, body: form });
+      const r = await fetch(`${API}/api/cases/${cid}/upload`, { method: "POST", headers: authHeaders(), body: form });
       const data = await r.json();
       if (!r.ok) throw new Error(data.error);
       setD(data); setFile(null);
@@ -46,7 +46,10 @@ export default function Documents({ cid, user, me, notify }) {
       </div>
       <div className="doc-actions">
         <span className="muted">Customer's secure link:</span>
-        <a href={d.link} target="_blank" rel="noreferrer">{d.link}</a>
+        <a href={d.link} target="_blank" rel="noreferrer" title="Signed link, valid for 7 days">
+          {d.link.slice(0, 18)}…{d.link.slice(-6)}
+        </a>
+        <span className="muted">(signed, expires in {d.link_expires_in_days} days)</span>
         <button className="link" onClick={() => { navigator.clipboard?.writeText(link); notify("Link copied", "ok"); }}>Copy</button>
         {me?.roles.includes("rm") && (
           <span className="rm-upload">

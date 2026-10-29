@@ -53,8 +53,11 @@ def seed(data_dir="data/synthetic", cases_dir="data/cases", **settings) -> dict:
     settings = {"memo_chat": NoChat(), **settings}
     chosen, stopped = pick_clients(data_dir)
     done = {}
-    for cid, (stage, actions) in zip(chosen, PLAN):
-        _, _, case = run_case(cid, "rules", data_dir, cases_dir=cases_dir, **settings)
+    for i, (cid, (stage, actions)) in enumerate(zip(chosen, PLAN)):
+        # The case belongs to the RM who submits it (or alternates when nobody has yet).
+        rm = next((u for name, u, *_ in actions if name == "rm_submit"),
+                  ("rm.chanda", "rm.mutale")[i % 2])
+        _, _, case = run_case(cid, "rules", data_dir, cases_dir=cases_dir, assigned_rm=rm, **settings)
         for name, user, *args in actions:
             getattr(case, name)(user, *args)
         done[cid] = case.status

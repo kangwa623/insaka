@@ -39,11 +39,11 @@ def build_case(client_id: str, data_dir: str | Path = "data/synthetic", absa_mon
 def run_case(client_id: str, mode: str = "llm", data_dir: str | Path = "data/synthetic",
              cases_dir: str | Path = "data/cases", agent_dir: str | Path = "data/agent",
              chat=None, label: str = "", absa_months: int | None = None,
-             uploads_dir: str | Path = UPLOADS_DIR, **settings):
+             uploads_dir: str | Path = UPLOADS_DIR, assigned_rm: str | None = None, **settings):
     """Run the agent on one client and open the case file for people to act on."""
-    from ..case import open_case
+    from ..case import DEFAULT_RM, open_case
 
     settings.setdefault("memo_out", cases_dir)
     case = build_case(client_id, data_dir, absa_months, uploads_dir, **settings)
     run = run_agent(case, chat=chat, mode=mode, cache_dir=agent_dir, label=label)
-    return run, case, open_case(run, case, Path(cases_dir))
+    return run, case, open_case(run, case, Path(cases_dir), assigned_rm or DEFAULT_RM)

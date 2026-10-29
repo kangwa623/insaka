@@ -14,6 +14,8 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
 
+from ..security import file_sha256
+
 MODEL_PATH = Path("models/risk_lr.joblib")
 
 # TPIN registration, loan size and mobile-money share are left out: trained on the
@@ -87,12 +89,30 @@ def train(inputs: list[dict], y) -> dict:
     return {"model": model, "columns": columns}
 
 
+class ModelIntegrityError(RuntimeError):
+    """The model file does not match its recorded hash; it is not loaded."""
+
+
+def hash_path(path: Path) -> Path:
+    return Path(path).with_suffix(".sha256")
+
+
 def save(bundle: dict, path: Path = MODEL_PATH) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     joblib.dump(bundle, path)
+    hash_path(path).write_text(file_sha256(path) + "\n", "utf-8")
+
+
+def verify(path: Path = MODEL_PATH) -> bool:
+    expected = hash_path(path)
+    return expected.exists() and expected.read_text("utf-8").strip() == file_sha256(path)
 
 
 def load(path: Path = MODEL_PATH) -> dict:
+    # A joblib file can run code as it loads, so it is opened only if it is byte-for-byte
+    # the model that was trained and recorded.
+    if not verify(path):
+        raise ModelIntegrityError(f"{path} does not match {hash_path(path).name}; refusing to load it")
     return joblib.load(path)
 
 

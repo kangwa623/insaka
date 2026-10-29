@@ -4,9 +4,11 @@ import json
 import pytest
 
 from insaka.agent import NoChat, build_case
-from insaka.agent.tools import upload_token
 from insaka.api import create_app
+from insaka.auth import upload_token
 from insaka.generator import MWILA_ID, generate
+
+from conftest import auth_headers
 
 
 @pytest.fixture(scope="module")
@@ -14,7 +16,8 @@ def env(tmp_path_factory):
     out = tmp_path_factory.mktemp("upload")
     generate(4, 42, out, pdfs=True)
     app = create_app(out, out / "cases", out / "agent", uploads_dir=out / "uploads",
-                     label_method="rules", memo_chat=NoChat(), registry={})
+                     security_dir=out / "security", label_method="rules", memo_chat=NoChat(),
+                     registry={})
     clients = {c["client_id"]: c for c in json.loads((out / "clients.json").read_text("utf-8"))}
     return out, app.test_client(), clients
 
@@ -50,7 +53,7 @@ def test_customer_link_consent_and_checks(env):
                content_type="multipart/form-data")
     assert r.status_code == 200 and r.json["uploaded"] == ["mtn"]
     assert (out / "uploads" / f"{MWILA_ID}_mtn.pdf").exists()
-    docs = c.get(f"/api/cases/{MWILA_ID}/documents", headers={"X-User": "rm.chanda"}).json
+    docs = c.get(f"/api/cases/{MWILA_ID}/documents", headers=auth_headers(c.application, "rm.chanda")).json
     assert docs["consent"] and {s["channel"]: s["source"] for s in docs["statements"]} == \
         {"absa": "absa_internal", "mtn": "uploaded"}
 
@@ -61,10 +64,10 @@ def test_customer_link_consent_and_checks(env):
 
 def test_rm_upload_is_role_checked_and_audited(env):
     out, c, _ = env
-    h = {"X-User": "rm.chanda"}
+    h = auth_headers(c.application, "rm.chanda")
     assert c.post(f"/api/cases/{MWILA_ID}/run", headers=h, json={"mode": "rules"}).status_code == 200
     data = {"channel": "absa", "file": (io.BytesIO(pdf(out, MWILA_ID, "absa")), "a.pdf")}
-    r = c.post(f"/api/cases/{MWILA_ID}/upload", headers={"X-User": "approver.banda"}, data=data,
+    r = c.post(f"/api/cases/{MWILA_ID}/upload", headers=auth_headers(c.application, "approver.banda"), data=data,
                content_type="multipart/form-data")
     assert r.status_code == 403
     data = {"channel": "absa", "file": (io.BytesIO(pdf(out, MWILA_ID, "absa")), "a.pdf")}

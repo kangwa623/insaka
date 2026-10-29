@@ -1,6 +1,67 @@
 import { useState } from "react";
 import { kwacha } from "./api.js";
 
+const TEAMS = { credit_risk: "Credit risk", compliance: "Compliance", fraud: "Fraud" };
+
+// Anyone working a case can escalate it with a reason; someone else with approval
+// authority resolves it. The server enforces both.
+export function Escalate({ c, me, busy, act }) {
+  const [openForm, setOpenForm] = useState(false);
+  const [to, setTo] = useState("credit_risk");
+  const [reason, setReason] = useState("");
+  const roles = me?.roles || [];
+  if (!c || !["awaiting_rm", "submitted", "approved"].includes(c.status)) return null;
+  if (!roles.some((r) => r === "rm" || r === "approver")) return null;
+  return (
+    <section className="card escalate">
+      {!openForm ? (
+        <button className="link" onClick={() => setOpenForm(true)}>Escalate this case…</button>
+      ) : (
+        <div className="escalate-form">
+          <b>Escalate for a second look</b>
+          <div className="buttons">
+            <select value={to} onChange={(e) => setTo(e.target.value)} aria-label="Escalate to">
+              {Object.entries(TEAMS).map(([k, l]) => <option key={k} value={k}>{l}</option>)}
+            </select>
+            <input placeholder="Reason (required)" value={reason} maxLength={1000} onChange={(e) => setReason(e.target.value)} />
+            <button className="secondary" disabled={busy || !reason.trim()}
+                    onClick={() => act("escalate", { to, reason }, `Escalated to ${TEAMS[to]}`).then(() => { setOpenForm(false); setReason(""); })}>
+              Escalate
+            </button>
+            <button className="link" onClick={() => setOpenForm(false)}>Cancel</button>
+          </div>
+        </div>
+      )}
+    </section>
+  );
+}
+
+function Resolve({ c, open, me, busy, act }) {
+  const [note, setNote] = useState("");
+  const isApprover = (me?.roles || []).includes("approver");
+  return (
+    <section className="actions card escalated-card">
+      <div>
+        <b>Escalated to {TEAMS[open.to]} by {open.by}</b>: “{open.reason}”
+        <div className="muted">Someone other than {open.by}, with approval authority, resolves it: back to the RM, or decline.</div>
+      </div>
+      {isApprover && (
+        <div className="buttons">
+          <input placeholder="Resolution note (required)" value={note} maxLength={1000} onChange={(e) => setNote(e.target.value)} />
+          <button className="primary" disabled={busy || !note.trim()}
+                  onClick={() => act("resolve", { resolution: "return", note }, "Returned to the RM").then(() => setNote(""))}>
+            Return to RM
+          </button>
+          <button className="secondary" disabled={busy || !note.trim()}
+                  onClick={() => act("resolve", { resolution: "decline", note }, "Declined").then(() => setNote(""))}>
+            Decline
+          </button>
+        </div>
+      )}
+    </section>
+  );
+}
+
 // The next human step for this case. Buttons follow the signed-in role, but the server
 // decides: a refused action comes back as an error and is shown, not hidden.
 export default function Actions({ c, client, me, busy, act }) {
@@ -9,6 +70,11 @@ export default function Actions({ c, client, me, busy, act }) {
   const isRm = roles.includes("rm");
   const isApprover = roles.includes("approver");
   const status = c?.status || "not_started";
+  const open = (c?.human_escalations || []).find((e) => !e.resolution);
+
+  if (status === "escalated" && open) {
+    return <Resolve c={c} open={open} me={me} busy={busy} act={act} />;
+  }
 
   if (status === "not_started" || status === "escalated") {
     return (

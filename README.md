@@ -209,8 +209,8 @@ cd frontend; npm install; npm run build; cd ..
 For front-end development, run `npm run dev` in `frontend/` alongside the API; Vite forwards `/api` to port 5000.
 
 **The API** ([api.py](backend/insaka/api.py)): Flask, over the case workflow.
-- Sign-in is simulated: choose a staff member at the top of the screen, and the screens send that choice as the `X-User` header.
-- The server checks the role and maker-checker on every action, so a hidden button is never the only control.
+- Staff sign in with a password and an authenticator code (MFA). The screens send the signed session token as `Authorization: Bearer`. See **Security** below.
+- The server checks the role, the case owner, maker-checker and delegated limits on every action, so a hidden button is never the only control.
 - Endpoints list cases, open a case, return its labelled ledger, run the agent, and edit, submit, decide or disburse.
 
 **The screens** ([frontend/src/](frontend/src/)): React.
@@ -258,11 +258,38 @@ Two evaluations feed it:
 
 **Resetting the demo:** `python -m insaka.agent MWILA-001` prepares Mwila's case afresh, back to "Awaiting RM review". With `--mode rules` it uses the deterministic agent and needs no Groq quota.
 
+## Security
+
+[SECURITY.md](SECURITY.md) maps every control to the **OWASP Top 10 (2025)** and the **OWASP Top 10 for LLM Applications (2025)**, with the code that implements it and the test that proves it. The **Security** screen (for auditors, approvers and the manager) shows the same with live status and the security event log.
+
+**Signing in:** choose a synthetic staff account, enter the demo password, then the 6-digit code from an authenticator app. **Set up an authenticator app** shows a QR code for Google or Microsoft Authenticator. Five wrong attempts lock an account for 15 minutes, and sessions last 30 minutes.
+- **Demo password:** set by `INSAKA_DEMO_PASSWORD`, and shared with judges separately, never in the repo. Locally, without it, the development password is `insaka-local-demo`. In production (`INSAKA_ENV=production`) a missing password means nobody can sign in.
+- **Demo helper:** with `INSAKA_DEMO_MFA_HELPER=1` (on for the hackathon site), the sign-in screen also shows the current code, labelled "prototype only". The real code check still runs.
+
+| Account | Roles | Can |
+|---|---|---|
+| `rm.chanda`, `rm.mutale` | RM | Prepare and submit their own cases, upload statements, escalate |
+| `approver.banda` | Approver (up to K500,000) | Approve or decline, resolve escalations, disburse |
+| `manager.zulu` | RM, approver (up to K1,000,000), manager | Any case; still bound by maker-checker |
+| `auditor.phiri` | Auditor | Read everything, including the security log; change nothing |
+
+**Case controls:**
+- **Escalate:** an RM or approver can escalate a case to credit risk, compliance or fraud with a reason. Someone else with approval authority resolves it, either back to the RM or declined.
+- **High-risk cases:** these need a resolved credit-risk escalation before they can be approved.
+- **Above the approver's limit:** the approver can't decide, so the case must go to a higher authority.
+
+**Reliability:**
+- A 30-second timeout and a circuit breaker on the model. Deterministic fallbacks keep every check running, and the screens show a banner while they're in use.
+- A daily token budget.
+- `GET /api/health`.
+- Atomic, locked case writes.
+- An error boundary and retries in the screens.
+
 ## Deploy
 
 **Live at https://insaka.web.app.** The screens are on Firebase Hosting (project `insaka-genaithon`, site `insaka`), and the API is on Render (`https://insaka-zm-api.onrender.com`).
 
-**API on Render** ([render.yaml](render.yaml)): Render → New → Blueprint → this repo, and paste `GROQ_API_KEY` when asked.
+**API on Render** ([render.yaml](render.yaml)): Render → New → Blueprint → this repo, then paste `GROQ_API_KEY` and `INSAKA_DEMO_PASSWORD` when asked. Render generates `INSAKA_SECRET_KEY`.
 - The build regenerates the seed-42 synthetic data (no PDFs) and seeds the demo pipeline.
 - It runs under gunicorn with one worker, because case state lives in files.
 - `INSAKA_CORS_ORIGINS` limits browser access to the Firebase site.
@@ -276,7 +303,8 @@ firebase deploy --only hosting
 **Limits of the free tier:**
 - **Sleep:** Render sleeps after 15 minutes idle. The first request then takes up to a minute, and the screens show a "waking the server" notice meanwhile.
 - **Resets:** Render's disk resets on every restart or redeploy. Approvals, edits and uploads made on the public site don't survive, and Mwila's case returns to "Awaiting RM review".
-- **Simulated sign-in:** anyone with the link can act as any of the synthetic staff. The data is synthetic, but don't post the link publicly.
+- **Shared demo accounts:** anyone with the demo password can sign in as the synthetic staff, and the demo helper shows their codes. The data is synthetic, but share the password only with judges.
+- **In-memory controls:** lockouts, revocations and the security log reset when Render restarts.
 - **Quota:** a live "Prepare case" on the public site uses the Groq key's daily quota.
 
 ## Tests

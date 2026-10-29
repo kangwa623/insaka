@@ -37,3 +37,6 @@ data/uploads/
 
 # Firebase CLI deploy cache.
 .firebase/
+
+# Security event log (hash-chained; per deployment, never committed).
+data/security/

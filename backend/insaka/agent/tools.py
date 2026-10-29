@@ -10,6 +10,7 @@ import json
 from dataclasses import dataclass, field
 from pathlib import Path
 
+from ..auth import upload_token
 from ..evaluation.labelling import load_statement
 from ..features import _months
 from ..labelling import label_case
@@ -109,10 +110,6 @@ def read_statement(case: AgentCase, channel: str) -> dict:
             "listed_wallets_not_yet_requested": [w for w in case.wallets_listed
                                                  if w not in case.requested]}
 
-
-def upload_token(client_id: str) -> str:
-    """The client's secure upload link token (stable, so the link can be re-sent)."""
-    return hashlib.sha256(f"insaka-upload:{client_id}".encode()).hexdigest()[:16]
 
 
 def request_documents(case: AgentCase, channels: list) -> dict:

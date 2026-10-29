@@ -1,7 +1,10 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { api, fmtFigure, kwacha, STATUS } from "./api.js";
+import { api, fmtFigure, kwacha, session, STATUS } from "./api.js";
+import ErrorBoundary from "./ErrorBoundary.jsx";
+import Login from "./Login.jsx";
+import Security from "./Security.jsx";
 import AgentPanel from "./AgentPanel.jsx";
-import Actions from "./Actions.jsx";
+import Actions, { Escalate } from "./Actions.jsx";
 import CashflowChart from "./CashflowChart.jsx";
 import Brief from "./Brief.jsx";
 import Documents from "./Documents.jsx";
@@ -12,9 +15,38 @@ import Pipeline from "./Pipeline.jsx";
 import SourceDrawer from "./SourceDrawer.jsx";
 import { AuditTrail, Transactions } from "./Tables.jsx";
 
+// Nothing loads until a staff member has signed in with a password and an authenticator
+// code; the session ends when the tab closes, on sign-out, or after 30 minutes.
 export default function App() {
+  const [signedIn, setSignedIn] = useState(() => session.get()?.user || null);
+  useEffect(() => {
+    const out = () => setSignedIn(null);
+    window.addEventListener("insaka:signed-out", out);
+    return () => window.removeEventListener("insaka:signed-out", out);
+  }, []);
+  const signOut = async () => {
+    await api("/auth/logout", null, { method: "POST" }).catch(() => {});
+    session.clear();
+    setSignedIn(null);
+  };
+  if (!signedIn) {
+    return (
+      <ErrorBoundary>
+        <Login onSignedIn={(s) => {
+          session.set({ token: s.access_token, user: s.user, expiresAt: Date.now() + s.expires_in * 1000 });
+          setSignedIn(s.user);
+        }} />
+      </ErrorBoundary>
+    );
+  }
+  return <ErrorBoundary><Workspace signedIn={signedIn} onSignOut={signOut} /></ErrorBoundary>;
+}
+
+const SECURITY_ROLES = ["auditor", "approver", "manager"];
+
+function Workspace({ signedIn, onSignOut }) {
   const [users, setUsers] = useState([]);
-  const [user, setUser] = useState("rm.chanda");
+  const user = signedIn.id;
   const [cases, setCases] = useState([]);
   const [filter, setFilter] = useState("");
   const [selected, setSelected] = useState("MWILA-001");
@@ -22,7 +54,9 @@ export default function App() {
   const [ledger, setLedger] = useState([]);
   const params = new URLSearchParams(window.location.search);
   const [tab, setTab] = useState(params.get("tab") || "memo");
-  const [screen, setScreen] = useState(["evaluation", "pipeline"].includes(params.get("view")) ? params.get("view") : "cases");
+  const [screen, setScreen] = useState(["evaluation", "pipeline", "security"].includes(params.get("view")) ? params.get("view") : "cases");
+  const canSeeSecurity = signedIn.roles.some((r) => SECURITY_ROLES.includes(r));
+  const [health, setHealth] = useState(null);
   const [drawer, setDrawer] = useState(null);   // {title, value, label, source, rows}
   const [busy, setBusy] = useState(false);
   const [toast, setToast] = useState(null);
@@ -39,6 +73,21 @@ export default function App() {
     const slow = setTimeout(() => setWaking(true), 3000);
     api("/users").then(setUsers).catch((e) => notify(e.message, "error"))
       .finally(() => { clearTimeout(slow); setWaking(false); });
+  }, []);
+
+  // Reliability: show when the AI is on its fallbacks; warn before the session ends.
+  useEffect(() => {
+    const check = () => api("/health").then(setHealth).catch(() => setHealth(null));
+    check();
+    const t = setInterval(check, 60000);
+    return () => clearInterval(t);
+  }, []);
+  useEffect(() => {
+    const t = setInterval(() => {
+      const left = (session.get()?.expiresAt || 0) - Date.now();
+      if (left > 0 && left < 120000) notify("Your session ends in under 2 minutes. Save your work; you'll need to sign in again.");
+    }, 60000);
+    return () => clearInterval(t);
   }, []);
   const loadCases = useCallback(() => api("/cases", user).then(setCases).catch((e) => notify(e.message, "error")), [user]);
   useEffect(() => { loadCases(); }, [loadCases]);
@@ -78,7 +127,7 @@ export default function App() {
   }, [view, ledger]);  // eslint-disable-line react-hooks/exhaustive-deps
 
   const rowsById = useMemo(() => Object.fromEntries(ledger.map((r) => [r.row_id, r])), [ledger]);
-  const me = users.find((u) => u.id === user);
+  const me = signedIn;
   const shown = cases.filter((c) =>
     `${c.business_name} ${c.client_id} ${c.town}`.toLowerCase().includes(filter.toLowerCase()));
   const c = view?.case;
@@ -92,22 +141,26 @@ export default function App() {
           <span className="tagline">Every business has a story.</span>
         </div>
         <nav className="screens">
-          {[["cases", "Cases"], ["pipeline", "Pipeline"], ["evaluation", "Evaluation"]].map(([k, l]) => (
+          {[["cases", "Cases"], ["pipeline", "Pipeline"], ["evaluation", "Evaluation"],
+            ...(canSeeSecurity ? [["security", "Security"]] : [])].map(([k, l]) => (
             <button key={k} className={screen === k ? "on" : ""} onClick={() => { setScreen(k); if (k !== "cases") loadCases(); }}>{l}</button>
           ))}
         </nav>
         <span className="pill synthetic">Synthetic data<span className="pill-more"> · prototype</span></span>
-        <label className="signin">
-          Signed in as
-          <select value={user} onChange={(e) => setUser(e.target.value)}>
-            {users.map((u) => (
-              <option key={u.id} value={u.id}>{u.name} ({u.roles.join(" + ")})</option>
-            ))}
-          </select>
-        </label>
+        <div className="signin">
+          <span className="who"><b>{signedIn.name}</b> <small>{signedIn.roles.join(" · ")}</small></span>
+          <button className="signout" onClick={onSignOut}>Sign out</button>
+        </div>
       </header>
+      {health && health.ai !== "available" && (
+        <div className="degraded" role="status">
+          AI assistance is unavailable right now ({health.model?.configured ? `model ${health.model.state}` : "not configured"}).
+          Insaka is using its deterministic fallbacks: the rules agent, keyword labels and the template memo. Every check still runs.
+        </div>
+      )}
 
       {screen === "evaluation" ? <Evaluation user={user} /> :
+       screen === "security" && canSeeSecurity ? <Security user={user} /> :
        screen === "pipeline" ? <Pipeline cases={cases} openCase={(cid) => { setSelected(cid); setTab("memo"); setScreen("cases"); }} /> : (
       <div className="layout">
         <aside className="cases">
@@ -134,6 +187,7 @@ export default function App() {
             <>
               <ClientHeader client={client} c={c} />
               <Actions c={c} client={client} me={me} busy={busy} act={act} />
+              <Escalate c={c} me={me} busy={busy} act={act} />
               <Documents key={`${selected}-${c?.status}`} cid={selected} user={user} me={me} notify={notify} />
               {c && (
                 <>

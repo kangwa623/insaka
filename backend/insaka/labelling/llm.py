@@ -19,6 +19,7 @@ import re
 import time
 from pathlib import Path
 
+from ..security import MODEL_BREAKER, MODEL_BUDGET
 from ..taxonomy import CATEGORIES
 from .payees import payee_key
 
@@ -133,6 +134,13 @@ def check_labels(labels: list, texts: list[str]) -> dict:
     return accepted
 
 
+MODEL_TIMEOUT_S = 30
+
+
+class ModelUnavailable(RuntimeError):
+    """The model is not being called right now (circuit open or budget spent)."""
+
+
 class GroqChat:
     """One chat completion per call; the key comes from GROQ_API_KEY (or a .env file)."""
 
@@ -145,11 +153,32 @@ class GroqChat:
             raise RuntimeError("GROQ_API_KEY is not set. Put it in a .env file in the project "
                                "root, or label with method='rules'.")
         self.model = model or os.environ.get("INSAKA_LLM_MODEL", DEFAULT_MODEL)
-        self.client = Groq(max_retries=8)
+        self.client = Groq(max_retries=4, timeout=MODEL_TIMEOUT_S)
+
+    def _create(self, **kwargs):
+        """Every model call goes through here: skipped while the circuit is open or the day's
+        token budget is spent (callers then fall back to rules and templates), timed out
+        after MODEL_TIMEOUT_S, and counted towards the budget."""
+        from groq import BadRequestError
+
+        if MODEL_BREAKER.is_open():
+            raise ModelUnavailable("circuit open after repeated model failures")
+        if MODEL_BUDGET.exhausted():
+            raise ModelUnavailable("daily model token budget used up")
+        try:
+            reply = self.client.chat.completions.create(**kwargs)
+        except BadRequestError:
+            raise                      # the request or the model's output, not an outage
+        except Exception as e:
+            MODEL_BREAKER.failure(f"{type(e).__name__}: {e}")
+            raise
+        MODEL_BREAKER.success()
+        MODEL_BUDGET.spend(reply.usage.total_tokens if reply.usage else 0)
+        return reply
 
     def __call__(self, system: str, user: str) -> str:
         extra = {"reasoning_effort": "none"} if "qwen3" in self.model else {}
-        reply = self.client.chat.completions.create(
+        reply = self._create(
             model=self.model, temperature=0, max_completion_tokens=MAX_OUTPUT_TOKENS,
             response_format={"type": "json_object"},
             messages=[{"role": "system", "content": system}, {"role": "user", "content": user}],
@@ -167,7 +196,7 @@ class GroqChat:
 
         extra = {"reasoning_effort": "none"} if "qwen3" in self.model else {}
         try:
-            reply = self.client.chat.completions.create(
+            reply = self._create(
                 model=self.model, temperature=0, max_completion_tokens=AGENT_OUTPUT_TOKENS,
                 messages=messages, tools=tools, tool_choice="auto", parallel_tool_calls=False,
                 **extra)
