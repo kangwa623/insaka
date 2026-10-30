@@ -98,6 +98,22 @@ def test_production_never_falls_back_to_the_published_dev_password(tmp_path, mon
     assert login(c, password=DEV_PASSWORD).status_code == 401
 
 
+def test_demo_signin_needs_no_password_but_still_needs_the_code(tmp_path, monkeypatch):
+    monkeypatch.setenv("INSAKA_DEMO_SIGNIN", "1")
+    c = create_app(security_dir=tmp_path).test_client()
+    assert c.get("/api/auth/methods").json["password_required"] is False
+    assert login(c, user="nobody", password="").status_code == 401
+    r = login(c, password="")
+    assert r.status_code == 200 and r.json["demo_code"] == code()
+    ticket = r.json["mfa_ticket"]
+    assert c.post("/api/auth/mfa", json={"mfa_ticket": ticket, "code": "000000"}).status_code == 401
+    assert c.post("/api/auth/mfa", json={"mfa_ticket": ticket, "code": r.json["demo_code"]}).status_code == 200
+    # Signing straight back in gets a fresh code, not a replay error.
+    again = login(c, password="").json
+    assert c.post("/api/auth/mfa", json={"mfa_ticket": again["mfa_ticket"],
+                                         "code": again["demo_code"]}).status_code == 200
+
+
 def test_login_is_rate_limited_per_address(app):
     c = app.test_client()
     statuses = [login(c, user=f"x{i}", password="x").status_code for i in range(12)]

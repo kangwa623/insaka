@@ -11,6 +11,8 @@
 - Access tokens are signed, last 30 minutes and carry a session id that sign-out revokes.
 - INSAKA_DEMO_MFA_HELPER=1 (prototype only) returns the current code with the MFA ticket,
   so judges can sign in without an authenticator app. It is reported on the Security screen.
+- INSAKA_DEMO_SIGNIN (on unless set to 0) skips the password step for the demo and turns
+  the helper on; the authenticator code is still checked.
 """
 
 import base64
@@ -56,8 +58,14 @@ def using_dev_secrets() -> dict:
             "password": not os.environ.get("INSAKA_DEMO_PASSWORD")}
 
 
+def demo_signin() -> bool:
+    """Prototype default: no password step, but the authenticator code is still required.
+    A pilot sets INSAKA_DEMO_SIGNIN=0 to require the password as well."""
+    return os.environ.get("INSAKA_DEMO_SIGNIN", "1") == "1"
+
+
 def demo_helper_on() -> bool:
-    return os.environ.get("INSAKA_DEMO_MFA_HELPER") == "1"
+    return demo_signin() or os.environ.get("INSAKA_DEMO_MFA_HELPER") == "1"
 
 
 def _serializer(purpose: str) -> URLSafeTimedSerializer:
@@ -128,7 +136,8 @@ class Authenticator:
     def check_password(self, username: str, password: str) -> dict:
         if username in USERS and self.locked(username):
             raise AuthError("locked")
-        valid = username in self.hashes and check_password_hash(self.hashes[username], password or "")
+        valid = username in self.hashes and (
+            demo_signin() or check_password_hash(self.hashes[username], password or ""))
         if not valid:
             if username in USERS and self._fail(username):
                 raise AuthError("locked_now")
@@ -136,8 +145,17 @@ class Authenticator:
         ticket = _serializer("mfa").dumps({"u": username, "n": secrets.token_hex(8)})
         out = {"mfa_ticket": ticket, "expires_in": MFA_TTL_S}
         if demo_helper_on():
-            out["demo_code"] = totp(username).now()
+            out["demo_code"] = self.demo_code(username)
         return out
+
+    def demo_code(self, username: str) -> str:
+        """The current code, or the next one if the current one was just used, so signing
+        straight back in doesn't trip replay protection."""
+        t = totp(username)
+        now = int(time.time())
+        if now // t.interval <= self.last_step.get(username, -1):
+            now += t.interval
+        return t.at(now)
 
     def ticket_user(self, ticket: str) -> str:
         try:

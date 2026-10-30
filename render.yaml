@@ -19,10 +19,10 @@ services:
       # never in the repository.
       - key: INSAKA_SECRET_KEY
         generateValue: true
-      # The synthetic staff accounts' password: set in the Render dashboard, shared with
-      # judges separately. Without it nobody can sign in.
-      - key: INSAKA_DEMO_PASSWORD
-        sync: false
+      # Demo sign-in: choose an account, then the authenticator code (still checked).
+      # A pilot sets this to "0" and adds INSAKA_DEMO_PASSWORD to require a password too.
+      - key: INSAKA_DEMO_SIGNIN
+        value: "1"
       # Prototype only: show the current authenticator code at sign-in. Remove for a pilot.
       - key: INSAKA_DEMO_MFA_HELPER
         value: "1"

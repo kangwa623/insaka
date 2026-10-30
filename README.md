@@ -262,9 +262,9 @@ Two evaluations feed it:
 
 [SECURITY.md](SECURITY.md) maps every control to the **OWASP Top 10 (2025)** and the **OWASP Top 10 for LLM Applications (2025)**, with the code that implements it and the test that proves it. The **Security** screen (for auditors, approvers and the manager) shows the same with live status and the security event log.
 
-**Signing in:** choose a synthetic staff account, enter the demo password, then the 6-digit code from an authenticator app. **Set up an authenticator app** shows a QR code for Google or Microsoft Authenticator. Five wrong attempts lock an account for 15 minutes, and sessions last 30 minutes.
-- **Demo password:** set by `INSAKA_DEMO_PASSWORD`, and shared with judges separately, never in the repo. Locally, without it, the development password is `insaka-local-demo`. In production (`INSAKA_ENV=production`) a missing password means nobody can sign in.
-- **Demo helper:** with `INSAKA_DEMO_MFA_HELPER=1` (on for the hackathon site), the sign-in screen also shows the current code, labelled "prototype only". The real code check still runs.
+**Signing in:** choose a synthetic staff account, then enter the 6-digit code from an authenticator app. **Set up an authenticator app** shows a QR code for Google or Microsoft Authenticator. Five wrong attempts lock an account for 15 minutes, and sessions last 30 minutes.
+- **Demo sign-in** (`INSAKA_DEMO_SIGNIN`, on unless set to `0`): there's no password step, and the screen shows and fills in the current code, labelled "prototype only". The server still checks the code, with replay protection and lockout.
+- **Full sign-in** (`INSAKA_DEMO_SIGNIN=0`): a password comes first. It is set by `INSAKA_DEMO_PASSWORD` and never committed. Locally, without it, the development password is `insaka-local-demo`. In production (`INSAKA_ENV=production`) a missing password means nobody can sign in. `INSAKA_DEMO_MFA_HELPER=1` still shows the code.
 
 | Account | Roles | Can |
 |---|---|---|
@@ -289,7 +289,7 @@ Two evaluations feed it:
 
 **Live at https://insaka.web.app.** The screens are on Firebase Hosting (project `insaka-genaithon`, site `insaka`), and the API is on Render (`https://insaka-zm-api.onrender.com`).
 
-**API on Render** ([render.yaml](render.yaml)): Render → New → Blueprint → this repo, then paste `GROQ_API_KEY` and `INSAKA_DEMO_PASSWORD` when asked. Render generates `INSAKA_SECRET_KEY`.
+**API on Render** ([render.yaml](render.yaml)): Render → New → Blueprint → this repo, then paste `GROQ_API_KEY` when asked. Render generates `INSAKA_SECRET_KEY`. The demo needs no password.
 - The build regenerates the seed-42 synthetic data (no PDFs) and seeds the demo pipeline.
 - It runs under gunicorn with one worker, because case state lives in files.
 - `INSAKA_CORS_ORIGINS` limits browser access to the Firebase site.
@@ -303,7 +303,7 @@ firebase deploy --only hosting
 **Limits of the free tier:**
 - **Sleep:** Render sleeps after 15 minutes idle. The first request then takes up to a minute, and the screens show a "waking the server" notice meanwhile.
 - **Resets:** Render's disk resets on every restart or redeploy. Approvals, edits and uploads made on the public site don't survive, and Mwila's case returns to "Awaiting RM review".
-- **Shared demo accounts:** anyone with the demo password can sign in as the synthetic staff, and the demo helper shows their codes. The data is synthetic, but share the password only with judges.
+- **Open demo accounts:** with demo sign-in on, anyone with the link can sign in as the synthetic staff, because the helper shows their codes. The data is synthetic. For a closed demo, set `INSAKA_DEMO_SIGNIN=0` and a password.
 - **In-memory controls:** lockouts, revocations and the security log reset when Render restarts.
 - **Quota:** a live "Prepare case" on the public site uses the Groq key's daily quota.
 

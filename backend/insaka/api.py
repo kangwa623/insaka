@@ -21,7 +21,7 @@ from flask import Flask, abort, g, jsonify, redirect, request, send_from_directo
 from werkzeug.exceptions import HTTPException
 
 from .auth import (AuthError, Authenticator, client_for_upload_token, demo_helper_on,
-                   upload_token, using_dev_secrets)
+                   demo_signin, upload_token, using_dev_secrets)
 from .case import APPROVAL_LIMITS, ESCALATE_TO, USERS, NotAllowed, case_lock, load_case, load_ledger
 from .security import (MODEL_BREAKER, MODEL_BUDGET, SECURITY_HEADERS, EventLog, RateLimiter,
                        valid_client_id)
@@ -196,6 +196,11 @@ def create_app(data_dir="data/synthetic", cases_dir="data/cases", agent_dir="dat
         return jsonify([{"id": k, "name": v["name"], "roles": v["roles"],
                          "approval_limit": APPROVAL_LIMITS.get(k)} for k, v in USERS.items()])
 
+    @app.get("/api/auth/methods")
+    def methods():
+        return jsonify(password_required=not demo_signin(), mfa="TOTP (RFC 6238)",
+                       demo_helper=demo_helper_on())
+
     @app.post("/api/auth/login")
     def login():
         limited(f"login:{ip()}", 10, 60)
@@ -208,7 +213,7 @@ def create_app(data_dir="data/synthetic", cases_dir="data/cases", agent_dir="dat
                            "warning", username=username)
             status, message = AUTH_MESSAGES[str(e)]
             return jsonify(error=message), status
-        security_event("password_ok", username=username)
+        security_event("account_selected" if demo_signin() else "password_ok", username=username)
         return jsonify(out)
 
     @app.post("/api/auth/enroll")
@@ -269,9 +274,10 @@ def create_app(data_dir="data/synthetic", cases_dir="data/cases", agent_dir="dat
                        ai=ai, model=model, uptime_s=round(time.time() - started))
 
     # --- staff data ------------------------------------------------------------------------
+    # Public, like /api/auth/accounts (synthetic names and roles only); older Render
+    # settings use it as the health check.
     @app.get("/api/users")
-    @requires(*ANY_STAFF)
-    def users(u):
+    def users():
         return jsonify([{"id": k, "name": v["name"], "roles": v["roles"]} for k, v in USERS.items()])
 
     @app.get("/api/cases")
@@ -481,7 +487,8 @@ def create_app(data_dir="data/synthetic", cases_dir="data/cases", agent_dir="dat
         from .scoring.model import MODEL_PATH, verify
         dev = using_dev_secrets()
         return jsonify(
-            mfa={"required": True, "method": "TOTP (RFC 6238)", "demo_helper": demo_helper_on()},
+            mfa={"required": True, "method": "TOTP (RFC 6238)", "demo_helper": demo_helper_on(),
+                 "password_required": not demo_signin()},
             sessions={"access_token_minutes": 30, "lockout_after": 5, "lockout_minutes": 15,
                       "login_rate_per_minute": 10},
             secrets={"from_environment": not any(dev.values()), "development_defaults": dev},

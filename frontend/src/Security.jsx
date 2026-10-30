@@ -26,7 +26,7 @@ function owasp(s) {
       "security.valid_client_id, labelling/injection.py", "test_security: path traversal", "met"],
     ["A06", "Insecure Design", "Threat-modelled flow: people decide, the agent cannot approve or pay; escalation must be resolved by someone else; High-risk cases need a credit-risk review.",
       "case.py, agent/policy.py", "test_security, test_agent", "met"],
-    ["A07", "Authentication Failures", `Password + authenticator code (MFA); replay protection; lockout after 5 tries; 10 sign-ins a minute per address; 30-minute sessions; sign-out revokes.${s.mfa.demo_helper ? " Demo code helper is ON for judges." : ""}`,
+    ["A07", "Authentication Failures", `${s.mfa.password_required ? "Password + authenticator code (MFA)" : "Authenticator code (MFA); password step off for the demo"}; replay protection; lockout after 5 tries; 10 sign-ins a minute per address; 30-minute sessions; sign-out revokes.${s.mfa.demo_helper ? " Demo code helper is ON for judges." : ""}`,
       "auth.py", "test_auth", s.mfa.demo_helper ? "check" : "met"],
     ["A08", "Software or Data Integrity Failures", `Risk model loads only if its SHA-256 matches (${s.risk_model_verified ? "verified" : "NOT verified"}); tamper check on statements; hash-chained security log; atomic case writes.`,
       "scoring/model.py, parsing/verify.py, security.EventLog", "test_security: tampered model, chain", s.risk_model_verified && s.event_log.intact ? "met" : "check"],
@@ -84,7 +84,7 @@ export default function Security({ user }) {
       <section className="card">
         <h2>Controls at a glance</h2>
         <div className="tiles">
-          <div className="tile static"><span>Sign-in</span><b>Password + MFA</b><small>{s.mfa.method}{s.mfa.demo_helper ? " · demo helper on" : ""}</small></div>
+          <div className="tile static"><span>Sign-in</span><b>{s.mfa.password_required ? "Password + MFA" : "Account + MFA code"}</b><small>{s.mfa.method}{s.mfa.demo_helper ? " · demo helper on" : ""}</small></div>
           <div className="tile static"><span>Sessions</span><b>{s.sessions.access_token_minutes} min</b><small>lockout after {s.sessions.lockout_after} tries for {s.sessions.lockout_minutes} min</small></div>
           <div className="tile static"><span>AI model</span><b>{s.model.state === "closed" ? "Available" : "Fallback"}</b><small>circuit trips: {s.model.trips}</small></div>
           <div className="tile static"><span>Security log</span><b>{s.event_log.intact ? "Intact" : "Tampered"}</b><small>{s.event_log.entries} events, hash-chained</small></div>

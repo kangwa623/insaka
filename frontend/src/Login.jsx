@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { api } from "./api.js";
 
 // Two factors: something you know (password), then something you have (an authenticator
-// app's 6-digit code). The accounts are synthetic staff; their password is shared with
-// judges separately, never shown here.
+// app's 6-digit code). The accounts are synthetic staff. For the demo the server can switch
+// the password step off (INSAKA_DEMO_SIGNIN); the code is always checked.
 export default function Login({ onSignedIn }) {
   const [accounts, setAccounts] = useState([]);
   const [username, setUsername] = useState("rm.chanda");
@@ -15,8 +15,12 @@ export default function Login({ onSignedIn }) {
   const [enrol, setEnrol] = useState(null);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState(null);
+  const [needsPassword, setNeedsPassword] = useState(true);
 
-  useEffect(() => { api("/auth/accounts").then(setAccounts).catch((e) => setError(e.message)); }, []);
+  useEffect(() => {
+    api("/auth/accounts").then(setAccounts).catch((e) => setError(e.message));
+    api("/auth/methods").then((m) => setNeedsPassword(m.password_required)).catch(() => {});
+  }, []);
 
   const submitPassword = async (e) => {
     e.preventDefault();
@@ -24,6 +28,7 @@ export default function Login({ onSignedIn }) {
     try {
       const r = await api("/auth/login", null, { method: "POST", body: { username, password } });
       setTicket(r.mfa_ticket); setDemoCode(r.demo_code || null); setPassword(""); setStep("code");
+      if (r.demo_code) setCode(`${r.demo_code.slice(0, 3)} ${r.demo_code.slice(3)}`);
     } catch (err) { setError(err.message); } finally { setBusy(false); }
   };
 
@@ -55,7 +60,7 @@ export default function Login({ onSignedIn }) {
           <h1>{step === "password" ? "Sign in" : "Enter your authenticator code"}</h1>
           <p className="muted small-note">
             {step === "password"
-              ? "Staff sign-in. Step 1 of 2: your password."
+              ? `Staff sign-in. Step 1 of 2: ${needsPassword ? "your password" : "choose your account"}.`
               : "Step 2 of 2: the 6-digit code from your authenticator app (Google or Microsoft Authenticator)."}
           </p>
 
@@ -68,11 +73,13 @@ export default function Login({ onSignedIn }) {
                   ))}
                 </select>
               </label>
-              <label>Password
-                <input type="password" value={password} onChange={(e) => setPassword(e.target.value)}
-                       autoComplete="current-password" required maxLength={256} />
-              </label>
-              <button className="primary wide" disabled={busy || !password}>{busy ? "Checking…" : "Continue"}</button>
+              {needsPassword && (
+                <label>Password
+                  <input type="password" value={password} onChange={(e) => setPassword(e.target.value)}
+                         autoComplete="current-password" required maxLength={256} />
+                </label>
+              )}
+              <button className="primary wide" disabled={busy || (needsPassword && !password)}>{busy ? "Checking…" : "Continue"}</button>
             </form>
           ) : (
             <form onSubmit={submitCode} className="login-form">
@@ -84,7 +91,8 @@ export default function Login({ onSignedIn }) {
               {demoCode && (
                 <div className="demo-helper" role="note">
                   <b>Demo helper (prototype only):</b> the current code for this synthetic account is{" "}
-                  <code>{demoCode.slice(0, 3)} {demoCode.slice(3)}</code>. A real deployment turns this off.
+                  <code>{demoCode.slice(0, 3)} {demoCode.slice(3)}</code>, filled in for you. A real
+                  deployment turns this off and asks for a password first.
                 </div>
               )}
               <button className="primary wide" disabled={busy || code.replace(/\s/g, "").length !== 6}>

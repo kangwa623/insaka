@@ -4,6 +4,7 @@ import os
 os.environ["INSAKA_SECRET_KEY"] = "test-secret-key-for-insaka-tests"
 os.environ["INSAKA_DEMO_PASSWORD"] = "test-password"
 os.environ.pop("INSAKA_DEMO_MFA_HELPER", None)
+os.environ["INSAKA_DEMO_SIGNIN"] = "0"         # the full password + code flow
 os.environ.pop("INSAKA_CORS_ORIGINS", None)
 
 
