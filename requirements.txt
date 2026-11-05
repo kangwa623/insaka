@@ -13,7 +13,7 @@ itsdangerous==2.2.0
 gunicorn==23.0.0
 pyotp==2.9.0
 segno==1.6.1
-pytest==9.1.1
+pytest==9.2.0
 # Pillow arrives through the PDF libraries. 13.0.0 fixes known advisories but needs
 # Python 3.11+; see SECURITY.md (A03) for the 3.10 exception and its mitigation.
 pillow==13.0.0 ; python_version >= "3.11"
